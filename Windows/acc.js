@@ -1,4 +1,4 @@
-◆系统特性、设置及说明
+◆系统特性、设置及说明 
   系统[部分]字体更改
     在桌面上右击-个性化-窗口颜色-高级外观设置-在项目中进行每项的字体显示更改。
   设置win7资源管理器默认打开为“我的电脑”
@@ -7,7 +7,7 @@
     （即：%windir%\explorer.exe ,），然后保存。
     记住此方法是把输入法切换在英文状态下进行。
 ---------------------------------------------------------------------------
-◆快捷键、小技巧
+◆快捷键、小技巧 
   Alt+Space+N——窗口最小化
   开始+D——桌面显示
   Ctrl+方向键右——光标移到下一空格处（或行尾）
@@ -56,7 +56,7 @@
     选择文字
         Shift+左、右方向键
 ---------------------------------------------------------------------------
-◆Question&Answer
+◆Question&Answer 
   为什么Word、Excel等文字中句号。在中间显示？
     港台用的宋体句号在中间。
     
@@ -76,7 +76,7 @@
     然后跟着指引设置即可
 ◆Problem: 
 一直更新失败 
-  停止 Windows update 和 Background Intelligent Transfer Service 服务  
+  停止 'Windows update' 和 'Background Intelligent Transfer Service' 服务  
   方法一: 
     删除临时文件 
       'C:\Windows\SoftwareDistribution'下
@@ -90,6 +90,7 @@
     删除注册表文件夹 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Schedule\ TaskCache\Tree\Microsoft\XblGameSave' 
   方法三: 
     控制面板/疑难解答/使用windows更新解决问题 
+  终极方法: 搜索'windows10',进入下载页,点击立即更新,下载辅助更新软件'易升' 
 svchost.exe 占大量网速和内存 
   右键我的电脑----管理---选择服务 
   找到 Background Intelligent Transfer Service
