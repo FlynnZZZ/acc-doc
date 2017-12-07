@@ -1,5 +1,5 @@
 ◆系统特性、设置及说明
-  系统（部分）字体更改
+  系统[部分]字体更改
     在桌面上右击-个性化-窗口颜色-高级外观设置-在项目中进行每项的字体显示更改。
   设置win7资源管理器默认打开为“我的电脑”
     关闭所有的资源管理器窗口，Shift+在任务栏的资源管理器图标上右击，选属性。
@@ -56,7 +56,7 @@
     选择文字
         Shift+左、右方向键
 ---------------------------------------------------------------------------
-◆Question And Answer
+◆Question&Answer
   为什么Word、Excel等文字中句号。在中间显示？
     港台用的宋体句号在中间。
     
@@ -74,6 +74,27 @@
     进入到防火墙设置页->高级设置,
     选择 出站规则 或 进站规则,进行 新建规则 ,
     然后跟着指引设置即可
+◆Problem: 
+一直更新失败 
+  停止 Windows update 和 Background Intelligent Transfer Service 服务  
+  方法一: 
+    删除临时文件 
+      'C:\Windows\SoftwareDistribution'下
+      删除 DataStore 文件夹下的内容和 Download 文件夹下的内容 
+    重命名'SoftwareDistribution'文件夹为'SDfolder' ? 
+      Windows+R 打开运行,输入 services.msc 并回车 
+      打开'Windows  Update'服务,点击'服务状态'下面的'关闭'按钮,将启动类型改为'禁用'
+      然后重命名,完成后,重启之后重新启用 Windows  Update 服务再尝试检查更新和安装 
+  方法二: 
+    删除文件夹 'C:\Windows\System32\Tasks\Microsoft\XblGameSave' 
+    删除注册表文件夹 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Schedule\ TaskCache\Tree\Microsoft\XblGameSave' 
+  方法三: 
+    控制面板/疑难解答/使用windows更新解决问题 
+svchost.exe 占大量网速和内存 
+  右键我的电脑----管理---选择服务 
+  找到 Background Intelligent Transfer Service
+  服务状态改为停止服务
+  启动类型改为手动或禁用
 
 
 
