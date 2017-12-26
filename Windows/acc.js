@@ -17,7 +17,7 @@ BIOS'Basic Input/Output System',基本输入输出系统
     开机按F2进入BIOS系统,进行相关设置 
     Boot选项:将从硬盘启动的项放到第一的顺序 
     UEFI改为:legacy 
-    ◆可能遇到的问题: 
+  ◆可能遇到的问题: 
     重启显示: NO BOOTABLE DEVICE 
       表示缺少系统引导设备,用于开机引导系统的文件丢失或损坏;
       解决方法: 重新使用U盘启动,使用Diskgenius工具重建分区表,
