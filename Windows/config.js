@@ -1,6 +1,26 @@
 系统配置: 
   hosts:  
-    todo ✔ 
+    127.0.0.1 localhost
+    ::1 localhost
+    
+    #本地测试 
+      127.0.0.1  tst.lcl.com  wbtls.lcl.com 
+    
+    # 开发通用 
+      112.74.36.44   jiekou.hkbao.com   kanboard.hkbao.com
+    # 华润相关 
+      112.74.36.44  huarundb.hkbao.com  
+    # 亿游  
+      112.74.36.44  1314.qilaiwan.com 
+    # 易货相关 
+      127.0.0.1  yihuo.lcltst.com   
+      112.74.36.44  yihuo.hkbao.com  yihuof.hkbao.com   yihuoadmin.hkbao.com  
+      112.74.36.44   yihuohoutai.hkbao.com   yihuodemoadmin.hkbao.com  yihuodemocode.hkbao.com   
+    # likecto 
+      # 外网测试
+      112.74.36.44  demowww.likecto.hkbao.com   demoadmin.likecto.hkbao.com  democode.likecto.hkbao.com 
+      # 正式
+      112.74.36.44  www.likecto.com   admin.likecto.hkbao.com   code.likecto.com 
   联网控制: 
 Desktop: 桌面 
   回收站                           
