@@ -21,33 +21,42 @@ BIOS'Basic Input/Output System',基本输入输出系统
     设置-恢复-重置电脑 
     windows defender-设备性能和运行状况-全新启动
   ◆可能遇到的问题: 
-    重启显示: NO BOOTABLE DEVICE 
-      表示缺少系统引导设备,用于开机引导系统的文件丢失或损坏;
+  启动显示: NO BOOTABLE DEVICE 
+    一: 缺少系统引导设备,用于开机引导系统的文件丢失或损坏;
       解决方法: 重新使用U盘启动,使用Diskgenius工具重建分区表,
       选中硬盘右键-搜索已丢失分区(重建分区表),中途按提示选择保留或忽略-
       完成后,重建主引导记录-然后进行重启
-重启慢‹启动正常› 
-  一: 启动模式问题 ‹待验证› 
-    若主板是UEFI启动,而采用传统启动模式,就会很慢
-    决解: 
-      1:重新安装UEFI启动的系统
-      2:已安装好系统后修改下启动引导,以达到UEFI启动的效果 
-        1、新建一个100M空间的分区 
-          计算机-选择管理,选中一有空闲空间的分区,右键-压缩卷,新建分区 
-        2、将新分区格式化<FAT32格式> 
-        4、修复EFI引导分区 
-          命令行中键入命令：
-          bcdboot <X>：Windows /s <Y>： /l zh-CN /f ALL 
-            Example: bcdboot C：Windows /s E： /l zh-CN /f ALL
-            X是系统文件所在分区
-            Y是刚分出来的FAT32分区 
-        5、重启并进入BIOS
-          Secure Boot 设为 Enabled
-          Launch CSM 设为 Never 
-          Boot Menu 设为 Disable 
-        6、保存更改的设置，退出BIOS，重启 
-  二: 到官方网站下载主板芯片驱动更新 ‹待验证› 
-  三: 
+    二: 启动方式问题 
+      将启动方式从UEFI改为legacy 
+  启动显示: Intel UNDI,PXE-2.1 (build 083) 
+    原因: 主板启用了网卡的PXE远程启动,且为第一引导项 
+    解决：
+      开机-F2,进入BIOS设置 
+      Onboard LAN Boot ROM‹内建网络开机功能›,改为 Disabled
+      Network Boot 改为 Disabled 
+  重启慢‹启动正常› 
+    一: 启动模式问题 ‹待验证› 
+      若主板是UEFI启动,而采用传统启动模式,就会很慢
+      决解: 
+        1:重新安装UEFI启动的系统
+        2:已安装好系统后修改下启动引导,以达到UEFI启动的效果 
+          1、新建一个100M空间的分区 
+            计算机-选择管理,选中一有空闲空间的分区,右键-压缩卷,新建分区 
+          2、将新分区格式化<FAT32格式> 
+          4、修复EFI引导分区 
+            命令行中键入命令：
+            bcdboot <X>：Windows /s <Y>： /l zh-CN /f ALL 
+              Example: bcdboot C：Windows /s E： /l zh-CN /f ALL
+              X是系统文件所在分区
+              Y是刚分出来的FAT32分区 
+          5、重启并进入BIOS
+            Secure Boot 设为 Enabled
+            Launch CSM 设为 Never 
+            Boot Menu 设为 Disable 
+          6、保存更改的设置，退出BIOS，重启 
+    二: 到官方网站下载主板芯片驱动更新 ‹待验证› 
+    三: 将系统进行重置 
+      从官网进行重新安装系统
 --------------------------------------------------------------------------------
 系统特性、设置及说明 
   系统[部分]字体更改
