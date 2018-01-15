@@ -5,19 +5,19 @@
     'prefix': 'template-package'
     'body': """
     <template lang="html">
-      <section class="xxx">
-        $1
-      </section>
+    <section class="xxx">
+      $1
+    </section>
     </template>
     
     <script>
     export default {
-      name: "xxx"
-      ,data: function(){
+      data: function(){
         return {
           
         };
       }
+      ,name: "xxx"
     }
     </script>
     
