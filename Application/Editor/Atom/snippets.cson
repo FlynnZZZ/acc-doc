@@ -6,25 +6,22 @@
   '- PS:  说明':
     'prefix': 'PS-self'
     'body': 'PS: '
+  '- DefDec:  定义说明':
+    'prefix': 'DefDec-self'
+    'body': 'DefDec: '
+  '- Enum:  枚举':
+    'prefix': 'Enum-self'
+    'body': 'Enum: '
+  '- Sort:  类别':
+    'prefix': 'Sort-self'
+    'body': 'Sort: '
   '- Example:  例子':
     'prefix': 'Example-self'
     'body': 'Example: '
-  '- Extend:  继承':
-    'prefix': 'Extend-self'
-    'body': 'Extend: '
   '- Relate:  相关的':
     'prefix': 'Relate-self'
     'body': 'Relate: '
-  '- Static:  静态属性':
-    'prefix': 'Static-self'
-    'body': 'Static: '
-  '- Proto:  原型属性':
-    'prefix': 'Proto-self'
-    'body': 'Proto: '
-  '- Instance:  类的实例':
-    'prefix': 'Instance-self'
-    'body': 'Instance: '
-  '- Member:  对象的成员':
+  '- Member:  ‹对象的›成员':
     'prefix': 'Member-self'
     'body': 'Member: '
   '- Feature:  特性':
@@ -45,10 +42,24 @@
   '- Question:  问题':
     'prefix': 'Question-self'
     'body': 'Question: '
+    
+  '- Extend:  继承':
+    'prefix': 'Extend-self'
+    'body': 'Extend: '
+  '- Static:  静态属性':
+    'prefix': 'Static-self'
+    'body': 'Static: '
+  '- Proto:  原型属性':
+    'prefix': 'Proto-self'
+    'body': 'Proto: '
+  '- Instance:  类的实例':
+    'prefix': 'Instance-self'
+    'body': 'Instance: '
+    
   '- Env:  环境':
     'prefix': 'Env-self'
     'body': 'Env: '
-  '- Sit:  网站':
+  '- Sit:  网站、站点':
     'prefix': 'Sit-self'
     'body': 'Sit: '
   '- Win:  窗口':
