@@ -342,10 +342,10 @@
         // ,cache: true  
       })
       .then(function(backData,statusTxt,xhr){
-        console.info(_url_,'某接口',statusTxt);
+        console.info('_url_','某接口',statusTxt);
       }
       ,function(xhr,status,errorTrown){
-        console.warn(_url_,'某接口',status);
+        console.warn('_url_','某接口',status);
       }) """
   '-jq $.getScript(url,cfoo);  获取JS文件':
     'prefix': 'jq-getScript'

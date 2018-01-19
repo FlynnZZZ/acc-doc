@@ -12,9 +12,12 @@
   '- Enum:  枚举':
     'prefix': 'Enum-self'
     'body': 'Enum: '
-  '- Sort:  类别':
+  '- Sort:  类别分类':
     'prefix': 'Sort-self'
     'body': 'Sort: '
+  '- Pattern:  模式、模型':
+    'prefix': 'Pattern-self'
+    'body': 'Pattern: '
   '- Example:  例子':
     'prefix': 'Example-self'
     'body': 'Example: '
@@ -39,9 +42,9 @@
   '- Expand:  扩展':
     'prefix': 'Expand-self'
     'body': 'Expand: '
-  '- Question:  问题':
-    'prefix': 'Question-self'
-    'body': 'Question: '
+  '- Q&I:  问题及想法':
+    'prefix': 'QuestionIdea-self'
+    'body': 'Q&I: '
     
   '- Extend:  继承':
     'prefix': 'Extend-self'
@@ -83,6 +86,7 @@
   '- MoIn:  更多':
     'prefix': 'MoIn-self'
     'body': 'MoIn: '
+    
   '- NdA  不可直接使用':
     'prefix': 'NdA-self'
     'body': 'NdA'
@@ -103,10 +107,10 @@
     'prefix': 'params-word'
     'body': 'params'
   # 符号
-  '- kh1  括号1':
+  '- ‹$1›  括号1':
     'prefix': 'kh1-fh'
     'body': '‹$1›'
-  '- kh2  括号2':
+  '- «$1»  括号2':
     'prefix': 'kh2-fh'
     'body': '«$1»'
 '.source.js':
