@@ -4,6 +4,7 @@
   '-vue .vue文件模版':
     'prefix': 'template-package'
     'body': """
+    
     <template lang="html">
     <section class="xxx">
       $1

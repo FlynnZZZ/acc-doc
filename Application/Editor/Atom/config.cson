@@ -52,6 +52,7 @@
   core:
     allowPendingPaneItems: false
     audioBeep: false
+    automaticallyUpdate: false
     closeEmptyWindows: false
     destroyEmptyPanes: false
     disabledPackages: [
@@ -74,7 +75,6 @@
       "symbols-view"
       "github"
       "language-vue-component"
-      "atom-beautify"
       "pigments"
       "update-package-dependencies"
       "dalek"

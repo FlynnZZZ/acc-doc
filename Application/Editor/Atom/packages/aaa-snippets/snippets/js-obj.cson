@@ -186,7 +186,7 @@
   'O .lastIndexOf(str[,bgn])  idx,指定位置向前的首个指定字符串的下标,否则返回-1':
     'prefix': 'lastIndexOf-str/arr'
     'body': 'lastIndexOf($1)'
-  'O .concat($1)  str,返回拼接后的字符串':
+  'O .concat($1)  str,返回拼接后的字符串/数组':
     'prefix': 'concat-str/arr'
     'body': 'concat($1)'
   # str/rgep 
@@ -258,10 +258,10 @@
   'O .shift()  val,返回删除的头部成员':
     'prefix': 'shift-arr'
     'body': 'shift()'
-  'O .push($1)  num,末尾添加成员,返回新数组长度':
+  'O .push(val1?...)  num,末尾添加成员,返回新数组长度':
     'prefix': 'push-arr'
     'body': 'push($1)'
-  'O .unshift(val1[,val2,...])  num,头部添加元素,返回新数组长度':
+  'O .unshift(val1 [,val2,...])  num,头部添加元素,返回新数组长度':
     'prefix': 'unshift-arr'
     'body': 'unshift($1)'
   'O .splice(begin ,num ,v1,v2,...)  arr,删除[添加]元素,返回由删除的成员组成的数组':
@@ -270,49 +270,49 @@
   'O .reverse()  arr,颠倒所有成员后返回':
     'prefix': 'reverse-arr'
     'body': 'reverse()'
-  'O .sort([foo])  返回排序后的数组[改变原数组]':
+  'O .sort(foo?)  返回排序后的数组[改变原数组]':
     'prefix': 'sort-arr'
     'body': """sort(${1:function(val1,val2){
       return ${2:true[改变顺序]}
     }})"""
-  'O .join([str])  str,使用指定字符串连成员':
+  'O .join(str?)  str,使用指定字符串连成员':
     'prefix': 'join-arr'
     'body': 'join($1)'
-  'O .forEach(foo)':
+  'O .forEach(foo)  数组遍历':
     'prefix': 'forEach-arr'
-    'body': """forEach(function(val,idx,arr){
+    'body': """forEach(function(val,idx ${1:,arr}){
       $1
     })"""
-  'O .map(cfoo[,this])  arr,返回回调返回值组成的数组':
+  'O .map(cfoo ,this?)  arr,返回回调返回值组成的数组':
     'prefix': 'map-arr'
-    'body': """map(function(val,idx,arr1){
+    'body': """map(function(val,idx ${1:,arr}){
       return $2
-    }${1:,this})"""
-  'O .every(foo [,this])  bol,回调返回值是否全部为真':
+    } )"""
+  'O .every(foo ,this?)  bol,回调返回值是否全部为真':
     'prefix': 'every-arr'
-    'body': """every(function(val,idx,arr){
+    'body': """every(function(val,idx ${1:,arr}){
       return ${2:[全部为真时,才为真]}
-    },${1:this})"""
-  'O .some(foo [,this])  bol,回调返回值是否存在真':
+    } )"""
+  'O .some(foo ,this?)  bol,回调返回值是否存在真':
     'prefix': 'some-arr'
-    'body': """some(function(val,idx,arr){
+    'body': """some(function(val,idx ${1:,arr}){
       return ${2:[若存在返回值为真则返回真]}
-    } ${1:,this})"""
-  'O .filter(foo [,this])  arr,回调返回值为true的元素组成的数组':
+    } )"""
+  'O .filter(foo ,this?)  arr,回调返回值为true的元素组成的数组':
     'prefix': 'filter-arr'
-    'body': """filter(function(val,idx,arr){
+    'body': """filter(function(val,idx ${1:,arr}){
         return ${2:true[保留]}
-      } ,${1:this})"""
-  'O .reduce(foo[,initVal])  条件缩减,返回最后一次回调值':
+      } )"""
+  'O .reduce(foo ,initVal?)  条件缩减,返回最后一次回调值':
     'prefix': 'reduce-arr'
-    'body': """reduce(function(retVal,val,idx,arr){ 
+    'body': """reduce(function(retVal,val,idx ${1:,arr}){ 
       return $2 
-    },${1:initVal})"""
-  'O .reduceRight(foo[,initVal])  同.reduce,只是从右到左遍历':
+    } )"""
+  'O .reduceRight(foo ,initVal?)  同.reduce,只是从右到左遍历':
     'prefix': 'reduceRight-arr'
-    'body': """reduceRight(function(retVal,val,idx,arr){ 
+    'body': """reduceRight(function(retVal,val,idx ${1:,arr}){ 
       return $2 
-    },${1:initVal})"""
+    } )"""
   # fn ------------------------------------------------
   'O Function':
     'prefix': 'Function-fn'
