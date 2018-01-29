@@ -174,7 +174,7 @@
     'prefix': 'toPrecision-num'
     'body': 'toPrecision($1)'
   # str/arr 
-  'O .slice(begin[,end]) str,字符截取':
+  'O .slice(begin[,end]) str,字符/数组截取':
     'prefix': 'slice-str/arr'
     'body': 'slice($1)'
   'O .includes(str/val)  bol,是否包含指定字符串':

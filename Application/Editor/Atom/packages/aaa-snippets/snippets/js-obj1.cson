@@ -139,7 +139,7 @@
   '-O1 .ignoreCase   bol,是否忽略大小写':
     'prefix': 'ignoreCase-re'
     'body': 'ignoreCase'
-  '-O1 .test(str)  bol,是否存在于字符串中':
+  '-O1 .test(str/num)  bol,是否存在于字符串中':
     'prefix': 'test-re'
     'body': 'test($1)'
   '-O1 .exec(str)  arr,正则匹配到的字符串组成的数组':
