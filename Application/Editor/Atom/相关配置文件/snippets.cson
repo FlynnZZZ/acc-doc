@@ -106,6 +106,15 @@
   '- params  参数':
     'prefix': 'params-word'
     'body': 'params'
+  '- response  响应':
+    'prefix': 'response-word'
+    'body': 'response'
+  '- request  请求':
+    'prefix': 'request-word'
+    'body': 'request'
+  '- query  查询':
+    'prefix': 'query-word'
+    'body': 'query'
   # 符号
   '- ‹$1›  括号1':
     'prefix': 'kh1-fh'
