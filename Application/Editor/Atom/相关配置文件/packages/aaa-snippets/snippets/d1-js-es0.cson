@@ -1,7 +1,7 @@
 # js .js 对象及其属性方法--------------------------------------------------------
 '.source.js':
   # obj ------------------------------------------------
-  'O writable':
+  'O writable  可写':
     'prefix': 'writable'
     'body': 'writable' 
   'O enumerable':
@@ -281,8 +281,8 @@
   'O .forEach(foo)  数组遍历':
     'prefix': 'forEach-arr'
     'body': """forEach(function(val,idx ${1:,arr}){
-      $1
-    })"""
+      $2
+    } )"""
   'O .map(cfoo ,this?)  arr,返回回调返回值组成的数组':
     'prefix': 'map-arr'
     'body': """map(function(val,idx ${1:,arr}){

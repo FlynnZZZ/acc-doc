@@ -90,7 +90,14 @@
   '- NdA  不可直接使用':
     'prefix': 'NdA-self'
     'body': 'NdA'
-  # word 
+  # 符号
+  '- ‹$1›  括号1':
+    'prefix': 'kh1-fh'
+    'body': '‹$1›'
+  '- «$1»  括号2':
+    'prefix': 'kh2-fh'
+    'body': '«$1»'
+  # 常用词  
   '- template  模板':
     'prefix': 'template-word'
     'body': 'template'
@@ -115,82 +122,21 @@
   '- query  查询':
     'prefix': 'query-word'
     'body': 'query'
-  # 符号
-  '- ‹$1›  括号1':
-    'prefix': 'kh1-fh'
-    'body': '‹$1›'
-  '- «$1»  括号2':
-    'prefix': 'kh2-fh'
-    'body': '«$1»'
-'.source.js':
-  '- /* $1 */':
-    'prefix': 'zs'
-    'body': '/* $1 */'
   '- prop  属性,组成部分':
     'prefix': 'prop-word'
     'body': """prop""" 
   '- attr  特性,修饰部分':
     'prefix': 'attr-word'
     'body': """attr""" 
-  '- typeof val;  str,值类型检测':
-    'prefix': 'typeof-operat'
-    'body': 'typeof '
-  '- obj instanceof Foo;  bol,对象是否继承至构造函数':
-    'prefix': 'instanceof-operat'
-    'body': """instanceof""" 
-  '- delete val;  bol,删除对象中的成员[值],返回是否删除成功的布尔值':
-    'prefix': 'delete-operat'
-    'body': 'delete '
-  '- prop in obj;  bol,属性是否在对象中[包括原型中属性]':
-    'prefix': 'in-operat'
-    'body': 'in '
-  '- void expr;  undefined,执行表达式':
-    'prefix': 'void-operat'
-    'body': 'void '
-  '- expr1?expr2:expr3;  三元条件运算符':
-    'prefix': 'expr3-operat'
-    'body': '?expr2:expr3'
-  '- try-catch':
-    'prefix': 'try-catch'
-    'body': """try {
-      } 
-      catch (e) {
-      } 
-      finally {
-      }"""
-  '- for (var i = 0; i < $1; i++) { }':
-    'prefix': 'for-es'
-    'body': """for (var i = 0; i < $1; i++) {
-      $2
-    }"""
-  '- for-in;':
-    'prefix': 'for-in-es'
-    'body': """for(var ${1:key} in ${2:obj}){
-      $3
-    };"""
-  # 自定义组合 ---------------------
-  '- ajax-pack':
-    'prefix': 'ajax-pack'
-    'body':  """
-      var xhr = new XMLHttpRequest();
-      xhr.open('Method', 'Url', true);
-      xhr.setRequestHeader('Content-Type', 'application/json'); // 可选
-      xhr.onreadystatechange = function() {
-        if(xhr.readyState === 4) {
-          console.log('state change end', xhr);
-          console.log(xhr.status);
-          console.log(xhr.response);
-          var response = JSON.parse(xhr.response);
-          console.log(response);
-        } 
-        else {
-          console.log('change');
-        }
-      }
-      var aoo = { username: 'gua', password: '123', };
-      var data = JSON.stringify(aoo);
-      xhr.send(data); 
-      """
+  # 代码 
+  '-* <tag>$1</tag>  双标记':
+    'prefix': 'tag-couple'
+    'body': '<${1:tag}></${1:tag}>'
+  '-* <tag/>  单标记':
+    'prefix': 'tag-single'
+    'body': '<${1:tag}/>'
+
+'.source.js':
   '- window.screenLeft':
     'prefix': 'screenLeft-window'
     'body': 'window.screenLeft'

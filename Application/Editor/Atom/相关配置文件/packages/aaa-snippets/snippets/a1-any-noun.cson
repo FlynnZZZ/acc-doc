@@ -1,0 +1,136 @@
+# 所有格式的补全 
+'*':  
+  # 名词 
+  '-* abstract  摘要':
+    'prefix': 'abstract'
+    'body': """abstract""" 
+  '-* bundle  捆、包':
+    'prefix': 'bundle'
+    'body': """bundle""" 
+  '-* config  配置':
+    'prefix': 'config'
+    'body': """config""" 
+  '-* data  数据':
+    'prefix': 'data'
+    'body': """data""" 
+  '-* double  双':
+    'prefix': 'double'
+    'body': """double""" 
+  '-* error  错误':
+    'prefix': 'error'
+    'body': 'error'
+  '-* fail  失败':
+    'prefix': 'fail'
+    'body': """fail""" 
+  '-* success  成功':
+    'prefix': 'success'
+    'body': 'success'
+  '-* from  来自':
+    'prefix': 'from'
+    'body': """from""" 
+  '-* handle  操作':
+    'prefix': 'handle'
+    'body': """handle""" 
+  '-* header  头':
+    'prefix': 'header'
+    'body': """header""" 
+  '-* global  全局':
+    'prefix': 'global'
+    'body': 'global'
+  '-* volatile  易变的':
+    'prefix': 'volatile'
+    'body': """volatile""" 
+  '-* source  源码':
+    'prefix': 'source'
+    'body': 'source'
+  '-* that':
+    'prefix': 'that'
+    'body': 'that'
+  '-* synchronized  同步的':
+    'prefix': 'synchronized'
+    'body': """synchronized""" 
+  '-* transient  短暂的':
+    'prefix': 'transient'
+    'body': """transient""" 
+  '-* route  路线':
+    'prefix': 'route'
+    'body': 'route'
+  '-* socket  套接字':
+    'prefix': 'socket'
+    'body': """socket""" 
+  '-* install  安装':
+    'prefix': 'install'
+    'body': 'install'
+  '-* interface  界面':
+    'prefix': 'interface'
+    'body': """interface""" 
+  '-* loader  载入器':
+    'prefix': 'loader'
+    'body': """loader""" 
+  '-* method  方法':
+    'prefix': 'method'
+    'body': """method""" 
+  '-* multiple  多个':
+    'prefix': 'multiple'
+    'body': """multiple""" 
+  '-* native  本地的':
+    'prefix': 'native'
+    'body': """native""" 
+  '-* package  包':
+    'prefix': 'package'
+    'body': """package""" 
+  '-* private  私有的':
+    'prefix': 'private'
+    'body': """private""" 
+  '-* protect  保护':
+    'prefix': 'protect'
+    'body': """protect""" 
+  '-* component  组件':
+    'prefix': 'component'
+    'body': """component""" 
+  '-* template  模版':
+    'prefix': 'template1' # exit bug 
+    'body': """template""" 
+  '-* compute  计算':
+    'prefix': 'compute'
+    'body': """compute""" 
+  '-* default  默认':
+    'prefix': 'default'
+    'body': 'default'
+  '-* directive  指令':
+    'prefix': 'directive'
+    'body': """directive""" 
+  '-* document  文档':
+    'prefix': 'document'
+    'body': 'document'
+  '-* implements  工具、执行':
+    'prefix': 'implements'
+    'body': """implements""" 
+  '-* length  长度':
+    'prefix': 'length'
+    'body': 'length'
+  '-* resolve  解决':
+    'prefix': 'resolve'
+    'body': 'resolve'
+  '-* reject  拒绝':
+    'prefix': 'reject'
+    'body': 'reject'
+  '-* result  结果':
+    'prefix': 'result'
+    'body': """result""" 
+  '-* target  目标':
+    'prefix': 'target'
+    'body': 'target'
+  '-* value  值':
+    'prefix': 'value'
+    'body': 'value' 
+  # 常用词 
+  '-* autoprefixer':
+    'prefix': 'autoprefixer'
+    'body': 'autoprefixer'
+  # http 
+  '-* Content-Type':
+    'prefix': 'Content-Type'
+    'body': """\"Content-Type\"""" 
+
+

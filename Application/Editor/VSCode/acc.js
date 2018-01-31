@@ -14,7 +14,6 @@
   'snippets/xxx.xx',用户代码片段 
 插件 
   ★外观
-  vscode-icons    // 文件图标主题
   One Dark Theme  // Atom的oneDark主题
   ★功能
   open in browser    // 在浏览器中打开文件 
@@ -23,8 +22,8 @@
   VS Color Picker    // 颜色选取 
     自定义快捷键 ctrl+alt+c 
   ★HTML
-  Auto Rename Tag  // 同时修改HTML标签 
   HTML Snippets    // HTML语言代码提示 
+  Auto Rename Tag  // 同时修改HTML标签 
   ★JS
   JavaScript Snippet Pack         // ES5及以下的代码提示
   JavaScript (ES6) code snippets  // ES6代码提示 
