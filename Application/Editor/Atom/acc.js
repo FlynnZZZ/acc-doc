@@ -1,112 +1,114 @@
-用户全局设置: 'C:/Users/f/.atom/config.cson' 
-  悬挂缩进: 2
-  字体设置: Consolas,楷体 
-    PS: consolas为atom默认字体
-      字体间使用逗号隔开,第一个定义英文字体,第二个定义中文字体.
-  取消勾选: ctrl+滚轮,调整字体大小
-  忽略的文件: 
-    .git, .hg, *.svn, .dS_Store, ._*, thumbs.db,
-    *.docx, *.doc, *.pdf,*.jpg,*.project,*.lnk,*.ini,*.exe
-  非实体字符'Non Word Characters' 
-    // @/\()"':,.;<>~!#$%^&*|+=[]{}`?…、◆★●■▲▼（）,。-[]【】〖〗『』《》
-用户键盘映射: 'C:/Users/f/.atom/keymap.cson' 
-  枚举: 
-    自定义 
-      Now         Prev              功能   
-      ★键盘键位更改  
-      f1          backspace         删除  
-      f5          enter             换行  
-      ★显示/隐藏/打开/关闭 
-      alt-n       ctrl-shift-N      新建窗口 
-      alt-m       ctrl-shift-A      添加项目文件夹 
-      alt-l       ctrl-shift-T      恢复关闭的页面  
-      alt-\       ctrl-|            在文件目录中定位当前文档 
-      alt-1       ctrl-alt-{        折叠所有 
-      alt-2       ctrl-alt-}        展开所有 
-      alt-3       ctrl-alt-[        折叠当前 
-      alt-4       ctrl-alt-]        展开当前 
-      alt-e       ctrl-space        激活代码提示 
-        默认快捷键存在bug
-      alt-b       ctrl-alt-o        浏览器中打开文档 
-      alt-p                         浏览器兼容写法 
-      ★查询/选中  
-      f4          shift-f3          查找时,到上一个 
-      ctrl-e      ctrl-u            取消'ctrl-d'的选中 
-      ctrl-p      alt-f3            选中所有匹配项   
-      alt-q       ctrl-alt-,        选中括号内内容 
-      alt-t       ctrl-alt-backspace  删除匹配括号 
-      alt-f       ctrl-m            标签跳转 
-      ★行操作 
-      alt-c       ctrl-l            行选中 
-      alt-v       ctrl-shift-D      行复制  
-      ctrl-q      ctrl-/            行注释 
-      alt-a       ctrl-[            行负缩进 
-      alt-s       ctrl-]            行缩进 
-      alt-z       ctrl-j            行合并  
-      alt-enter   ctrl-shift-enter  行前插入 
-      alt-x       ctrl-alt-f2       行标记 
-      alt-d       ctrl-shift-K      行删除 
-      ★不常用 
-      alt-u       ctrl-k ctrl-u     字母大写 
-      alt-i       ctrl-k ctrl-l     字母小写 
-    默认  
-      ★显示/隐藏/打开/关闭  
-      ctrl-,         打开设置面板 
-      ctrl-o         打开文件 
-      ctrl-n         新建页面  
-      ctrl-w         关闭当前标签 
-      ctrl-\         开关目录树 
-      ctrl-space     激活代码提示 
-      ctrl-shift-o   打开文件夹 
-      ctrl-home      移到文档开始
-      ctrl-end       移到文档结束
-      ctrl-shift-s   保存所有打开的文件
-      ctrl-shift-u   调出切换编码选项
-      ★查询相关 
-      f2             跳到当前文件的下一条书签
-      ctrl-d         选取和当前单词相同的下一处
-      ctrl-f2        列出当前工程所有书签
-      ctrl-g         跳转到指定的行
-      ctrl-f         当前页查找
-      ctrl-shift-f   在整个文件夹中查找  
-      ctrl-shift-p   调出命令查询框 
-        可查询并执行命令
-      ★行操作 
-      ctrl+↑/↓       行移动
-      ctrl-enter     在当前行的末尾回车
-      ★光标操作  
-      ctrl-click     增加新光标 
-      ctr-→/←        单词单位移动 
-      alt-→/←        单词单位移动 
-      ctrl-alt-↑/↓   光标多选
-      ★文件目录树操作  
-      a             新增文件 
-      shift-a       新增文件夹 
-      m             修改文件名  
-      delet         删除文件 
-      ★不常用 
-  未占用键汇总: 
-    ★左
-    // alt-f1 f2
-    // alt-`
-    // alt-w r 
-    // alt-g
-    // ctrl-3 4
-    ★右
-    // alt- f7 f8 f9 f10
-    // alt-6 7 8 9 0 - =
-    // alt-y [ ]
-    // alt-h j k l ; '
-    // alt-, . /
-    // ctrl-`
-    // ctrl-u i
-    // ctrl-j k ; '
-    // ctrl-n m , . /
-  Question: 
-    如何切换到下一个和当前词相同的词
-用户样式设置: 'C:/Users/f/.atom/styles.less' 
-  // 设置技巧: ctrl-shift-i 打开调试面板,然后调试样式 
-用户代码片段: 'C:/Users/f/.atom/snippets.cson' 
+配置文件 
+  PS: 文件存放路径'C:/Users/<用户名>/.atom/'
+  'config.cson',用户全局设置 
+    悬挂缩进: 2
+    字体设置: Consolas,楷体 
+      PS: consolas为atom默认字体
+        字体间使用逗号隔开,第一个定义英文字体,第二个定义中文字体.
+    取消勾选: ctrl+滚轮,调整字体大小
+    忽略的文件: 
+      .git, .hg, *.svn, .dS_Store, ._*, thumbs.db,
+      *.docx, *.doc, *.pdf,*.jpg,*.project,*.lnk,*.ini,*.exe
+    非实体字符'Non Word Characters' 
+      // @/\()"':,.;<>~!#$%^&*|+=[]{}`?…、◆★●■▲▼（）,。-[]【】〖〗『』《》
+  'keymap.cson',用户键盘映射 
+    枚举: 
+      自定义 
+        Now         Prev              功能   
+        ★键盘键位更改  
+        f1          backspace         删除  
+        f5          enter             换行  
+        ★显示/隐藏/打开/关闭 
+        alt-n       ctrl-shift-N      新建窗口 
+        alt-m       ctrl-shift-A      添加项目文件夹 
+        alt-l       ctrl-shift-T      恢复关闭的页面  
+        alt-\       ctrl-|            在文件目录中定位当前文档 
+        alt-1       ctrl-alt-{        折叠所有 
+        alt-2       ctrl-alt-}        展开所有 
+        alt-3       ctrl-alt-[        折叠当前 
+        alt-4       ctrl-alt-]        展开当前 
+        alt-e       ctrl-space        激活代码提示 
+          默认快捷键存在bug
+        alt-b       ctrl-alt-o        浏览器中打开文档 
+        alt-p                         浏览器兼容写法 
+        ★查询/选中  
+        f4          shift-f3          查找时,到上一个 
+        ctrl-e      ctrl-u            取消'ctrl-d'的选中 
+        ctrl-p      alt-f3            选中所有匹配项   
+        alt-q       ctrl-alt-,        选中括号内内容 
+        alt-t       ctrl-alt-backspace  删除匹配括号 
+        alt-f       ctrl-m            标签跳转 
+        ★行操作 
+        alt-c       ctrl-l            行选中 
+        alt-v       ctrl-shift-D      行复制  
+        ctrl-q      ctrl-/            行注释 
+        alt-a       ctrl-[            行负缩进 
+        alt-s       ctrl-]            行缩进 
+        alt-z       ctrl-j            行合并  
+        alt-enter   ctrl-shift-enter  行前插入 
+        alt-x       ctrl-alt-f2       行标记 
+        alt-d       ctrl-shift-K      行删除 
+        ★不常用 
+        alt-u       ctrl-k ctrl-u     字母大写 
+        alt-i       ctrl-k ctrl-l     字母小写 
+      默认  
+        ★显示/隐藏/打开/关闭  
+        ctrl-,         打开设置面板 
+        ctrl-o         打开文件 
+        ctrl-n         新建页面  
+        ctrl-w         关闭当前标签 
+        ctrl-\         开关目录树 
+        ctrl-space     激活代码提示 
+        ctrl-shift-o   打开文件夹 
+        ctrl-home      移到文档开始
+        ctrl-end       移到文档结束
+        ctrl-shift-s   保存所有打开的文件
+        ctrl-shift-u   调出切换编码选项
+        ★查询相关 
+        f2             跳到当前文件的下一条书签
+        ctrl-d         选取和当前单词相同的下一处
+        ctrl-f2        列出当前工程所有书签
+        ctrl-g         跳转到指定的行
+        ctrl-f         当前页查找
+        ctrl-shift-f   在整个文件夹中查找  
+        ctrl-shift-p   调出命令查询框 
+          可查询并执行命令
+        ★行操作 
+        ctrl+↑/↓       行移动
+        ctrl-enter     在当前行的末尾回车
+        ★光标操作  
+        ctrl-click     增加新光标 
+        ctr-→/←        单词单位移动 
+        alt-→/←        单词单位移动 
+        ctrl-alt-↑/↓   光标多选
+        ★文件目录树操作  
+        a             新增文件 
+        shift-a       新增文件夹 
+        m             修改文件名  
+        delet         删除文件 
+        ★不常用 
+    未占用键汇总: 
+      ★左
+      // alt-f1 f2
+      // alt-`
+      // alt-w r 
+      // alt-g
+      // ctrl-3 4
+      ★右
+      // alt- f7 f8 f9 f10
+      // alt-6 7 8 9 0 - =
+      // alt-y [ ]
+      // alt-h j k l ; '
+      // alt-, . /
+      // ctrl-`
+      // ctrl-u i
+      // ctrl-j k ; '
+      // ctrl-n m , . /
+    Question: 
+      如何切换到下一个和当前词相同的词
+  'styles.less',用户样式设置 
+    // 设置技巧: ctrl-shift-i 打开调试面板,然后调试样式 
+  'snippets.cson',用户代码片段 
 插件 
   自带插件 
     about                  关于Atom的信息查看 [help-about Atom]
@@ -318,3 +320,6 @@ Suggestion&Question
   折叠功能
     html格式文件 行内标签折叠不能达到块便签的效果
   snippets 插件的自定义提示词,激活的关键字不能有重复
+
+
+

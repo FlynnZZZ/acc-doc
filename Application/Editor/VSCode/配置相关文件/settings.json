@@ -1,0 +1,16 @@
+{
+    "git.ignoreMissingGitWarning": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "files.autoSave": "onFocusChange",
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.fontFamily": "Consolas,楷体",
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.scrollBeyondLastLine": false
+}
