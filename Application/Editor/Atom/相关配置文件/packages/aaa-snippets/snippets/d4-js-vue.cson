@@ -1,11 +1,11 @@
-'.text.html.vue': 
-  # Vue 
-  'J00 Vue.extend({});  扩展Vue构造器':
+# Vue 
+'.source.js': 
+  'JV Vue.extend({});  扩展Vue构造器':
     'prefix': 'vue-extend'
     'body': """Vue.extend({
         $1
       });""" 
-  'J00 Vue.component("c-name",{})  全局组件':
+  'JV Vue.component("c-name",{})  全局组件':
     'prefix': 'vue-component'
     'body': """Vue.component('c-name',{
       template: ''
@@ -33,7 +33,7 @@
       ,created: function(){
       }
     });""" 
-  'J00 Vue.component("c-name",foo)  异步全局组件':
+  'JV Vue.component("c-name",foo)  异步全局组件':
     'prefix': 'vue-component-async'
     'body': """Vue.component("c-name",function(rs,rj){
       rs({
@@ -63,7 +63,7 @@
         }
       })
     });""" 
-  'J00 Vue.directive("xx-xx",{});  全局指令':
+  'JV Vue.directive("xx-xx",{});  全局指令':
     'prefix': 'vueDirective'
     'body': """Vue.directive('xxx-xxx', {
       bind : function(el,binds,vn){
@@ -82,15 +82,15 @@
         
       }
     });""" 
-  'J00 Vue.filter("xxx",foo);  全局过滤器':
+  'JV Vue.filter("xxx",foo);  全局过滤器':
     'prefix': 'vue-filter'
     'body': """Vue.filter('xxx',function(val,arg2,arg3){
         $1 
       });""" 
-  'J00 Vue.use($1)  注册插件':
+  'JV Vue.use($1)  注册插件':
     'prefix': 'vue-use'
     'body': 'Vue.use($1)'
-  'J00 new Vue({$1});  实例化Vue':
+  'JV new Vue({$1});  实例化Vue':
     'prefix': 'new-vue'
     'body': """new Vue({
         el: '#xxx'
@@ -107,84 +107,84 @@
           
         }
       });""" 
-  'J00 props  KW,传递属性':
+  'JV props  KW,传递属性':
     'prefix': 'props-vue'
     'body': """props""" 
-  'J00 propsData  KW,传递属性数据':
+  'JV propsData  KW,传递属性数据':
     'prefix': 'propsData-vue'
     'body': """propsData""" 
-  'J00 computed  KW,计算值':
+  'JV computed  KW,计算值':
     'prefix': 'computed-vue'
     'body': """computed""" 
-  'J00 watch  KW,观察数据':
+  'JV watch  KW,观察数据':
     'prefix': 'watch-vue'
     'body': """watch""" 
-  'J00 methods  KW,方法':
+  'JV methods  KW,方法':
     'prefix': 'methods-vue'
     'body': """methods""" 
-  'J00 filters  KW,过滤':
+  'JV filters  KW,过滤':
     'prefix': 'filters-vue'
     'body': """filters""" 
-  'J00 directives  KW,指令':
+  'JV directives  KW,指令':
     'prefix': 'directives-vue'
     'body': """directives""" 
-  'J00 mixins  KW,混合':
+  'JV mixins  KW,混合':
     'prefix': 'mixins-vue'
     'body': """mixins""" 
-  'J00 components  KW,子组件':
+  'JV components  KW,子组件':
     'prefix': 'components-vue'
     'body': """components""" 
-  'J00 beforeCreate  实例刚创建':
+  'JV beforeCreate  实例刚创建':
     'prefix': 'beforeCreate-vue'
     'body': """beforeCreate""" 
-  'J00 created  实例创建完毕':
+  'JV created  实例创建完毕':
     'prefix': 'created-vue'
     'body': """created""" 
-  'J00 beforeMount  DOM渲染前':
+  'JV beforeMount  DOM渲染前':
     'prefix': 'beforeMount-vue'
     'body': """beforeMount""" 
-  'J00 mounted  DOM渲染完毕':
+  'JV mounted  DOM渲染完毕':
     'prefix': 'mounted-vue'
     'body': """mounted""" 
-  'J00 beforeUpdate  更新前':
+  'JV beforeUpdate  更新前':
     'prefix': 'beforeUpdate-vue'
     'body': """beforeUpdate""" 
-  'J00 updated  数据模型更新':
+  'JV updated  数据模型更新':
     'prefix': 'updated-vue'
     'body': """updated""" 
-  'J00 activated  组件被激活时':
+  'JV activated  组件被激活时':
     'prefix': 'activated-vue'
     'body': """activated""" 
-  'J00 deactivated  组件被移除时':
+  'JV deactivated  组件被移除时':
     'prefix': 'deactivated-vue'
     'body': """deactivated""" 
-  'J00 beforeDestroy  销毁前':
+  'JV beforeDestroy  销毁前':
     'prefix': 'beforeDestroy-vue'
     'body': """beforeDestroy""" 
-  'J00 destroyed  销毁观察、组件及事件':
+  'JV destroyed  销毁观察、组件及事件':
     'prefix': 'destroyed-vue'
     'body': """destroyed""" 
-  'J00 .$set(obj,key,val)  更新数据':
+  'JV .$set(obj,key,val)  更新数据':
     'prefix': 'set-vue'
     'body': """$set(obj,key,val)""" 
-  'J00 .$emit("eventName",data)  触发事件':
+  'JV .$emit("eventName",data)  触发事件':
     'prefix': 'emit-vue'
     'body': """$emit('eventName',data)""" 
-  'J00 .$on("eventName",function (){})  监听事件':
+  'JV .$on("eventName",function (){})  监听事件':
     'prefix': 'on-vue'
     'body': """$on('eventName',function (data){
       $1
     })""" 
-  'J00 .$refs  ':
+  'JV .$refs  ':
     'prefix': 'refs-vue'
     'body': """$refs""" 
   # vue插件 
-  'J00 new VueRouter();  实例化路由':
+  'JV new VueRouter();  实例化路由':
     'prefix': 'new-VueRouter'
     'body': """new VueRouter({
         routes : $1
       });""" 
-  'J00 new Vuex.Store({})  实例化数据中心':
+  'JV new Vuex.Store({})  实例化数据中心':
     'prefix': 'new Vuex.store'
     'body': """new Vuex.store({ 
       state: { 
@@ -206,49 +206,49 @@
       ,modules: {  
       }
     })""" 
-  'J00 redirect  KW,重定向':
+  'JV redirect  KW,重定向':
     'prefix': 'redirect-KW-vue'
     'body': """redirect""" 
-  'J00 namespaced  KW,命名空间':
+  'JV namespaced  KW,命名空间':
     'prefix': 'namespaced-KW-vue'
     'body': """namespaced""" 
-  'J00 mapState  FN,状态绑定函数':
+  'JV mapState  FN,状态绑定函数':
     'prefix': 'mapState-FN-vue'
     'body': """mapState""" 
-  'J00 mapMutations  FN,commit绑定函数':
+  'JV mapMutations  FN,commit绑定函数':
     'prefix': 'mapMutations-FN-vue'
     'body': """mapMutations""" 
-  'J00 mapGetters  FN,getters绑定函数':
+  'JV mapGetters  FN,getters绑定函数':
     'prefix': 'mapGetters-FN-vue'
     'body': """mapGetters""" 
-  'J00 mapActions  FN,dispatch绑定函数':
+  'JV mapActions  FN,dispatch绑定函数':
     'prefix': 'mapActions-FN-vue'
     'body': """mapActions""" 
-  'J00 .$router  路由实例':
+  'JV .$router  路由实例':
     'prefix': 'router-vue'
     'body': """$router""" 
-  'J00 .$store  数据中心':
+  'JV .$store  数据中心':
     'prefix': 'store-vue'
     'body': """$store""" 
-  'J00 .$store.state.xx  原始数据':
+  'JV .$store.state.xx  原始数据':
     'prefix': 'store.state-vue'
     'body': """$store.state""" 
-  'J00 .$store.getters.xx  组件中使用数据':
+  'JV .$store.getters.xx  组件中使用数据':
     'prefix': 'store.getters-vue'
     'body': """$store.getters""" 
-  'J00 .$store.commit("foo",data)  执行mutations的方法‹操作state›':
+  'JV .$store.commit("foo",data)  执行mutations的方法‹操作state›':
     'prefix': 'store.commit-vue'
     'body': """$store.commit('foo',data)""" 
-  'J00 commit("foo",data)  执行mutations的方法‹操作state›':
+  'JV commit("foo",data)  执行mutations的方法‹操作state›':
     'prefix': 'commit-vue'
     'body': """commit('foo',data)""" 
-  'J00 .$store.dispatch("goo",data)  执行actions的方法‹操作mutations›':
+  'JV .$store.dispatch("goo",data)  执行actions的方法‹操作mutations›':
     'prefix': 'store.dispatch-vue'
     'body': """$store.dispatch('goo',data)""" 
-  'J00 dispatch("goo",data)  执行actions的方法‹操作mutations›':
+  'JV dispatch("goo",data)  执行actions的方法‹操作mutations›':
     'prefix': 'dispatch-vue'
     'body': """dispatch('goo',data)""" 
-  'J00 .$http.get().then  GET请求':
+  'JV .$http.get().then  GET请求':
     'prefix': 'http.get-vue'
     'body': """$http.get('${1:_url_}',{})  // 某接口
     .then(function(back){
@@ -257,7 +257,7 @@
     ,function(err){
       console.warn('_url_','某接口',err); 
     }) """ 
-  'J00 .$http.post().then  POST请求':
+  'JV .$http.post().then  POST请求':
     'prefix': 'http.post-vue'
     'body': """$http.post('${1:_url_}',{})  // 某接口
     .then(function(back){
