@@ -19,6 +19,10 @@
   'DOM .dispatchEvent(event)  bol,派发事件,返回是否阻止默认行为':
     'prefix': 'dispatchEvent-EventTarget'
     'body': '.dispatchEvent(event)'
+  # TouchEvent  
+  'DOM .changedTouches  TouchEvent,手指列表':
+    'prefix': 'TouchEvent-changedTouches'
+    'body': 'changedTouches'
   # Node  
   'DOM .cloneNode(bol)  node,返回复制的节点':
     'prefix': 'cloneNode-Node'

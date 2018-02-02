@@ -64,13 +64,13 @@
       })
     });""" 
   'JV Vue.directive("xx-xx",{});  全局指令':
-    'prefix': 'vueDirective'
+    'prefix': 'vue-directive'
     'body': """Vue.directive('xxx-xxx', {
       bind : function(el,binds,vn){
         // binds{name,value,expression,arg,modifiers}
       }
       ,inserted : function(el,binds,vn){
-        
+        // binds{name,value,expression,arg,modifiers}
       }
       ,update : function(el,binds,vn,oVn){
         // binds{name,value,expression,arg,modifiers,oldValue}
@@ -79,7 +79,7 @@
         // binds{name,value,expression,arg,modifiers,oldValue}
       }
       ,unbind : function(el,binds,vn,oVn){
-        
+        // binds{name,value,expression,arg,modifiers}
       }
     });""" 
   'JV Vue.filter("xxx",foo);  全局过滤器':
