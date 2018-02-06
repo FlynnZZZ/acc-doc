@@ -36,104 +36,104 @@
 '.text.html.basic,.text.html.vue': 
   # 标签 
   '-HD <slot name="xxx">$1</slot>  子组件中对应分发的内容':
-    'prefix': 'slot-tag'
+    'prefix': 'slot-tag-vue'
     'body': '<slot name="${1:xxx}">$2</slot>'
   '-HD <keep-alive>$1</keep-alive>  组件缓存,避免重新渲染':
-    'prefix': 'keep-alive'
+    'prefix': 'keep-alive-tag-vue'
     'body': '<keep-alive>$1</keep-alive>'
   '-HD <transition>$1</transition>  过渡动画':
-    'prefix': 'transition'
+    'prefix': 'transition-tag-vue'
     'body': '<transition name="$1">$2</transition>'
   '-HD <router-view></router-view>  路由视图':
-    'prefix': 'router-view-couple'
+    'prefix': 'router-view-couple-vue'
     'body': '<router-view name="$2">$1</router-view>' 
   '-HD <router-view />  路由视图':
-    'prefix': 'router-view'
+    'prefix': 'router-view-single-vue'
     'body': '<router-view name="$1" />' 
   '-HD <router-link></router-link>  路由入口':
-    'prefix': 'router-link'
+    'prefix': 'router-link-tag-vue'
     'body': '<router-link>$1</router-link>' 
   # 指令  
   '-HD v-if  是否渲染控制':
-    'prefix': 'vif'
+    'prefix': 'v-if-vue'
     'body': 'v-if="${1:key}"' 
   '-HD v-else-if  是否渲染控制':
-    'prefix': 'v-else-if'
+    'prefix': 'v-else-if-vue'
     'body': 'v-else-if="${1:key}"' 
   '-HD v-else  是否渲染控制':
-    'prefix': 'v-else'
+    'prefix': 'v-else-vue'
     'body': 'v-else'
   '-HD v-show  是否显示控制':
-    'prefix': 'v-show'
+    'prefix': 'v-show-vue'
     'body': 'v-show="${1:key}"' 
   '-HD v-for  循环渲染':
-    'prefix': 'v-for'
+    'prefix': 'v-for-vue'
     'body': 'v-for="(val,key) in list"' 
   '-HD v-text  文本插入':
-    'prefix': 'v-text'
+    'prefix': 'v-text-vue'
     'body': 'v-text="${1:key}"' 
   '-HD v-html  HTML插入':
-    'prefix': 'v-html'
+    'prefix': 'v-html-vue'
     'body': 'v-html="${1:key}"' 
   '-HD v-model  双向‹表单›绑定':
-    'prefix': 'v-model'
+    'prefix': 'v-model-vue'
     'body': 'v-model="${1:key}"'
   '-HD v-bind  属性绑定':
-    'prefix': 'v-bind'
+    'prefix': 'v-bind-vue'
     'body': ':${1:class}="${2:arg}"'
   '-HD v-on  事件绑定':
-    'prefix': 'v-on'
+    'prefix': 'v-on-vue'
     'body': '@${1:click}="${2:arg}"' 
   '-HD v-once  一次性插值‹配合插值使用›':
-    'prefix': 'v-once'
+    'prefix': 'v-once-vue'
     'body': """v-once""" 
   '-HD v-cloak  实例编译时存在‹结束后消失›':
-    'prefix': 'v-cloak'
+    'prefix': 'v-cloak-vue'
     'body': """v-cloak""" 
   '-HD v-pre  跳过该部分的编译':
-    'prefix': 'v-pre'
+    'prefix': 'v-pre-vue'
     'body': """v-pre""" 
   '-HD v-directive  自定义指令':
-    'prefix': 'v-directive'
+    'prefix': 'v-directive-vue'
     'body': 'v-name="{fn: foo, arg: arg1}"' 
   # 属性   
-  '-HD lang="$1" ':
-    'prefix': 'lang'
+  '-HD lang="$1" 定义使用的语言':
+    'prefix': 'lang-attr'
     'body': """lang=\"$1\"""" 
   '-HD slot="$1"  父组件中具名的分发内容':
     'prefix': 'slot-attr-vue'
     'body': 'slot="$1"' 
-  '-HD scope="$1"  ':
-    'prefix': 'scope-vue'
+  '-HD scope="$1"  作用域插槽,提供父组件分发内容的数据':
+    'prefix': 'scope-attr-vue'
     'body': 'scope="$1"' 
-  '-HD is="$1"  ':
-    'prefix': 'is-vue'
+  '-HD is="$1"  指定组件':
+    'prefix': 'is-attr-vue'
     'body': 'is="$1"' 
-  '-HD ref="$1"  ':
-    'prefix': 'ref-vue'
+  '-HD ref="$1"  子组件索引-标识子组件':
+    'prefix': 'ref-attr-vue'
     'body': 'ref="$1"'
-  '-HD inline-template="$1"  ':
-    'prefix': 'inline-template-vue'
+  '-HD inline-template="$1"  内联模版':
+    'prefix': 'inline-template-attr-vue'
     'body': 'inline-template="$1"' 
-  '-HD to="$1"  router-link属性,跳转地址':
-    'prefix': 'to-router-link'
+  '-HD to="$1"  <router-link>属性,跳转地址':
+    'prefix': 'to-attr-router'
     'body': 'to="$1"'
-  '-HD active-class="$1"  router-link属性,路径匹配激活class':
-    'prefix': 'active-class-router-link'
+  '-HD active-class="$1"  <router-link>属性,路径匹配激活class':
+    'prefix': 'active-class-attr-router-link'
     'body': 'active-class="$1"'
   '-HD exact-active-class="$1"  router-link属性,路径精确匹配激活class':
     'prefix': 'exact-active-class-router-link'
     'body': 'exact-active-class="$1"'
   # 属性-布尔值    
-  '-HD scoped  ':
-    'prefix': 'scoped-vue'
+  '-HD scoped  CSS样式只在该组件中生效':
+    'prefix': 'scoped-attr-vue'
     'body': 'scoped'
   '-HD append  router-link属性,跳转加上当前地址':
-    'prefix': 'append-router-vue'
+    'prefix': 'append-attr-router-vue'
     'body': 'append'
   # 属性-其他 
-  '-HD text/x-template  ':
-    'prefix': 'text/x-template-vue'
+  '-HD text/x-template  定义组件模版':
+    'prefix': 'text/x-template-attr-vue'
     'body': '"text/x-template"'
 
 
