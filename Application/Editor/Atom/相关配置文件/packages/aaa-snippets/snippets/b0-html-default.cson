@@ -37,20 +37,20 @@
   # 标签 
   '-HD <slot name="xxx">$1</slot>  子组件中对应分发的内容':
     'prefix': 'slot-tag'
-    'body': '<slot name="xxx">$1</slot>'
-  '-HD <keep-alive>$1</keep-alive>  ':
+    'body': '<slot name="${1:xxx}">$2</slot>'
+  '-HD <keep-alive>$1</keep-alive>  组件缓存,避免重新渲染':
     'prefix': 'keep-alive'
     'body': '<keep-alive>$1</keep-alive>'
-  '-HD <transition>$1</transition>  ':
+  '-HD <transition>$1</transition>  过渡动画':
     'prefix': 'transition'
     'body': '<transition name="$1">$2</transition>'
-  '-HD <router-view></router-view>  ':
+  '-HD <router-view></router-view>  路由视图':
     'prefix': 'router-view-couple'
     'body': '<router-view name="$2">$1</router-view>' 
-  '-HD <router-view />  ':
+  '-HD <router-view />  路由视图':
     'prefix': 'router-view'
     'body': '<router-view name="$1" />' 
-  '-HD <router-link></router-link>  ':
+  '-HD <router-link></router-link>  路由入口':
     'prefix': 'router-link'
     'body': '<router-link>$1</router-link>' 
   # 指令  
@@ -101,7 +101,7 @@
     'prefix': 'lang'
     'body': """lang=\"$1\"""" 
   '-HD slot="$1"  父组件中具名的分发内容':
-    'prefix': 'slot-vue'
+    'prefix': 'slot-attr-vue'
     'body': 'slot="$1"' 
   '-HD scope="$1"  ':
     'prefix': 'scope-vue'
