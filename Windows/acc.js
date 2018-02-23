@@ -133,28 +133,33 @@ Q&A
     进入到防火墙设置页->高级设置,
     选择 出站规则 或 进站规则,进行 新建规则,
     然后跟着指引设置即可
-◆Problem: 
-一直更新失败 
-  停止 'Windows update' 和 'Background Intelligent Transfer Service' 服务  
-  方法一: 
-    删除临时文件 
-      'C:\Windows\SoftwareDistribution'下
-      删除 DataStore 文件夹下的内容和 Download 文件夹下的内容 
-    重命名'SoftwareDistribution'文件夹为'SDfolder' ? 
-      Windows+R 打开运行,输入 services.msc 并回车 
-      打开'Windows  Update'服务,点击'服务状态'下面的'关闭'按钮,将启动类型改为'禁用'
-      然后重命名,完成后,重启之后重新启用 Windows  Update 服务再尝试检查更新和安装 
-  方法二: 
-    删除文件夹 'C:\Windows\System32\Tasks\Microsoft\XblGameSave' 
-    删除注册表文件夹 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Schedule\ TaskCache\Tree\Microsoft\XblGameSave' 
-  方法三: 
-    控制面板/疑难解答/使用windows更新解决问题 
-  终极方法: 搜索'windows10',进入下载页,点击立即更新,下载辅助更新软件'易升' 
-svchost.exe 占大量网速和内存 
-  右键我的电脑----管理---选择服务 
-  找到 Background Intelligent Transfer Service
-  服务状态改为停止服务
-  启动类型改为手动或禁用
+问题汇总: 
+  一直更新失败 
+    停止 'Windows update' 和 'Background Intelligent Transfer Service' 服务  
+    方法一: 
+      删除临时文件 
+        'C:\Windows\SoftwareDistribution'下
+        删除 DataStore 文件夹下的内容和 Download 文件夹下的内容 
+      重命名'SoftwareDistribution'文件夹为'SDfolder' ? 
+        Windows+R 打开运行,输入 services.msc 并回车 
+        打开'Windows  Update'服务,点击'服务状态'下面的'关闭'按钮,将启动类型改为'禁用'
+        然后重命名,完成后,重启之后重新启用 Windows  Update 服务再尝试检查更新和安装 
+    方法二: 
+      删除文件夹 'C:\Windows\System32\Tasks\Microsoft\XblGameSave' 
+      删除注册表文件夹 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Schedule\ TaskCache\Tree\Microsoft\XblGameSave' 
+    方法三: 
+      控制面板/疑难解答/使用windows更新解决问题 
+    终极方法: 搜索'windows10',进入下载页,点击立即更新,下载辅助更新软件'易升' 
+  svchost.exe 占大量网速和内存 
+    右键我的电脑----管理---选择服务 
+    找到 Background Intelligent Transfer Service
+    服务状态改为停止服务
+    启动类型改为手动或禁用
+  IE‹Internet Explore 11›浏览器消失了,重现方法  
+    控制面板-启用或关闭windows功能
+    接着,关闭选项 'Internet Explore 11' ,重启 
+    然后,勾选选项 'Internet Explore 11' ,重启 
+    最后,在开始菜单 的 Accessories 文件夹下,找到 IE
 --------------------------------------------------------------------------------
 
 
