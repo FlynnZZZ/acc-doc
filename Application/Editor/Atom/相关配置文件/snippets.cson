@@ -134,7 +134,7 @@
     'body': '<${1:tag}></${1:tag}>'
   '-* <tag/>  单标记':
     'prefix': 'tag-single'
-    'body': '<${1:tag}/>'
+    'body': '<${1:tag} />'
 
 '.source.js':
   '- window.screenLeft':
