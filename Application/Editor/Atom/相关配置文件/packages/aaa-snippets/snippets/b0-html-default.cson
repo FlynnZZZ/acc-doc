@@ -34,25 +34,6 @@
     'body': 'data-$1="$2"'
 # html & vue 
 '.text.html.basic,.text.html.vue': 
-  # 标签 
-  '-HD <slot name="xxx">$1</slot>  子组件中对应分发的内容':
-    'prefix': 'slot-tag-vue'
-    'body': '<slot name="${1:xxx}">$2</slot>'
-  '-HD <keep-alive>$1</keep-alive>  组件缓存,避免重新渲染':
-    'prefix': 'keep-alive-tag-vue'
-    'body': '<keep-alive>$1</keep-alive>'
-  '-HD <transition>$1</transition>  过渡动画':
-    'prefix': 'transition-tag-vue'
-    'body': '<transition name="$1">$2</transition>'
-  '-HD <router-view></router-view>  路由视图':
-    'prefix': 'router-view-couple-vue'
-    'body': '<router-view name="$2">$1</router-view>' 
-  '-HD <router-view />  路由视图':
-    'prefix': 'router-view-single-vue'
-    'body': '<router-view name="$1" />' 
-  '-HD <router-link></router-link>  路由入口':
-    'prefix': 'router-link-tag-vue'
-    'body': '<router-link>$1</router-link>' 
   # 指令  
   '-HD v-if  是否渲染控制':
     'prefix': 'v-if-vue'
@@ -96,6 +77,25 @@
   '-HD v-directive  自定义指令':
     'prefix': 'v-directive-vue'
     'body': 'v-name="{fn: foo, arg: arg1}"' 
+  # 标签 
+  '-HD <slot name="xxx">$1</slot>  子组件中对应分发的内容':
+    'prefix': 'slot-tag-vue'
+    'body': '<slot name="${1:xxx}">$2</slot>'
+  '-HD <keep-alive>$1</keep-alive>  组件缓存,避免重新渲染':
+    'prefix': 'keep-alive-tag-vue'
+    'body': '<keep-alive>$1</keep-alive>'
+  '-HD <transition>$1</transition>  过渡动画':
+    'prefix': 'transition-tag-vue'
+    'body': '<transition name="$1">$2</transition>'
+  '-HD <router-view></router-view>  路由视图':
+    'prefix': 'router-view-couple-vue'
+    'body': '<router-view name="$2">$1</router-view>' 
+  '-HD <router-view />  路由视图':
+    'prefix': 'router-view-single-vue'
+    'body': '<router-view name="$1" />' 
+  '-HD <router-link></router-link>  路由入口':
+    'prefix': 'router-link-tag-vue'
+    'body': '<router-link>$1</router-link>' 
   # 属性   
   '-HD lang="$1" 定义使用的语言':
     'prefix': 'lang-attr'
@@ -129,6 +129,9 @@
     'prefix': 'scoped-attr-vue'
     'body': 'scoped'
   '-HD append  router-link属性,跳转加上当前地址':
+    'prefix': 'append-attr-router-vue'
+    'body': 'append'
+  '-HD replace  router-link属性,跳转并替换历史记录':
     'prefix': 'append-attr-router-vue'
     'body': 'append'
   # 属性-其他 
