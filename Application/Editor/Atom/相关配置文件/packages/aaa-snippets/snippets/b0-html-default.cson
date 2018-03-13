@@ -118,6 +118,9 @@
   '-HD to="$1"  <router-link>属性,跳转地址':
     'prefix': 'to-attr-router'
     'body': 'to="$1"'
+  '-HD tag="div"  <router-link>属性,渲染成的标签':
+    'prefix': 'tag-attr-router'
+    'body': 'tag="$1"'
   '-HD active-class="$1"  <router-link>属性,路径匹配激活class':
     'prefix': 'active-class-attr-router-link'
     'body': 'active-class="$1"'
