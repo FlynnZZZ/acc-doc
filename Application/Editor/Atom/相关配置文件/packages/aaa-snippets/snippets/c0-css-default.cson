@@ -19,6 +19,9 @@
   '-CM background-color: #b9e4e7;  背景色':
     'prefix': 'background-color-fast'
     'body': 'background-color: #${1:b9e4e7};'
+  '-CM outline: 1px solid red;  边线':
+    'prefix': 'outline-fast'
+    'body': 'outline: 1px solid red;'
   '-CM border: solid blue 1px;':
     'prefix': 'border-fast'
     'body': 'border: solid blue 1px;'

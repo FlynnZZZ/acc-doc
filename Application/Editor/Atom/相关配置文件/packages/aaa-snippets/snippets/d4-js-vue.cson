@@ -1,5 +1,6 @@
 # Vue 
 '.source.js': 
+  # 类 
   'JV Vue.extend({});  扩展Vue构造器':
     'prefix': 'vue-extend'
     'body': """Vue.extend({
@@ -107,9 +108,26 @@
           
         }
       });""" 
+  # 配置属性 
   'JV props  KW,传递属性':
     'prefix': 'props-vue'
     'body': """props""" 
+  'JV props  KW,传递属性':
+    'prefix': 'props-vue-pack'
+    'body': """props: {
+        xxx: {
+          default: function () {  
+            return ;
+          }
+          ,type: String, 
+            // String Number Boolean Function Object Array Symbol
+            // 自定义构造器函数,使用 instanceof 检测 
+          ,required: true,  
+          ,validator: function (value) {  
+            return value > 10
+          }
+        }
+      }""" 
   'JV propsData  KW,传递属性数据':
     'prefix': 'propsData-vue'
     'body': """propsData""" 
@@ -164,6 +182,7 @@
   'JV destroyed  销毁观察、组件及事件':
     'prefix': 'destroyed-vue'
     'body': """destroyed""" 
+  # 属性方法 
   'JV .$set(obj,key,val)  更新数据':
     'prefix': 'set-vue'
     'body': """$set(obj,key,val)""" 
