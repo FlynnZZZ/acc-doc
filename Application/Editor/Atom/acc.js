@@ -48,6 +48,9 @@
         alt-enter   ctrl-shift-enter  行前插入 
         alt-x       ctrl-alt-f2       行标记 
         alt-d       ctrl-shift-K      行删除 
+        ★插件快捷键 
+        alt-r      ctrl-shift-b      script插件-运行代码
+        alt-w      ctrl-q            script插件-清理当前进程 
         ★不常用 
         alt-u       ctrl-k ctrl-u     字母大写 
         alt-i       ctrl-k ctrl-l     字母小写 
@@ -91,7 +94,6 @@
       ★左
       // alt-f1 f2
       // alt-`
-      // alt-w r 
       // alt-g
       // ctrl-3 4
       ★右
@@ -276,6 +278,9 @@
       安装此插件会在编辑器下方添加浏览器的小图标,点击在浏览器中打开正在编辑的文档.
     atom-wx                    '.wxml','.wxss'语法高亮 
     language-vue               '.vue'语法高亮 
+    script                     在Atom中运行代码  
+      Default Current Working Directory (CWD) Behavior  // 设置代码执行时的路径 
+        Directory of the script   // 当前代码执行的路径 
     选用插件 
       atom-beautify              代码格式美化
       autocomplete-cocos2d-js    cocos的补全插件
