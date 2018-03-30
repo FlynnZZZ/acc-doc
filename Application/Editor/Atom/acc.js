@@ -281,6 +281,8 @@
     script                     在Atom中运行代码  
       Default Current Working Directory (CWD) Behavior  // 设置代码执行时的路径 
         Directory of the script   // 当前代码执行的路径 
+      目前存在的问题: 
+        监听端口后,结束运行代码,程序仍占用端口 
     选用插件 
       atom-beautify              代码格式美化
       autocomplete-cocos2d-js    cocos的补全插件

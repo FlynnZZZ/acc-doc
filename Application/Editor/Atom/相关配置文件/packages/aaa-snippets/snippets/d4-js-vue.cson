@@ -112,31 +112,47 @@
   'JV props  KW,传递属性':
     'prefix': 'props-vue'
     'body': """props""" 
-  'JV props  KW,传递属性':
-    'prefix': 'props-vue-pack'
-    'body': """props: {
-        xxx: {
-          default: function () {  
-            return ;
-          }
-          ,type: String, 
-            // String Number Boolean Function Object Array Symbol
-            // 自定义构造器函数,使用 instanceof 检测 
-          ,required: true,  
-          ,validator: function (value) {  
-            return value > 10
-          }
+  'JV props-member  MB,传递属性的完整成员':
+    'prefix': 'props-member-vue'
+    'body': """xxx: {
+        default: function () {  
+          return ;
         }
-      }""" 
+        ,type: String, 
+          // String Number Boolean Function Object Array Symbol
+          // 自定义构造器函数,使用 instanceof 检测 
+        ,required: true,  
+        ,validator: function (value) {  
+          return value > 10
+        }
+      } """ 
   'JV propsData  KW,传递属性数据':
     'prefix': 'propsData-vue'
     'body': """propsData""" 
   'JV computed  KW,计算值':
     'prefix': 'computed-vue'
     'body': """computed""" 
+  'JV computed-member  MB,计算值的完整成员':
+    'prefix': 'computed-member-vue'
+    'body': """xxx: {
+        get: function () {
+          return 
+        }
+        ,set: function (val) {
+          
+        }
+      } """ 
   'JV watch  KW,观察数据':
     'prefix': 'watch-vue'
     'body': """watch""" 
+  'JV watch-member  MB,数据监听的完整成员':
+    'prefix': 'watch-member-vue'
+    'body': """'aaa.bbb': {
+        deep: true 
+        ,handler: function ( val, oldVal) {
+          
+        }
+      }""" 
   'JV methods  KW,方法':
     'prefix': 'methods-vue'
     'body': """methods""" 
