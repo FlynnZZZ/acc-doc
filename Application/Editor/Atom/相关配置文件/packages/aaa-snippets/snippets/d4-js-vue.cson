@@ -249,19 +249,19 @@
     'prefix': 'new Vuex.store'
     'body': """new Vuex.store({ 
       state: { 
-        aoo: 123  
+        stateData1: 123  
       }
       ,mutations: {  
         foo: function(state,data){  
         }
       }
       ,getters: {  
-        boo: function(state,getters){
+        boo: function({ stateData1 },getters){
           return state.xx;
         }
       }
       ,actions: {   
-        goo: function(context,data){  
+        goo: function({ commit },data){  
         }
       }
       ,modules: {  
