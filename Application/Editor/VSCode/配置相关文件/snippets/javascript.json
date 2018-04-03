@@ -1,0 +1,78 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"console.log($1)": {
+		"prefix": "log",
+		"body": [ "console.log($1)" ],
+		"description": "console.log($1)"
+	}
+	
+// NodeJS 相关 
+	// 公用 
+	,"require($1)": {
+		"prefix": "require-module",
+		"body": [ "require" ],
+	}
+	,"import {xxx} from 'xxx'": {
+		"prefix": "import-from-module",
+		"body": [ "import ${1:xxx} from 'xxx'" ],
+	}
+	,".toString()": {
+		"prefix": "toString()-buffer",
+		"body": [ "toString()" ],
+	}
+
+	// querystring 模块
+	,"querystring": {
+		"prefix": "querystring",
+		"body": [ "querystring" ]
+	}
+	,".parse(str)": {
+		"prefix": "parse-querystring",
+		"body": [ "parse($1)" ]
+	}
+
+	// url 模块
+	,".parse(url,bol,bol)": {
+		"prefix": "parse-url",
+		"body": [ "parse(url,bol,bol)" ]
+	}
+
+	// http 模块
+	,".createServer(fn)": {
+		"prefix": "createServer-http",
+		"body": [ "createServer(function(){  \n$1 \n})" ]
+	}
+	,".listen(port?,ip?)": {
+		"prefix": "listen-server",
+		"body": [ "listen(8080,'127.0.0.1')" ]
+	}
+	,".write($1)": {
+		"prefix": "write-response",
+		"body": [ "write($1)" ]
+	}
+	,".end($1?)": {
+		"prefix": "write-request",
+		"body": [ "end()" ]
+	}
+	// file system 模块
+	,".readFile(path,fn,)": {
+		"prefix": "readFile-fs",
+		"body": [ "readFile(path ,function (err,data) {\n  $1 \n}" ]
+	}
+	,".writeFile(path,content,fn)": {
+		"prefix": "writeFile-fs",
+		"body": [ "writeFile(path,content,function(err){\n  $1\n}" ]
+	}
+}
