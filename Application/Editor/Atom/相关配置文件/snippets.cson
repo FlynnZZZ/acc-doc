@@ -9,41 +9,38 @@
   '- DefDec:  定义说明':
     'prefix': 'DefDec-self'
     'body': 'DefDec: '
+  '- Describe:  描述':
+    'prefix': 'Describe-self'
+    'body': 'Describe: '
+  '- Feature:  特性':
+    'prefix': 'Feature-self'
+    'body': 'Feature: '
   '- Enum:  枚举':
     'prefix': 'Enum-self'
     'body': 'Enum: '
   '- Sort:  类别分类':
     'prefix': 'Sort-self'
     'body': 'Sort: '
-  '- Pattern:  模式、模型':
-    'prefix': 'Pattern-self'
-    'body': 'Pattern: '
   '- Example:  例子':
     'prefix': 'Example-self'
     'body': 'Example: '
   '- Relate:  相关的':
     'prefix': 'Relate-self'
     'body': 'Relate: '
-  '- Member:  ‹对象的›成员':
-    'prefix': 'Member-self'
-    'body': 'Member: '
-  '- Feature:  特性':
-    'prefix': 'Feature-self'
-    'body': 'Feature: '
+  '- Expand:  扩展':
+    'prefix': 'Expand-self'
+    'body': 'Expand: '
+  '- More:  更多':
+    'prefix': 'More-self'
+    'body': 'More: '
   '- Accu:  总结,积累':
     'prefix': 'Accu-self'
     'body': 'Accu: '
   '- Self:  自己相关':
     'prefix': 'Self-self'
     'body': 'Self: '
-  '- More:  更多':
-    'prefix': 'More-self'
-    'body': 'More: '
-  '- Expand:  扩展':
-    'prefix': 'Expand-self'
-    'body': 'Expand: '
   '- Q&I:  问题及想法':
-    'prefix': 'QuestionIdea-self'
+    'prefix': 'Question-Idea-self'
     'body': 'Q&I: '
     
   '- Extend:  继承':
@@ -58,6 +55,21 @@
   '- Instance:  类的实例':
     'prefix': 'Instance-self'
     'body': 'Instance: '
+  '- Member:  ‹对象的›成员':
+    'prefix': 'Member-self'
+    'body': 'Member: '
+  '- Arguments:  参数':
+    'prefix': 'Arguments-self'
+    'body': 'Arguments: '
+  '- Return:  返回值':
+    'prefix': 'Return-self'
+    'body': 'Return: '
+  '- Input:  输入':
+    'prefix': 'Input-self'
+    'body': 'Input: '
+  '- Output:  输出':
+    'prefix': 'Output-self'
+    'body': 'Output: '
     
   '- Env:  环境':
     'prefix': 'Env-self'
@@ -88,7 +100,7 @@
     'body': 'MoIn: '
     
   '- NdA  不可直接使用':
-    'prefix': 'NdA-self'
+    'prefix': 'not-direct-access-self'
     'body': 'NdA'
   # 符号
   '- ‹$1›  括号1':
