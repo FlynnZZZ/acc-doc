@@ -2,8 +2,9 @@
 '.text.html.vue':
   '-vue .vue文件模版':
     'prefix': 'template-package'
-    'body': """
-    
+    'body': """<!--  
+      
+    -->
     <template lang="html">
     <section class="xxx">
       $1
