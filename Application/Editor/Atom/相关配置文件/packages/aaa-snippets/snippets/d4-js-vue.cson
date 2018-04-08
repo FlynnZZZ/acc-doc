@@ -199,7 +199,7 @@
     'prefix': 'destroyed-vue'
     'body': """destroyed""" 
   # 属性方法 
-  'JV .$set(obj,key,val)  更新数据':
+  'JV vm.$set(obj,key,val)  更新数据':
     'prefix': 'set-vue'
     'body': """$set(obj,key,val)""" 
   'JV .$emit("eventName",data)  触发事件':
@@ -252,21 +252,42 @@
         stateData1: 123  
       }
       ,mutations: {  
-        foo: function(state,data){  
+        fooMt: function(state,data){  
         }
       }
       ,getters: {  
-        boo: function({ stateData1 },getters){
-          return state.xx;
+        fooGt: function({ stateData1 },getters){
+          return stateData1;
         }
       }
       ,actions: {   
-        goo: function({ commit },data){  
+        fooAt: function({ commit },data){  
         }
       }
       ,modules: {  
       }
     })""" 
+  'JV vuex-store-module  vuex模块化':
+    'prefix': 'vuex-store-module'
+    'body': """export default { 
+      state: { 
+        stateData1: 123  
+      }
+      ,mutations: {  
+        fooMt: function(state,data){  
+        }
+      }
+      ,getters: {  
+        fooGt: function({ stateData1 },getters){
+          return stateData1;
+        }
+      }
+      ,actions: {   
+        fooAt: function({ commit },data){  
+        }
+      }
+      ,namespaced: true 
+    }""" 
   'JV namespaced  KW,命名空间':
     'prefix': 'namespaced-KW-vue'
     'body': """namespaced""" 
