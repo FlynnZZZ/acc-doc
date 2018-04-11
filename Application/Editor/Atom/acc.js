@@ -315,7 +315,7 @@
   1.20.0 开启atom-beautify导致内存占用过高  
   1.23.1 CSS代码提示,冒号后有空格则无提示 
     display: block; 
-Suggestion&Question 
+Q&I: 
   优点总结
     折叠功能优秀
     选中字符后直接增加括号,则选中的内容被包括在括号内
@@ -327,6 +327,9 @@ Suggestion&Question
   折叠功能
     html格式文件 行内标签折叠不能达到块便签的效果
   snippets 插件的自定义提示词,激活的关键字不能有重复
-
+Q&A: 
+  使用一段时间后,出现卡死崩溃,无响应的现象,关闭重新启动后一直处于卡死状态 
+    $ atom --clear-window-state  // 命令行执行 
+  
 
 

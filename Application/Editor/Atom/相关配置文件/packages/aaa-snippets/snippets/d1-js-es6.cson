@@ -8,11 +8,23 @@
     'prefix': 'new-promise'
     'body': '''new Promise(function(rs,rj){
       })'''
-  '-6 pms.then(fn1,fn2)  pms,执行':
+  '-6 pms.then(fn1,fn2)  pms,执行rs/rj':
     'prefix': 'then-promise'
     'body': '''then(function(data){
       }
-      ,function(){
+      ,function(info){
+      })'''
+  '-6 pms.then(fn)  pms,执行rs':
+    'prefix': 'then1-promise'
+    'body': '''then(function(data){
+      })'''
+  '-6 pms.catch(fn)  pms,执行rj':
+    'prefix': 'catch-promise'
+    'body': '''catch(function(info){
+      })'''
+  '-6 pms.finally(fn)  pms,最终会执行':
+    'prefix': 'finally-promise'
+    'body': '''finally(function(data){
       })'''
   # num 
   '-6 Number.MAX_SAFE_INTEGER':
