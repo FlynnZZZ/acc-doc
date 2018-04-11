@@ -220,6 +220,21 @@
   '-DOM .readAsText':
     'prefix': 'readAsText'
     'body': 'readAsText'
+  # Img ------------------------------------------------
+  '-O2 new Image()  图片元素对象':
+    'prefix': 'new-Image'
+    'body': 'new Image()'
+  # indexedDB ------------------------------------------------
+  '-O2 indexedDB  浏览器数据库':
+    'prefix': 'indexedDB'
+    'body': 'indexedDB'
+  # FormData ------------------------------------------------
+  '-O2 new FormData(formEl?)  表单模拟':
+    'prefix': 'new FormData'
+    'body': 'new FormData()'
+  '-O2 append(key,val,fileName?)  添加字段':
+    'prefix': 'append-FormData'
+    'body': 'append(key,val ${1:,fileName})'
 
 
 

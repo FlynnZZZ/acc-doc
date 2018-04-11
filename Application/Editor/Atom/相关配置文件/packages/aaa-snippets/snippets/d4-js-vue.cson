@@ -267,8 +267,8 @@
       ,modules: {  
       }
     })""" 
-  'JV vuex-store-module  vuex模块化':
-    'prefix': 'vuex-store-module'
+  'JV store-vuex-module  vuex模块化':
+    'prefix': 'store-vuex-module'
     'body': """export default { 
       state: { 
         stateData1: 123  

@@ -231,9 +231,9 @@
   '-O1 console  控制台调试对象':
     'prefix': 'console'
     'body': 'console'
-  '-O1 .log("%c%s","color:red",str)  带颜色输出':
+  '-O1 .log("%c%s","color:red",str,$1)  带颜色输出':
     'prefix': 'console-log-color'
-    'body': 'console.log("%c%s","color:red",$1)'
+    'body': 'console.log("%c%s","color:red","说明",$1)'
   '-O1 .info(val1,val2,..)  输出信息性消息':
     'prefix': 'console-info'
     'body': 'console.info($1)'

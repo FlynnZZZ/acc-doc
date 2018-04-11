@@ -4,6 +4,16 @@
   '-6 Promise':
     'prefix': 'Promise'
     'body': 'Promise'
+  '-6 new Promise(fn)  实例化Promise':
+    'prefix': 'new-promise'
+    'body': '''new Promise(function(rs,rj){
+      })'''
+  '-6 pms.then(fn1,fn2)  pms,执行':
+    'prefix': 'then-promise'
+    'body': '''then(function(data){
+      }
+      ,function(){
+      })'''
   # num 
   '-6 Number.MAX_SAFE_INTEGER':
     'prefix': 'Number-MAX_SAFE_INTEGER'
@@ -58,16 +68,6 @@
   '-6 Array.of(val1,val2,..)':
     'prefix': 'Array-of'
     'body': 'Array.of($1)'
-  '-6 arr .find(foo(member))':
-    'prefix': 'find arr'
-    'body': '''.find(function(val){
-        $1
-      }))'''
-  '-6 arr .findIndex(foo(member))':
-    'prefix': 'findIndex arr'
-    'body': '''.findIndex(function(val){
-        $1
-      }))'''
   # function 
   '-6 gen iterator':
     'prefix': 'iterator'

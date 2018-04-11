@@ -313,6 +313,16 @@
     'body': """reduceRight(function(retVal,val,idx ${1:,arr}){ 
       return $2 
     } )"""
+  'O arr.find(fn)  meber,成员查询':
+    'prefix': 'find-arr'
+    'body': """find(function(meber){ 
+      return bol   
+    } )"""
+  'O arr.findIndex(fn)  idx,成员查询':
+    'prefix': 'findIndex-arr'
+    'body': """findIndex(function(meber){ 
+      return bol   
+    } )"""
   # fn ------------------------------------------------
   'O Function':
     'prefix': 'Function-fn'
@@ -342,17 +352,16 @@
     'prefix': 'bind-fn'
     'body': 'bind(${1:this},${2:arg1,arg2,..})'
   'O function foo(){}  定义函数':
-    'prefix': 'function-1'
-    'body': 'function $1($2){$3\n}'
+    'prefix': 'function-11'
+    'body': '''function $1($2){
+      } '''
   'O function(){}  匿名函数':
-    'prefix': 'function-2'
+    'prefix': 'function-22'
     'body': '''function($1){
-        $2
       }'''
   'O ;(function (){})()  立即执行的匿名函数':
-    'prefix': 'function-3'
+    'prefix': 'function-33'
     'body': ''';(function ($1){
-        $3
       })($2)'''
 
 
