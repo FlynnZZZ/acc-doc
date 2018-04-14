@@ -1,238 +1,182 @@
-# DOM .js --------------------------------------------------------------------- 
+# 元素标签相关&与元素相关的类和对象  --------------------------------------------------------------------- 
 '.source.js':
   # multi  
-  'DOM .querySelector("$1")':
+  'dom1 .querySelector("$1")':
     'prefix': 'querySelector-el'
     'body': 'querySelector("$1")'
-  'DOM .querySelectorAll("$1")':
+  'dom1 .querySelectorAll("$1")':
     'prefix': 'querySelectorAll-el'
     'body': 'querySelectorAll("$1")'
-  # EventTarget  
-  'DOM .addEventListener("",foo)  绑定事件':
-    'prefix': 'addEventListener-EventTarget'
-    'body': """addEventListener("${1:click}",function(e){
-        $2
-      })"""
-  'DOM .removeEventListener(["",foo])  解除绑定':
-    'prefix': 'removeEventListener-EventTarget'
-    'body': '.removeEventListener("$1",foo)'
-  'DOM .dispatchEvent(event)  bol,派发事件,返回是否阻止默认行为':
-    'prefix': 'dispatchEvent-EventTarget'
-    'body': '.dispatchEvent(event)'
-  # TouchEvent  
-  'DOM .changedTouches  TouchEvent,手指列表':
-    'prefix': 'TouchEvent-changedTouches'
-    'body': 'changedTouches'
   # Node  
-  'DOM .cloneNode(bol)  node,返回复制的节点':
+  'dom1 .cloneNode(bol)  node,返回复制的节点':
     'prefix': 'cloneNode-Node'
     'body': 'cloneNode($1)'
-  'DOM .parentElement  父元素节点':
+  'dom1 .parentElement  父元素节点':
     'prefix': 'parentElement-Node'
     'body': 'parentElement'
-  'DOM .appendChild(node)  内部尾部添加子节点':
+  'dom1 .appendChild(node)  内部尾部添加子节点':
     'prefix': 'appendChild-Node'
     'body': 'appendChild($1)'
-  'DOM .insertBefore(cNode,flagNode)  节点内的指定节点前插入子节点':
+  'dom1 .insertBefore(cNode,flagNode)  节点内的指定节点前插入子节点':
     'prefix': 'insertBefore-Node'
     'body': 'insertBefore(node,flagNode)'
   # Document  
-  'DOM .createElement("$1")  创建元素节点':
+  'dom1 .createElement("$1")  创建元素节点':
     'prefix': 'createElement-Document'
     'body': 'createElement("$1")'
   # Element  
-  'DOM .innerHTML("$1") 读写,标签内HTML':
+  'dom1 .innerHTML("$1") 读写,标签内HTML':
     'prefix': 'innerHTML-Element'
     'body': 'innerHTML("$1")'
-  'DOM .insertAdjacentHTML("${1:beforeend}",html)  在指定位置插入HTML代码':
+  'dom1 .insertAdjacentHTML("${1:beforeend}",html)  在指定位置插入HTML代码':
     'prefix': 'insertAdjacentHTML-Element'
     'body': 'insertAdjacentHTML("${1:beforeend}",html)'
-  'DOM .getAttribute("$1")  str,获取特性的值':
+  'dom1 .getAttribute("$1")  str,获取特性的值':
     'prefix': 'getAttribute-Element'
     'body': 'getAttribute("$1")'
-  'DOM .setAttribute("$1","$2")  设置特性':
+  'dom1 .setAttribute("$1","$2")  设置特性':
     'prefix': 'setAttribute-Element'
     'body': 'setAttribute("$1","$2")'
   # Element  
-  'DOM .innerText("$1")  读写,标签内文本':
+  'dom1 .innerText("$1")  读写,标签内文本':
     'prefix': 'innerText-HTMLElement'
     'body': 'innerText("$1")'
-  # event name   
-  'DOM readystatechange':
-    'prefix': 'readystatechange-eventName'
-    'body': 'readystatechange'
-  # Event   
-  'DOM .type  事件类型':
-    'prefix': 'type-Event'
-    'body': """type""" 
-  'DOM .bubbles  bol,事件是否冒泡':
-    'prefix': 'bubbles-Event'
-    'body': """bubbles""" 
-  'DOM .cancelable  bol,是否可取消事件默认行为':
-    'prefix': 'cancelable-Event'
-    'body': """cancelable""" 
-  'DOM .trusted  bol,是否可取消事件默认行为':
-    'prefix': 'trusted-Event'
-    'body': """trusted""" 
-  'DOM .target  触发事件的目标元素':
-    'prefix': 'target-Event'
-    'body': """target""" 
-  'DOM .srcElement  事件目标,同.target':
-    'prefix': 'srcElement-Event'
-    'body': """srcElement""" 
-  'DOM .currentTarget  绑定事件的元素[即函数中的this]':
-    'prefix': 'currentTarget-Event'
-    'body': """currentTarget""" 
-  'DOM .preventDefault()  阻止事件的默认行为':
-    'prefix': 'preventDefault-Event'
-    'body': 'preventDefault()'
-  'DOM .stopPropagation()  阻止冒泡':
-    'prefix': 'stopPropagation-Event'
-    'body': 'stopPropagation()'
-  # MouseEvent   
-  'DOM .pageX  num,相对页面左上角的距离':
-    'prefix': 'pageX-MouseEvent'
-    'body': 'pageX'
-  'DOM .pageY  num,相对页面左上角的距离':
-    'prefix': 'pageY-MouseEvent'
-    'body': 'pageY'
   # HTMLCanvasElement 
-  'DOM .toDataURL(type,quality)  str,返回图片的dataURI':
+  'dom1 .toDataURL(type,quality)  str,返回图片的dataURI':
     'prefix': 'toDataURL-HTMLCanvasElement'
     'body': """toDataURL($1)"""
-  'DOM .getContext("2d")  CanvasRenderingContext2D,获取上下文对象':
+  'dom1 .getContext("2d")  CanvasRenderingContext2D,获取上下文对象':
     'prefix': 'getContext-HTMLCanvasElement'
     'body': """getContext($1)"""
   # CanvasRenderingContext2D 
-  'DOM .strokeStyle  读写,描边颜色':
+  'dom1 .strokeStyle  读写,描边颜色':
     'prefix': 'strokeStyle-CanvasRenderingContext2D'
     'body': """strokeStyle"""
-  'DOM .fillStyle  读写,填充颜色':
+  'dom1 .fillStyle  读写,填充颜色':
     'prefix': 'fillStyle-CanvasRenderingContext2D'
     'body': """fillStyle"""
-  'DOM .globalAlpha  num,读写,全局透明度,范围 0.0-1.0':
+  'dom1 .globalAlpha  num,读写,全局透明度,范围 0.0-1.0':
     'prefix': 'globalAlpha-CanvasRenderingContext2D'
     'body': """globalAlpha"""
-  'DOM .lineWidth  num,读写,线宽,默认 1.0':
+  'dom1 .lineWidth  num,读写,线宽,默认 1.0':
     'prefix': 'lineWidth-CanvasRenderingContext2D'
     'body': """lineWidth"""
-  'DOM .lineCap   kw,读写,线条端点样式':
+  'dom1 .lineCap   kw,读写,线条端点样式':
     'prefix': 'lineCap-CanvasRenderingContext2D'
     'body': """lineCap"""
-  'DOM .lineJoin   kw,读写,线条接合处的样式':
+  'dom1 .lineJoin   kw,读写,线条接合处的样式':
     'prefix': 'lineJoin-CanvasRenderingContext2D'
     'body': """lineJoin"""
-  'DOM .globalCompositeOperation   kw,读写,显示层次':
+  'dom1 .globalCompositeOperation   kw,读写,显示层次':
     'prefix': 'globalCompositeOperation-CanvasRenderingContext2D'
     'body': """globalCompositeOperation"""
-  'DOM .font   读写,文本样式、大小及字体':
+  'dom1 .font   读写,文本样式、大小及字体':
     'prefix': 'font-CanvasRenderingContext2D'
     'body': """font='italic bold 1.5em Times,serif'"""
-  'DOM .textAlign   kw,读写,文本水平对齐方式':
+  'dom1 .textAlign   kw,读写,文本水平对齐方式':
     'prefix': 'textAlign-CanvasRenderingContext2D'
     'body': """textAlign"""
-  'DOM .textBaseline   读写,基线,字体的垂直对齐方式':
+  'dom1 .textBaseline   读写,基线,字体的垂直对齐方式':
     'prefix': 'textBaseline-CanvasRenderingContext2D'
     'body': """textBaseline"""
-  'DOM .fillRect(x,y,w,h)  绘制左上角为(x,y)、宽w、高h的填充矩形':
+  'dom1 .fillRect(x,y,w,h)  绘制左上角为(x,y)、宽w、高h的填充矩形':
     'prefix': 'fillRect-CanvasRenderingContext2D'
     'body': """fillRect($1)"""
-  'DOM .strokeRect(x,y,w,h)  绘制左上角为(x,y)、宽w、高h的描边矩形':
+  'dom1 .strokeRect(x,y,w,h)  绘制左上角为(x,y)、宽w、高h的描边矩形':
     'prefix': 'strokeRect-CanvasRenderingContext2D'
     'body': """strokeRect($1)"""
-  'DOM .clearRect(x,y,w,h)  清空一左上角为(x,y)、宽w、高h的矩形区域':
+  'dom1 .clearRect(x,y,w,h)  清空一左上角为(x,y)、宽w、高h的矩形区域':
     'prefix': 'clearRect-CanvasRenderingContext2D'
     'body': """clearRect($1)"""
-  'DOM .beginPath()  开始路径':
+  'dom1 .beginPath()  开始路径':
     'prefix': 'beginPath-CanvasRenderingContext2D'
     'body': """beginPath()"""
-  'DOM .closePath()  闭合路径':
+  'dom1 .closePath()  闭合路径':
     'prefix': 'closePath-CanvasRenderingContext2D'
     'body': """closePath()"""
-  'DOM .moveTo(x,y)  移动笔触':
+  'dom1 .moveTo(x,y)  移动笔触':
     'prefix': 'moveTo-CanvasRenderingContext2D'
     'body': """moveTo($1)"""
-  'DOM .isPointInStroke(x,y)  bol,点是否位于路径上':
+  'dom1 .isPointInStroke(x,y)  bol,点是否位于路径上':
     'prefix': 'isPointInStroke-CanvasRenderingContext2D'
     'body': """isPointInStroke($1)"""
-  'DOM .lineTo(x,y)  绘制上一点到(x,y)的直线':
+  'dom1 .lineTo(x,y)  绘制上一点到(x,y)的直线':
     'prefix': 'lineTo-CanvasRenderingContext2D'
     'body': """lineTo($1)"""
-  'DOM .rect(x,y,w,h)  绘制左上角为(x,y)、宽w、高h的矩形':
+  'dom1 .rect(x,y,w,h)  绘制左上角为(x,y)、宽w、高h的矩形':
     'prefix': 'rect-CanvasRenderingContext2D'
     'body': """rect($1)"""
-  'DOM .arc(x,y,r,startAngle,endAngle,bol)  通过圆心+半径+夹角绘制圆弧':
+  'dom1 .arc(x,y,r,startAngle,endAngle,bol)  通过圆心+半径+夹角绘制圆弧':
     'prefix': 'arc-CanvasRenderingContext2D'
     'body': """arc(x,y,r,startAngle,Math.PI,false)"""
-  'DOM .arcTo(x1,y1,x2,y2,r)  连接上一点到(x2,y2)的弧线':
+  'dom1 .arcTo(x1,y1,x2,y2,r)  连接上一点到(x2,y2)的弧线':
     'prefix': 'arcTo-CanvasRenderingContext2D'
     'body': """arcTo(x1,y1,x2,y2,r)"""
-  'DOM .stroke()  路径描边':
+  'dom1 .stroke()  路径描边':
     'prefix': 'stroke-CanvasRenderingContext2D'
     'body': """stroke()"""
-  'DOM .fill([kw])  路径填充':
+  'dom1 .fill([kw])  路径填充':
     'prefix': 'fill-CanvasRenderingContext2D'
     'body': """fill()"""
-  'DOM .measureText(str)  TextMetrics,字符串文本测量':
+  'dom1 .measureText(str)  TextMetrics,字符串文本测量':
     'prefix': 'measureText-CanvasRenderingContext2D'
     'body': """measureText($1)"""
-  'DOM .strokeText(text,x,y[,maxW])  描边以(x,y)为左下角的文本':
+  'dom1 .strokeText(text,x,y[,maxW])  描边以(x,y)为左下角的文本':
     'prefix': 'strokeText-CanvasRenderingContext2D'
     'body': """strokeText($1)"""
-  'DOM .fillText(text,x,y[,maxW])  填充以(x,y)为左下角的文本':
+  'dom1 .fillText(text,x,y[,maxW])  填充以(x,y)为左下角的文本':
     'prefix': 'fillText-CanvasRenderingContext2D'
     'body': """fillText($1)"""
-  'DOM .drawImage(img,x,y[,w,h])  绘制图像':
+  'dom1 .drawImage(img,x,y[,w,h])  绘制图像':
     'prefix': 'drawImage-CanvasRenderingContext2D'
     'body': """drawImage($1)"""
-  'DOM .drawImage(img,sX,sY,sW,sH,dX,dY,dW,dH)  局部展示':
+  'dom1 .drawImage(img,sX,sY,sW,sH,dX,dY,dW,dH)  局部展示':
     'prefix': 'drawImage1-CanvasRenderingContext2D'
     'body': """drawImage($1)"""
-  'DOM .rotate(angle)  顺时针旋转':
+  'dom1 .rotate(angle)  顺时针旋转':
     'prefix': 'rotate-CanvasRenderingContext2D'
     'body': """rotate(0.25*Math.PI)"""
-  'DOM .scale(scaleX,scaleY)  缩放':
+  'dom1 .scale(scaleX,scaleY)  缩放':
     'prefix': 'scale-CanvasRenderingContext2D'
     'body': """scale($1)"""
-  'DOM .translate(x,y)  变换原点,(0,0)变为(x,y)':
+  'dom1 .translate(x,y)  变换原点,(0,0)变为(x,y)':
     'prefix': 'translate-CanvasRenderingContext2D'
     'body': """translate($1)"""
-  'DOM .transform(m1_1,m1_2,m2_1,m2_2,dx,dy)  直接修改变换矩阵':
+  'dom1 .transform(m1_1,m1_2,m2_1,m2_2,dx,dy)  直接修改变换矩阵':
     'prefix': 'transform-CanvasRenderingContext2D'
     'body': """transform(m1_1,m1_2,m2_1,m2_2,dx,dy)"""
-  'DOM .setTransform(m1_1,m1_2,m2_1,m2_2,dx,dy)  重设变换矩阵':
+  'dom1 .setTransform(m1_1,m1_2,m2_1,m2_2,dx,dy)  重设变换矩阵':
     'prefix': 'setTransform-CanvasRenderingContext2D'
     'body': """setTransform(m1_1,m1_2,m2_1,m2_2,dx,dy)"""
-  'DOM .getImageData(x,y,w,h)  ImageData,获取图像':
+  'dom1 .getImageData(x,y,w,h)  ImageData,获取图像':
     'prefix': 'getImageData-CanvasRenderingContext2D'
     'body': """getImageData(x,y,w,h)"""
   # FileReader 
-  'DOM .readAsDataURL()':
+  'dom1 FileReader':
+    'prefix': 'FileReader'
+    'body': """FileReader"""
+  'dom1 .readAsDataURL()':
     'prefix': 'readAsDataURL-FileReader'
     'body': """readAsDataURL($1)"""
   # 
-  '-DOM .readAsBinaryString':
+  'dom1 .readAsBinaryString':
     'prefix': 'readAsBinaryString'
     'body': 'readAsBinaryString'
-  '-DOM .readAsArrayBuffer':
+  'dom1 .readAsArrayBuffer':
     'prefix': 'readAsArrayBuffer'
     'body': 'readAsArrayBuffer'
-  '-DOM .readAsText':
+  'dom1 .readAsText':
     'prefix': 'readAsText'
     'body': 'readAsText'
   # Img ------------------------------------------------
-  '-O2 new Image()  图片元素对象':
+  'dom1 new Image()  图片元素对象':
     'prefix': 'new-Image'
     'body': 'new Image()'
-  # indexedDB ------------------------------------------------
-  '-O2 indexedDB  浏览器数据库':
-    'prefix': 'indexedDB'
-    'body': 'indexedDB'
   # FormData ------------------------------------------------
-  '-O2 new FormData(formEl?)  表单模拟':
+  'dom1 new FormData(formEl?)  表单模拟':
     'prefix': 'new FormData'
     'body': 'new FormData()'
-  '-O2 append(key,val,fileName?)  添加字段':
+  'dom1 append(key,val,fileName?)  添加字段':
     'prefix': 'append-FormData'
     'body': 'append(key,val ${1:,fileName})'
 

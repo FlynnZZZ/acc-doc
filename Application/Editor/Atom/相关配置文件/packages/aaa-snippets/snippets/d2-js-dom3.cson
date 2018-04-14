@@ -1,0 +1,70 @@
+# 事件相关 --------------------------------------------------------------------- 
+'.source.js':
+  # EventTarget  
+  'dom3 .addEventListener("",foo)  绑定事件':
+    'prefix': 'addEventListener-EventTarget'
+    'body': """addEventListener("${1:click}",function(e){
+        $2
+      })"""
+  'dom3 .removeEventListener(["",foo])  解除绑定':
+    'prefix': 'removeEventListener-EventTarget'
+    'body': '.removeEventListener("$1",foo)'
+  'dom3 .dispatchEvent(event)  bol,派发事件,返回是否阻止默认行为':
+    'prefix': 'dispatchEvent-EventTarget'
+    'body': '.dispatchEvent(event)'
+  # TouchEvent  
+  'dom3 .changedTouches  TouchEvent,手指列表':
+    'prefix': 'TouchEvent-changedTouches'
+    'body': 'changedTouches'
+  # event name   
+  'dom3 readystatechange':
+    'prefix': 'readystatechange-eventName'
+    'body': 'readystatechange'
+  # Event   
+  'dom3 .type  事件类型':
+    'prefix': 'type-Event'
+    'body': """type""" 
+  'dom3 .bubbles  bol,事件是否冒泡':
+    'prefix': 'bubbles-Event'
+    'body': """bubbles""" 
+  'dom3 .cancelable  bol,是否可取消事件默认行为':
+    'prefix': 'cancelable-Event'
+    'body': """cancelable""" 
+  'dom3 .trusted  bol,是否可取消事件默认行为':
+    'prefix': 'trusted-Event'
+    'body': """trusted""" 
+  'dom3 .target  触发事件的目标元素':
+    'prefix': 'target-Event'
+    'body': """target""" 
+  'dom3 .srcElement  事件目标,同.target':
+    'prefix': 'srcElement-Event'
+    'body': """srcElement""" 
+  'dom3 .currentTarget  绑定事件的元素[即函数中的this]':
+    'prefix': 'currentTarget-Event'
+    'body': """currentTarget""" 
+  'dom3 .preventDefault()  阻止事件的默认行为':
+    'prefix': 'preventDefault-Event'
+    'body': 'preventDefault()'
+  'dom3 .stopPropagation()  阻止冒泡':
+    'prefix': 'stopPropagation-Event'
+    'body': 'stopPropagation()'
+  # MouseEvent   
+  'dom3 .pageX  num,相对页面左上角的距离':
+    'prefix': 'pageX-MouseEvent'
+    'body': 'pageX'
+  'dom3 .pageY  num,相对页面左上角的距离':
+    'prefix': 'pageY-MouseEvent'
+    'body': 'pageY'
+
+
+
+
+
+
+
+
+
+
+
+
+

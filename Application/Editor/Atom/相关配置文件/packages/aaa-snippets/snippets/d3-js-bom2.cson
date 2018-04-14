@@ -1,0 +1,5 @@
+# 次常用API ---------------------------------------------------------------------
+'.source.js': 
+  'bom2 indexedDB  浏览器数据库':
+    'prefix': 'indexedDB'
+    'body': 'indexedDB'

@@ -1,55 +1,55 @@
-# BOM  .js ---------------------------------------------------------------------
+# 常用API ---------------------------------------------------------------------
 '.source.js': 
   # clss --------------------------------------------
-  'BOM XMLHttpRequest':
-    'prefix': 'XMLHttpRequest'
-    'body': 'XMLHttpRequest'
-  'BOM FileReader':
-    'prefix': 'FileReader'
-    'body': """FileReader"""
-  'BOM WebSocket':
+  'bom1 WebSocket':
     'prefix': 'WebSocket'
     'body': 'WebSocket'
   # window ------------------------------------------
-  'BOM window':
+  'bom1 window':
     'prefix': 'window'
     'body': 'window'
-  'BOM history':
-    'prefix': 'history'
-    'body': 'history'
-  'BOM location':
-    'prefix': 'location'
-    'body': 'location'
-  'BOM navigator':
-    'prefix': 'navigator'
-    'body': 'navigator'
-  'BOM localStorage':
-    'prefix': 'localStorage'
-    'body': 'localStorage'
-  'BOM sessionStorage':
-    'prefix': 'sessionStorage'
-    'body': 'sessionStorage'
-  'BOM alert($1)  提示窗':
+  'bom1 alert($1)  提示窗':
     'prefix': 'alert'
     'body': 'alert($1)'
-  'BOM confirm(str)':
+  'bom1 confirm(str)':
     'prefix': 'confirm'
     'body': 'confirm($1)'
-  'BOM open()':
+  'bom1 open()':
     'prefix': 'open'
     'body': 'open("${1:url}","_self")'
-  'BOM prompt("提示文字","默认输入文字")':
+  'bom1 prompt("提示文字","默认输入文字")':
     'prefix': 'prompt'
     'body': 'prompt("${1:提示文字}","${2:默认输入文字}")'
-  'BOM setTimeout(${1:funName},${2:time})':
+  'bom1 setTimeout(${1:funName},${2:time})':
     'prefix': 'setTimeout'
     'body': 'setTimeout(${1:funName},${2:1000})'
-  'BOM setInterval(${1:funName},${2:time})':
+  'bom1 setInterval(${1:funName},${2:time})':
     'prefix': 'setInterval'
     'body': 'setInterval(${1:funName},${2:1000})'
-  'BOM clearInterval($1)':
+  'bom1 clearInterval($1)':
     'prefix': 'clearInterval'
     'body': 'clearInterval($1)'
-  'BOM clearTimeout($1)':
+  'bom1 clearTimeout($1)':
     'prefix': 'clearTimeout'
     'body': 'clearTimeout($1)'
+  # history ------------------------------------------
+  'bom1 history':
+    'prefix': 'history'
+    'body': 'history'
+  # location ------------------------------------------
+  'bom1 location':
+    'prefix': 'location'
+    'body': 'location'
+  # navigator ------------------------------------------
+  'bom1 navigator':
+    'prefix': 'navigator'
+    'body': 'navigator'
+  # storage ------------------------------------------
+  'bom1 localStorage':
+    'prefix': 'localStorage'
+    'body': 'localStorage'
+  'bom1 sessionStorage':
+    'prefix': 'sessionStorage'
+    'body': 'sessionStorage'
+
+
