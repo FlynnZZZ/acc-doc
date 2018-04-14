@@ -324,24 +324,36 @@
   'JV dispatch("goo",data)  执行actions的方法‹操作mutations›':
     'prefix': 'dispatch-vue'
     'body': """dispatch('goo',data)""" 
-  'JV .$http.get().then  GET请求':
+  'JV http.get()  GET请求':
     'prefix': 'http.get-vue'
-    'body': """$http.get('${1:_url_}',{})  // 某接口
+    'body': """http.get('${1:_url_}',{ params: { } }) // 某接口
+    .then(function(back){
+      console.info('_url_','某接口',back.statusText);
+    }) """ 
+  'JV http.get().then  GET请求':
+    'prefix': 'http.get-then-vue'
+    'body': """http.get('${1:_url_}',{ params: { } }) // 某接口
     .then(function(back){
       console.info('_url_','某接口',back.statusText);
     }
     ,function(err){
       console.warn('_url_','某接口',err); 
     }) """ 
-  'JV .$http.post().then  POST请求':
+  'JV http.post()  POST请求':
     'prefix': 'http.post-vue'
-    'body': """$http.post('${1:_url_}',{})  // 某接口
+    'body': """http.post('${1:_url_}',{})  // 某接口
+    .then(function(back){
+      console.info('_url_','某接口',back.statusText);
+    })""" 
+  'JV http.post().then  POST请求':
+    'prefix': 'http.post-then-vue'
+    'body': """http.post('${1:_url_}',{})  // 某接口
     .then(function(back){
       console.info('_url_','某接口',back.statusText);
     }
     ,function(error){
       console.warn('_url_','某接口',err); 
     })""" 
-    
+  
 
 

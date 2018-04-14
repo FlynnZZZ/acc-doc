@@ -4,19 +4,31 @@
   '-6 Promise':
     'prefix': 'Promise'
     'body': 'Promise'
+  '-6 Promise.all(promiseArr)  全局模式':
+    'prefix': 'Promise.all'
+    'body': '''Promise.all([
+        promise1
+        ,...
+      ])'''
+  '-6 Promise.race(promiseArr)  竞速模式':
+    'prefix': 'Promise.race'
+    'body': '''Promise.race([
+        promise1
+        ,...
+      ])'''
   '-6 new Promise(fn)  实例化Promise':
     'prefix': 'new-promise'
     'body': '''new Promise(function(rs,rj){
       })'''
-  '-6 pms.then(fn1,fn2)  pms,执行rs/rj':
+  '-6 pms.then(fn)  pms,执行rs':
     'prefix': 'then-promise'
+    'body': '''then(function(data){
+      })'''
+  '-6 pms.then(fn1,fn2)  pms,执行rs/rj':
+    'prefix': 'then-both-promise'
     'body': '''then(function(data){
       }
       ,function(info){
-      })'''
-  '-6 pms.then(fn)  pms,执行rs':
-    'prefix': 'then1-promise'
-    'body': '''then(function(data){
       })'''
   '-6 pms.catch(fn)  pms,执行rj':
     'prefix': 'catch-promise'

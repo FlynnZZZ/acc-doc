@@ -69,47 +69,48 @@ BIOS'Basic Input/Output System',基本输入输出系统
     （即: %windir%\explorer.exe ,）,然后保存。
     记住此方法是把输入法切换在英文状态下进行。
 快捷键 
-  ★窗口操作 
-  alt-space-n           窗口最小化
-  win-d                 显示桌面 
-  ctrl-n                另外打开一新的该窗口
-  alt-esc               以项目打开的顺序切换项目
-  ctrl?-alt-tab-↑↓→←?   在打开的项目间切换
-  ctrl?-win-tab-↑↓→←?   '3D'形式切换界面
-  ★文档操作 
-  ctrl?-shift-↑↓→←  文字选择 
-  ctrl-a            全选
-  ctrl-f            查找
-  ctrl-p            打印
-  ctrl-s            保存
-  ctrl-z            取消
-  ctrl-f4           关闭多个文档
-  shift-↑↓→←           多个项目选择
-  
-  alt-f4            退出
-  ctrl-scroll       缩放 
-    可在桌面上调整图标大小  
-  alt-enter         显示所选项的属性
-  shift-f10         打开右键菜单
-  alt-↑             打开文件夹的上级菜单
-  ctrl-shift-esc    打开任务管理器
-  
-  ctrl-esc    打开开始菜单
-  win-<num>   打开任务栏上的第几个程序
-  win-d       显示桌面
-  win-e       打开我的电脑
-  win-l       锁定计算机或切换用户
-  win-r       打开运行对话框
-  win-t       切换任务栏上的程序
-  win-w       打开工作区面板,可使用便签、草图板及屏幕草绘等工具.
-  win-space   预览桌面/选择输入法 
-  win-↑↓→←    最大化/最小化/最大化到屏幕左/右侧
-  win-f       搜索文件或文件夹
-  win-ctrl-f  搜索计算机‹需要在网络上›
-
-  shift-drag      可将复制到换成移动到
-  prtscSysRq      全屏截屏 
-    截屏后需在画图软件中粘贴出来,才可以查看
+  ★系统/桌面相关操作 
+    win-d       显示桌面
+    win-e       打开我的电脑
+    win-r       打开运行对话框
+    win-w       打开工作区面板,可使用便签、草图板及屏幕草绘等工具.
+    win-l       锁定计算机或切换用户
+    win-<num>   打开任务栏上的第几个程序
+    win-t       切换任务栏上的程序
+    win-space   预览桌面/选择输入法 
+    win-↑↓→←    最大化/最小化/最大化到屏幕左/右侧
+    win-ctrl-f  搜索计算机‹需要在网络上›
+    win-f       搜索文件或文件夹/反馈中心 
+    ctrl-scroll       缩放 
+      可在桌面上调整图标大小  
+    ctrl-shift-esc    打开任务管理器
+    ctrl-esc    打开开始菜单 
+    prtscSysRq      全屏截屏 
+      截屏后需在画图软件中粘贴出来,才可以查看
+  ★程序通用操作 
+    alt-f4            退出
+  ★窗口通用操作 
+    alt-space-n           窗口最小化
+    alt-esc               以项目打开的顺序切换项目
+    ctrl?-alt-tab-↑↓→←?   在打开的项目间切换
+    ctrl?-win-tab-↑↓→←?   '3D'形式切换界面
+  ★文件夹/文件操作 
+    alt-↑             到当前目录的上级目录 
+    ctrl-n            新新窗口打开该目录 
+    alt-leftMouse     查看文件夹属性 
+    alt-enter         查看文件夹属性 
+    ctrl-leftMouse    新窗口打开文件夹 
+    ctrl-enter        新窗口打开文件夹 
+    shift-f10         打开右键菜单
+    ctrl?-shift-↑↓→←  文字选择 
+    ctrl-a            全选
+    ctrl-f            查找
+    ctrl-p            打印
+    ctrl-s            保存
+    ctrl-z            取消
+    ctrl-f4           关闭多个文档
+    shift-↑↓→←        多个项目选择
+    shift-drag        可将复制到换成移动到
 小技巧 
   文件编辑、修改与保存 
     将文件保存为PDF格式文件
