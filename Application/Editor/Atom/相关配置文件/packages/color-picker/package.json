@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "C:\\Users\\Fan\\AppData\\Local\\Temp\\d-117125-6292-s0ujm2\\package.tgz",
+        "raw": "C:\\Users\\fsl\\AppData\\Local\\Temp\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "C:\\Users\\Fan\\AppData\\Local\\Temp\\d-117125-6292-s0ujm2\\package.tgz",
-        "spec": "C:\\Users\\Fan\\AppData\\Local\\Temp\\d-117125-6292-s0ujm2\\package.tgz",
+        "rawSpec": "C:\\Users\\fsl\\AppData\\Local\\Temp\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
+        "spec": "C:\\Users\\fsl\\AppData\\Local\\Temp\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
         "type": "local"
       },
-      "C:\\Users\\Fan\\AppData\\Local\\Temp\\apm-install-dir-117125-6292-lsau9n"
+      "C:\\Users\\fsl\\AppData\\Local\\Temp\\apm-install-dir-118313-6104-1eukz8u.yki6bt9"
     ]
   ],
-  "_from": "..\\d-117125-6292-s0ujm2\\package.tgz",
-  "_id": "color-picker@2.2.5",
+  "_from": "..\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
+  "_id": "color-picker@2.3.0",
   "_inCache": true,
-  "_installable": true,
   "_location": "/color-picker",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "C:\\Users\\Fan\\AppData\\Local\\Temp\\d-117125-6292-s0ujm2\\package.tgz",
+    "raw": "C:\\Users\\fsl\\AppData\\Local\\Temp\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "C:\\Users\\Fan\\AppData\\Local\\Temp\\d-117125-6292-s0ujm2\\package.tgz",
-    "spec": "C:\\Users\\Fan\\AppData\\Local\\Temp\\d-117125-6292-s0ujm2\\package.tgz",
+    "rawSpec": "C:\\Users\\fsl\\AppData\\Local\\Temp\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
+    "spec": "C:\\Users\\fsl\\AppData\\Local\\Temp\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:..\\d-117125-6292-s0ujm2\\package.tgz",
-  "_shasum": "92c2b23ff05ca222803fbf2955dce4cb9685efd3",
+  "_resolved": "file:..\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
+  "_shasum": "11934e5069acd34b27a483b9de20cb359e6ba7b4",
   "_shrinkwrap": null,
-  "_spec": "C:\\Users\\Fan\\AppData\\Local\\Temp\\d-117125-6292-s0ujm2\\package.tgz",
-  "_where": "C:\\Users\\Fan\\AppData\\Local\\Temp\\apm-install-dir-117125-6292-lsau9n",
+  "_spec": "C:\\Users\\fsl\\AppData\\Local\\Temp\\d-118313-6104-1ue6fvt.lyp66r\\package.tgz",
+  "_where": "C:\\Users\\fsl\\AppData\\Local\\Temp\\apm-install-dir-118313-6104-1eukz8u.yki6bt9",
   "bugs": {
     "url": "https://github.com/thomaslindstrom/color-picker/issues"
   },
@@ -69,5 +68,5 @@
     "type": "git",
     "url": "git+https://github.com/thomaslindstrom/color-picker.git"
   },
-  "version": "2.2.5"
+  "version": "2.3.0"
 }
