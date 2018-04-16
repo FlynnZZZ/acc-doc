@@ -43,36 +43,40 @@
   'es1 arguments.callee  在函数体内表示函数本身':
     'prefix': 'callee-arguments'
     'body': 'callee'
-  'es1 gen iterator  ES6':
-    'prefix': 'iterator'
-    'body': 'iterator'
-  'es1 gen function* name(){}  ES6':
-    'prefix': 'function-gen'
-    'body': '''function* $1($2){
-        $3
+  'es1 ($1) => {$2}  箭头函数,ES6':
+    'prefix': 'arrow-function'
+    'body': '''($1) => {
+        $2
       }'''
-  'es1 gen yield  ES6':
-    'prefix': 'yield'
+  'es1 function* name(){}  Generator函数,ES6':
+    'prefix': 'generator-function'
+    'body': '''function* $1($2){
+        yield
+      }'''
+  'es1 function* (){}  匿名Generator函数,ES6':
+    'prefix': 'generator1-function'
+    'body': '''function* $1($2){
+        yield
+      }'''
+  'es1 yield  Generator停止位置,ES6':
+    'prefix': 'yield-generator'
     'body': 'yield'
-  'es1 gen yield*  ES6':
-    'prefix': 'yield1'
+  'es1 yield*  调用另一Generator,ES6':
+    'prefix': 'yield1-generator'
     'body': 'yield*'
-  'es1 async function name(){}  ES6':
-    'prefix': 'function-async'
+  'es1 async function name(){}  async函数,ES6':
+    'prefix': 'async-function'
     'body': '''async function $1($2){
         $3
       }'''
-  'es1 async function (){}  ES6':
-    'prefix': 'function-async1'
+  'es1 async function (){}  匿名async函数,ES6':
+    'prefix': 'async1-function'
     'body': '''async function ($2){
         $3
       }'''
-  'es1 asy await $1  ES6':
-    'prefix': 'await'
+  'es1 await $1  ES6':
+    'prefix': 'await-async'
     'body': 'await $1'
-  'es1 ($1) => {$2}  箭头函数,ES6':
-    'prefix': 'function-arrow'
-    'body': '($1) => {$2}'
   # obj ------------------------------------------------
   'es1 Object  对象的构造函数':
     'prefix': 'Object-obj' # 存在bug

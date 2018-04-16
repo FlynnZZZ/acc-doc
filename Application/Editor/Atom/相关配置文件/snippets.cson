@@ -42,6 +42,9 @@
   '- Q&I:  问题及想法':
     'prefix': 'Question-Idea-self'
     'body': 'Q&I: '
+  '- Q&A:  问题及方法':
+    'prefix': 'Question-Answer-self'
+    'body': 'Q&A: '
     
   '- Extend:  继承':
     'prefix': 'Extend-self'

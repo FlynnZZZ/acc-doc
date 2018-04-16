@@ -16,6 +16,12 @@
         promise1
         ,...
       ])'''
+  'es2 Promise.resolve($1)  promise,执行成功':
+    'prefix': 'Promise.resolve'
+    'body': '''Promise.resolve($1)'''
+  'es2 Promise.reject($1)  promise,执行失败':
+    'prefix': 'Promise.reject'
+    'body': '''Promise.reject($1)'''
   'es2 new Promise(fn)  实例化Promise':
     'prefix': 'new-promise'
     'body': '''new Promise(function(rs,rj){
@@ -76,7 +82,7 @@
     'body': 'console'
   'es2 .log("%c%s","color:red",str,$1)  带颜色输出':
     'prefix': 'console-log-color'
-    'body': 'console.log("%c%s","color:red",666666,$1)'
+    'body': 'console.log("%c%s","color:red","说明文字",$1)'
   'es2 .info(val1,val2,..)  输出信息性消息':
     'prefix': 'console-info'
     'body': 'console.info($1)'

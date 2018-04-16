@@ -36,6 +36,8 @@
   'f4': 'find-and-replace:find-previous'    # 查找时,到上一个
   'ctrl-e': 'find-and-replace:select-undo'  # 取消ctrl-d的选中 
   'ctrl-p': 'find-and-replace:select-all'   # 选中所有 
+  'alt-r': 'script:run'                     # script插件-运行代码 
+  'alt-w': 'script:kill-process'            # script插件-清理进程 
   
 'atom-workspace atom-text-editor:not([mini])':
   'alt-1': 'editor:fold-all'              # 折叠所有

@@ -96,7 +96,7 @@ BIOS'Basic Input/Output System',基本输入输出系统
     ctrl?-win-tab-↑↓→←?   '3D'形式切换界面
   ★文件夹/文件操作 
     alt-↑             到当前目录的上级目录 
-    ctrl-n            新新窗口打开该目录 
+    ctrl-n            新窗口打开该目录 
     alt-leftMouse     查看文件夹属性 
     alt-enter         查看文件夹属性 
     ctrl-leftMouse    新窗口打开文件夹 

@@ -52,7 +52,6 @@
   core:
     allowPendingPaneItems: false
     audioBeep: false
-    automaticallyUpdate: false
     closeEmptyWindows: false
     destroyEmptyPanes: false
     disabledPackages: [
@@ -70,7 +69,6 @@
       "restore-windows"
       "welcome"
       "language-javascript-jsx"
-      "language-babel"
       "metrics"
       "symbols-view"
       "github"
@@ -107,6 +105,7 @@
     ]
     projectHome: "E:\\project\\atom"
     telemetryConsent: "limited"
+    uriHandlerRegistration: "always"
     warnOnLargeFileLimit: 10
   editor:
     backUpBeforeSaving: true
@@ -167,6 +166,8 @@
   "php-cs-fixer": {}
   pigments: {}
   "restore-windows": {}
+  script:
+    cwdBehavior: "Directory of the script"
   "settings-view":
     enabled: true
   "simplified-chinese-menu": {}
@@ -216,6 +217,9 @@
 ".html.text.vue":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…-"
+".js.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!#@%^&*|+=[]{}`?-…、"
 ".makefile.source":
   editor:
     showInvisibles: true
