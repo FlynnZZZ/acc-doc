@@ -255,20 +255,20 @@
         fooMt: function(state,data){  
         }
       }
-      ,getters: {  
-        fooGt: function({ stateData1 },getters){
-          return stateData1;
-        }
-      }
       ,actions: {   
         fooAt: function({ commit },data){  
         }
       }
+      // ,getters: {  
+      //   fooGt: function({ stateData1 },getters){
+      //     return stateData1;
+      //   }
+      // }
       ,modules: {  
       }
     })""" 
-  'JV store-vuex-module  vuex模块化':
-    'prefix': 'store-vuex-module'
+  'JV store-module-vuex  vuex模块化':
+    'prefix': 'store-module-vuex'
     'body': """export default { 
       state: { 
         stateData1: 123  
@@ -277,52 +277,52 @@
         fooMt: function(state,data){  
         }
       }
-      ,getters: {  
-        fooGt: function({ stateData1 },getters){
-          return stateData1;
-        }
-      }
       ,actions: {   
-        fooAt: function({ commit },data){  
+        fooAt: function({ commit,state },data){  
         }
       }
-      ,namespaced: true 
+      // ,getters: {  
+      //   fooGt: function({ stateData1 },getters){
+      //     return stateData1;
+      //   }
+      // }
+      ,namespaced: true  // 
     }""" 
   'JV namespaced  KW,命名空间':
-    'prefix': 'namespaced-KW-vue'
+    'prefix': 'namespaced-KW-vuex'
     'body': """namespaced""" 
   'JV mapState  FN,状态绑定函数':
-    'prefix': 'mapState-FN-vue'
+    'prefix': 'mapState-vuex'
     'body': """mapState""" 
   'JV mapMutations  FN,commit绑定函数':
-    'prefix': 'mapMutations-FN-vue'
+    'prefix': 'mapMutations-vuex'
     'body': """mapMutations""" 
   'JV mapGetters  FN,getters绑定函数':
-    'prefix': 'mapGetters-FN-vue'
+    'prefix': 'mapGetters-vuex'
     'body': """mapGetters""" 
   'JV mapActions  FN,dispatch绑定函数':
-    'prefix': 'mapActions-FN-vue'
+    'prefix': 'mapActions-vuex'
     'body': """mapActions""" 
   'JV .$store  数据中心':
-    'prefix': 'store-vue'
+    'prefix': 'store-vuex'
     'body': """$store""" 
   'JV .$store.state.xx  原始数据':
-    'prefix': 'store.state-vue'
+    'prefix': 'store.state-vuex'
     'body': """$store.state""" 
   'JV .$store.getters.xx  组件中使用数据':
-    'prefix': 'store.getters-vue'
+    'prefix': 'store.getters-vuex'
     'body': """$store.getters""" 
   'JV .$store.commit("foo",data)  执行mutations的方法‹操作state›':
-    'prefix': 'store.commit-vue'
+    'prefix': 'store.commit-vuex'
     'body': """$store.commit('foo',data)""" 
-  'JV commit("foo",data)  执行mutations的方法‹操作state›':
-    'prefix': 'commit-vue'
-    'body': """commit('foo',data)""" 
   'JV .$store.dispatch("goo",data)  执行actions的方法‹操作mutations›':
-    'prefix': 'store.dispatch-vue'
+    'prefix': 'store.dispatch-vuex'
     'body': """$store.dispatch('goo',data)""" 
+  'JV commit("foo",data)  执行mutations的方法‹操作state›':
+    'prefix': 'commit-vuex'
+    'body': """commit('foo',data)""" 
   'JV dispatch("goo",data)  执行actions的方法‹操作mutations›':
-    'prefix': 'dispatch-vue'
+    'prefix': 'dispatch-vuex'
     'body': """dispatch('goo',data)""" 
   'JV http.get()  GET请求':
     'prefix': 'http.get-vue'

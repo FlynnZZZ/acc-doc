@@ -10,42 +10,17 @@
   'nd module.exports':
     'prefix': 'module-exports'
     'body': 'module.exports'
-  # querystring 模块 
-  'nd querystring':
-    'prefix': 'querystring'
-    'body': 'querystring'
-  'nd .parse(str)':
-    'prefix': 'parse-querystring'
-    'body': 'parse($1)'
-  # url 模块
-  'nd .parse(url,bol,bol)':
-    'prefix': 'parse-url'
-    'body': 'parse(url,bol,bol)'
-  # http 模块
-  'nd .createServer(fn)':
-    'prefix': 'createServer-http'
-    'body': '''createServer(function(req,res){
-        $1
-      })
-    '''
-  'nd .listen(port,ip)':
-    'prefix': 'listen-server'
-    'body': '''listen(8080,"127.0.0.1") '''
-  'nd .write($1)':
-    'prefix': 'write-response'
-    'body': '''write($1) '''
-  'nd .end($1?)':
-    'prefix': 'end-response'
-    'body': '''end($1) '''
-  # fs 模块 
-  'nd .readFile(path,fn)':
-    'prefix': 'readFile-fs'
-    'body': '''readFile(path,function(err,data){
-        $1
-      }) '''
-  'nd .writeFile(path,conten,fn)':
-    'prefix': 'writeFile-fs'
-    'body': '''writeFile(path,content,function(err){
-        $1
-      }) '''
+  'nd __filename  当前执行脚本所在的目录':
+    'prefix': 'filename-node'
+    'body': '__filename'
+  'nd __dirname  当前正在执行的脚本的路径和文件名':
+    'prefix': 'dirname-node'
+    'body': '__dirname'
+  # Buffer 
+  'nd Buffer.from($1)  buffer,将其他值使用buffer表示':
+    'prefix': 'Buffer.from'
+    'body': 'Buffer.from($1)'
+  'nd new Buffer($1)  buffer,创建buffer':
+    'prefix': 'Buffer.from'
+    'body': 'Buffer.from($1)'
   
