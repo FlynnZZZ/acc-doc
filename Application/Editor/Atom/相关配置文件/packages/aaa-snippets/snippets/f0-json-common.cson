@@ -1,0 +1,5 @@
+# 
+'.source.json':
+  'jnC test;':
+    'prefix': 'test-json-common'
+    'body': """test-json-common""" 

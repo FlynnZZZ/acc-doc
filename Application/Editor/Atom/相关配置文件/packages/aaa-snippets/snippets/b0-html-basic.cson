@@ -1,0 +1,6 @@
+# html | php | xml | vue 
+'.text.html.basic':
+  'HB test':
+    'prefix': 'test-html-basic'
+    'body': 'test-html-basic'
+

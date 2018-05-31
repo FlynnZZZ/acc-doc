@@ -17,9 +17,6 @@
   '-jq $("selecor",jEl)  jEl,从jEl后代中筛选':
     'prefix': 'jq-1'
     'body': '$("selecor",jEl)'
-  '-jq $.Deferred() ':
-    'prefix': 'jq-Deferred'
-    'body': '$.Deferred();'
   '-jq $.type(val)  str,类型检测':
     'prefix': 'jq-type'
     'body': '$.type($1);'
@@ -71,6 +68,34 @@
     'body': """$.grep(arr,function(val,idx){  
       return bol; // 是否包含该元素 
     })"""
+  # Deferred 
+  '-jq $.Deferred(fn?)  创建Deferred':
+    'prefix': 'jq-Deferred'
+    'body': '$.Deferred($1);'
+  '-jq $.when(defer1,defer2,..)  都完成后执行':
+    'prefix': 'jq-when'
+    'body': '$.when($1)'
+  '-jq .promise(fn?)  返回promise/给函数部署deferred接口':
+    'prefix': 'jq-promise'
+    'body': 'promise($1);'
+  '-jq .resolve(data?)  改变状态为"已完成"':
+    'prefix': 'jq-resolve'
+    'body': 'resolve(${1:data});'
+  '-jq .reject(info?)  改变状态为"已失败"':
+    'prefix': 'jq-reject'
+    'body': 'reject(${1:info});'
+  '-jq .done(fn)  指定成功时的回调':
+    'prefix': 'jq-done'
+    'body': """done(function(${1:data}){
+      })"""
+  '-jq .fail(fn)  指定失败时的回调':
+    'prefix': 'jq-fail'
+    'body': """fail(function(${1:info}){
+      })"""
+  '-jq .always(fn)  总会执行':
+    'prefix': 'jq-always'
+    'body': """always(function(${1:data}){
+      })"""
   # jEl --------------------------------------------   
   # 方法  
   '-jq .each(function(){})':
@@ -78,7 +103,7 @@
     'body': """each(function(idx,domElem){
       $1
     })"""
-  # 返回jEl 
+  # 获取jEl 
   '-jq .clone([bool])  jEl,返回复制的元素':
     'prefix': 'clone-jq'
     'body': 'clone($1)'
@@ -137,10 +162,10 @@
   '-jq .prependTo($1)  插入目标的内部头部':
     'prefix': 'prependTo-jq'
     'body': 'prependTo($1)'
-  '-jq .append($1)  内部尾部插入目标':
+  '-jq .append($1)  调用值内部尾部插入参数值':
     'prefix': 'append-jq'
     'body': 'append($1)'
-  '-jq .appendTo($1)  插入目标的内部尾部':
+  '-jq .appendTo($1)  调用值插入到参数值的内部尾部':
     'prefix': 'appendTo-jq'
     'body': 'appendTo($1)'
   '-jq .before($1)  外部头部插入目标':
@@ -254,6 +279,9 @@
   '-jq .select()':
     'prefix': 'select-jq'
     'body': 'select()'
+  '-jq .focus()  获得焦点':
+    'prefix': 'focus-jq'
+    'body': 'focus()'
   # 事件  
   '-jq .trigger("event",[]);':
     'prefix': 'trigger-jq'

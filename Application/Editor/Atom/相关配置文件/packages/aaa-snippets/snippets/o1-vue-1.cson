@@ -1,0 +1,29 @@
+# vue  
+'.text.html.vue':
+  '-vue .vue文件模版':
+    'prefix': 'template-package'
+    'body': """<!--  
+      
+    -->
+    <template lang="html">
+    <section class="xxx">
+      $1
+    </section>
+    </template>
+    
+    <script>
+    export default {
+      data: function(){ return {
+        // 
+      }}
+      ,name: "xxx"
+    }
+    </script>
+    
+    <style lang="less" scoped>
+      
+    </style>
+    
+    """
+
+

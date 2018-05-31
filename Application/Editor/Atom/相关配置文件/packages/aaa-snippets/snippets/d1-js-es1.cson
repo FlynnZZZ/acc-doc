@@ -8,15 +8,15 @@
     'prefix': 'function'
     'body': 'function'
   'es1 function foo(){}  定义函数':
-    'prefix': 'function-11'
+    'prefix': 'function-define'
     'body': '''function $1($2){
       } '''
   'es1 function(){}  匿名函数':
-    'prefix': 'function-22'
+    'prefix': 'function-nameless'
     'body': '''function($1){
       }'''
   'es1 ;(function (){})()  立即执行的匿名函数':
-    'prefix': 'function-33'
+    'prefix': 'function-immediate '
     'body': ''';(function ($1){
       })($2)'''
   'es1 fn.name str,函数的名字':
@@ -44,17 +44,20 @@
     'prefix': 'callee-arguments'
     'body': 'callee'
   'es1 ($1) => {$2}  箭头函数,ES6':
-    'prefix': 'arrow-function'
+    'prefix': 'function-arrow'
     'body': '''($1) => {
         $2
       }'''
+  'es1 ($1) => expr  箭头函数-简写,ES6':
+    'prefix': 'function-arrow-simple'
+    'body': '''($1) => $2'''
   'es1 function* name(){}  Generator函数,ES6':
-    'prefix': 'generator-function'
+    'prefix': 'function-generator'
     'body': '''function* $1($2){
         yield
       }'''
   'es1 function* (){}  匿名Generator函数,ES6':
-    'prefix': 'generator1-function'
+    'prefix': 'function-generator-nameless'
     'body': '''function* $1($2){
         yield
       }'''
@@ -65,12 +68,12 @@
     'prefix': 'yield1-generator'
     'body': 'yield*'
   'es1 async function name(){}  async函数,ES6':
-    'prefix': 'async-function'
+    'prefix': 'function-async'
     'body': '''async function $1($2){
         $3
       }'''
   'es1 async function (){}  匿名async函数,ES6':
-    'prefix': 'async1-function'
+    'prefix': 'function-async-nameless'
     'body': '''async function ($2){
         $3
       }'''
@@ -428,16 +431,16 @@
     'body': """filter(function(val,idx ${1:,arr}){
         return ${2:true[保留]}
       } )"""
-  'es1 arr.reduce(foo ,initVal?)  条件缩减,返回最后一次回调值':
+  'es1 arr.reduce(foo ,initVal?)  条件缩减,返回最后一次回调返回值':
     'prefix': 'reduce-arr'
     'body': """reduce(function(retVal,val,idx ${1:,arr}){ 
       return $2 
-    } )"""
+    } ,initVal )"""
   'es1 arr.reduceRight(foo ,initVal?)  同.reduce,只是从右到左遍历':
     'prefix': 'reduceRight-arr'
     'body': """reduceRight(function(retVal,val,idx ${1:,arr}){ 
       return $2 
-    } )"""
+    } ,initVal)"""
   'es1 arr.find(fn)  meber,成员查询':
     'prefix': 'find-arr'
     'body': """find(function(meber){ 
@@ -493,9 +496,12 @@
   'es1 JSON.parse(JSONstr[,foo(key,val)]) obj,解析':
     'prefix': 'JSON.parse'
     'body': 'JSON.parse($1)'
-  'es1 JSON.stringify(val[,arr/foo,num/str]) str,序列化':
-    'prefix': 'JSON.stringify'
+  'es1 JSON.stringify(val) str,序列化':
+    'prefix': 'JSON.stringify-simple'
     'body': 'JSON.stringify($1)'
+  'es1 JSON.stringify(val ,arr/foo ,num/str) str,序列化':
+    'prefix': 'JSON.stringify'
+    'body': 'JSON.stringify(val ,null ,2)'
   # date ------------------------------------------------
   'es1 Date.now()  num,自世界协调时间至今的毫秒数':
     'prefix': 'Date-now'

@@ -1,15 +1,15 @@
 # React  .js -------------------------------------------------------------------
 '.source.js':
-  '-rt-React;':
+  '-rt React;':
     'prefix': 'React'
     'body': """React""" 
-  '-rt-React.createClass({$1});':
-    'prefix': 'ReactCreateClass'
+  '-rt React.createClass({$1});':
+    'prefix': 'React-CreateClass'
     'body': """React.createClass({
       render : function1(){
         return <div> $1 </div>;
       },
     });""" 
-  '-rt-React.render(html,elem);':
-    'prefix': 'ReactRender'
+  '-rt React.render(html,elem);':
+    'prefix': 'React-Render'
     'body': """React.render(<Tag key="val" />,elem);""" 

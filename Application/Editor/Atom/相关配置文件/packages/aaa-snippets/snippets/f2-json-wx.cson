@@ -1,6 +1,6 @@
 # 微信小程序 .json --------------------------------------------------------------
 '.source.json':
-  '-wx window':
+  'jnW window':
     'prefix': 'window wx'
     'body': """\"window": { 
           "navigationBarBackgroundColor":"#000", 
@@ -11,7 +11,7 @@
           "enablePullDownRefresh":false,  
           "onReachBottomDistance": 50, 
         } """
-  '-wx tabBar':
+  'jnW tabBar':
     'prefix': 'tabBar wx'
     'body': """\"tabBar": {   
       "color":"#000",           
@@ -28,7 +28,7 @@
       "borderStyle":"black",    
       "position": "bottom"  
     } """
-  '-wx networkTimeout':
+  'jnW networkTimeout':
     'prefix': 'networkTimeout wx'
     'body': """\"networkTimeout": {  
       "request": 60000,        
@@ -36,6 +36,6 @@
       "downloadFile": 60000,   
       'uploadFile': 60000       
     } """
-  '-wx debug;':
+  'jnW debug;':
     'prefix': 'debug wx'
     'body': """\"debug": true""" 

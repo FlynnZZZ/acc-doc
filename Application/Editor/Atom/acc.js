@@ -29,7 +29,6 @@
         alt-4       ctrl-alt-]        展开当前 
         alt-e       ctrl-space        激活代码提示 
           默认快捷键存在bug
-        alt-b       ctrl-alt-o        浏览器中打开文档 
         alt-p                         浏览器兼容写法 
         ★查询/选中  
         f4          shift-f3          查找时,到上一个 
@@ -48,9 +47,6 @@
         alt-enter   ctrl-shift-enter  行前插入 
         alt-x       ctrl-alt-f2       行标记 
         alt-d       ctrl-shift-K      行删除 
-        ★插件快捷键 
-        alt-r      ctrl-shift-b      script插件-运行代码
-        alt-w      ctrl-q            script插件-清理当前进程 
         ★不常用 
         alt-u       ctrl-k ctrl-u     字母大写 
         alt-i       ctrl-k ctrl-l     字母小写 
@@ -266,8 +262,9 @@
       Char Width      缩略图代码宽度比例    0.7     
     minimap-highlight-selected 缩略图高亮
     color-picker               快捷颜色选择 
-      颜色选取插件,点击颜色值弹出颜色选择板进行颜色选择,
-      或直接使用快捷键ctrl+alt+c进行颜色值的选择插入.
+      快捷键: 
+        ctrl-alt-c  颜色值选择插入
+      颜色选取插件,点击颜色值弹出颜色选择板进行颜色选择 
     autocomplete-project-paths 路径补全 
       Question: 路径补全应为/而非\
     highlight-selected         高亮选中词 
@@ -275,10 +272,14 @@
     regex-railroad-diagram     正则查看 
     remember-folds             记录折叠的状态
     open-in-browsers           在浏览器中快捷打开html 
+      快捷键: alt-b       ctrl-alt-o        浏览器中打开文档 
       安装此插件会在编辑器下方添加浏览器的小图标,点击在浏览器中打开正在编辑的文档.
     atom-wx                    '.wxml','.wxss'语法高亮 
     language-vue               '.vue'语法高亮 
     script                     在Atom中运行代码  
+      快捷键: 
+        alt-r      ctrl-shift-b      script插件-运行代码
+        alt-w      ctrl-q            script插件-清理当前进程 
       Default Current Working Directory (CWD) Behavior  // 设置代码执行时的路径 
         Directory of the script   // 当前代码执行的路径 
       目前存在的问题: 

@@ -1,0 +1,4 @@
+'.text.xml':   
+  'HX test':
+    'prefix': 'test-html-xml'
+    'body': 'test-html-xml'

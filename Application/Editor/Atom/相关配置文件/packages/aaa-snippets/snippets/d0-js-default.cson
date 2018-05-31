@@ -1,8 +1,0 @@
-# js  
-'.source.js':
-  # window 全局变量 
-  'js frames 框架集对象':
-    'prefix': 'frames-win'
-    'body': 'frames'
-
-

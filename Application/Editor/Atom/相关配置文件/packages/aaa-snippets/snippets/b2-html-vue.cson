@@ -1,0 +1,6 @@
+# 
+'.text.html.vue': 
+  'HV test':
+    'prefix': 'test-html-vue'
+    'body': 'test-html-vue' 
+

@@ -1,0 +1,117 @@
+# php---------------------------------------------------------------------------
+'.text.html.php':
+  'php <?php $1 ?>':
+    'prefix': 'php-inline'
+    'body': '<?php $1 ?>'
+  'php <?php 换行 ?>':
+    'prefix': 'php-multiline'
+    'body': """<?php 
+      $1
+    ?>"""
+  # 方法------------------------------------------------------------------------
+  'php echo($1)':
+    'prefix': 'echo-kh'
+    'body': 'echo($1)'
+  'php print $1':
+    'prefix': 'print'
+    'body': 'print $1'
+  'php echo-br  换行输出':
+    'prefix': 'echo-br'
+    'body': """echo '<br>' . $1 ;"""
+  'php memory_get_usage()  获取当前PHP消耗的内存':
+    'prefix': 'memory_get_usage'
+    'body': 'memory_get_usage()'
+  # 字符串相关 
+  'php <<<xxx  Heredoc字符串模式':
+    'prefix': 'heredoc'
+    'body': """<<<xxx $1
+      xxx;"""
+  # 数组相关 
+  'php print_r($arr);  数组输出':
+    'prefix': 'print-r'
+    'body': """print_r($1);"""
+  # 对象相关 
+  'php class  创建类':
+    'prefix': 'class-create'
+    'body': """class ${1:ClassName} {
+      
+      function __construct(argument) {
+      }
+    }"""
+  'php class  创建类-继承':
+    'prefix': 'class-extends'
+    'body': """class ${1:ClassName} extends ${2:ParentClass} {
+      
+      function __construct(argument) {
+      }
+    }"""
+  # 变量相关  
+  'php var_dump($1)  返回变量的数据类型和值':
+    'prefix': 'var_dump'
+    'body': """var_dump($1)"""
+  'php define(name ,val ,bol)  定义常量':
+    'prefix': 'define'
+    'body': """define(name ,val ,false);"""
+  'php defined(name)  bol,常量是否定义':
+    'prefix': 'defined'
+    'body': """defined(name);"""
+  'php constant(name)  读取常量':
+    'prefix': 'constant'
+    'body': """constant(name);"""
+  # 超级全局变量
+  'php $GLOBALS  超级全局变量:用户定义值':
+    'prefix': 'GLOBALS-super'
+    'body': """$GLOBALS"""
+  'php $_SERVER  超级全局变量:Web服务器信息':
+    'prefix': 'SERVER-super'
+    'body': """$_SERVER"""
+  'php PHP_SELF  $_SERVER成员,脚本文件路径及名称':
+    'prefix': 'PHP_SELF-SERVER'
+    'body': """PHP_SELF"""
+  'php SCRIPT_NAME  $_SERVER成员,脚本文件路径及名称':
+    'prefix': 'SCRIPT_NAME-SERVER'
+    'body': """SCRIPT_NAME"""
+  'php SERVER_ADDR  $_SERVER成员,服务器ip地址':
+    'prefix': 'SERVER_ADDR-SERVER'
+    'body': """SERVER_ADDR"""
+  'php SERVER_NAME  $_SERVER成员,服务器主机名':
+    'prefix': 'SERVER_NAME-SERVER'
+    'body': """SERVER_NAME"""
+  'php SERVER_SOFTWARE  $_SERVER成员,服务器标识字符串':
+    'prefix': 'SERVER_SOFTWARE-SERVER'
+    'body': """SERVER_SOFTWARE"""
+  'php SERVER_PROTOCOL  $_SERVER成员,通信协议名称和版本':
+    'prefix': 'SERVER_PROTOCOL-SERVER'
+    'body': """SERVER_PROTOCOL"""
+  'php REQUEST_METHOD  $_SERVER成员,请求方法类型':
+    'prefix': 'REQUEST_METHOD-SERVER'
+    'body': """REQUEST_METHOD"""
+  'php QUERY_STRING  $_SERVER成员,请求的查询字符串':
+    'prefix': 'QUERY_STRING-SERVER'
+    'body': """QUERY_STRING"""
+  'php HTTP_HOST  $_SERVER成员,请求头中Host的值':
+    'prefix': 'HTTP_HOST-SERVER'
+    'body': """HTTP_HOST"""
+  'php HTTP_ACCEPT  $_SERVER成员,请求头中Accept的值':
+    'prefix': 'HTTP_ACCEPT-SERVER'
+    'body': """HTTP_ACCEPT"""
+  'php HTTP_USER_AGENT  $_SERVER成员,请求头中User-Agent的值':
+    'prefix': 'HTTP_USER_AGENT-SERVER'
+    'body': """HTTP_USER_AGENT"""
+  'php HTTP_ACCEPT_CHARSET  $_SERVER成员,请求头中Accept-Charset的值':
+    'prefix': 'HTTP_ACCEPT_CHARSET-SERVER'
+    'body': """HTTP_ACCEPT_CHARSET"""
+  'php $_REQUEST  超级全局变量:用于收集HTML表单提交的数据':
+    'prefix': 'REQUEST-super'
+    'body': """$_REQUEST"""
+  'php $_POST  超级全局变量:用于收集POST提交的数据':
+    'prefix': 'POST-super'
+    'body': """$_POST"""
+  'php $_GET  超级全局变量:用于收集GET提交的数据':
+    'prefix': 'GET-super'
+    'body': """$_GET"""
+  # http请求响应 
+  'php header;  设置相应头':
+    'prefix': 'header-http'
+    'body': """header($1);"""
+

@@ -1,25 +1,28 @@
 # ES相关的词&全局变量&规范 --------------------------------------------------------
 '.source.js':
   # 关键字 
-  'es0 break  关键字':
+  'es0 use strict  使用严格模式':
+    'prefix': 'use-strict'
+    'body': """'use strict';""" 
+  'es0 break  跳出循环':
     'prefix': 'break'
     'body': """break""" 
-  'es0 continue  关键字':
+  'es0 continue  继续下一次循环':
     'prefix': 'continue'
     'body': 'continue'
-  'es0 false  关键字':
+  'es0 false  否':
     'prefix': 'false'
     'body': """false""" 
+  'es0 return  返回':
+    'prefix': 'return'
+    'body': 'return '
   'es0 finally  关键字':
     'prefix': 'finally'
     'body': """finally""" 
   'es0 public  关键字':
     'prefix': 'public'
     'body': """public""" 
-  'es0 return  关键字':
-    'prefix': 'return'
-    'body': 'return '
-  'es0 static  关键字':
+  'es0 static  静态属性':
     'prefix': 'static'
     'body': """static""" 
   'es0 strict  关键字':
@@ -41,9 +44,6 @@
     'prefix': 'undefined'
     'body': 'undefined' 
   # 操作符 
-  'es0 /* $1 */':
-    'prefix': 'zs'
-    'body': '/* $1 */'
   'es0 typeof val;  str,值类型检测':
     'prefix': 'typeof-operat'
     'body': 'typeof '

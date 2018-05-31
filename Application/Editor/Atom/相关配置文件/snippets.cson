@@ -1,8 +1,9 @@
+# 任意文件 
 '*':
   # self  
-  '- TODO ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★  待处理':
+  '- TODO ★★★★★★★★★  待处理':
     'prefix': 'TODO-self'
-    'body': '// TODO: ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ '
+    'body': '// TODO: ★★★★★★★★★ '
   '- PS:  说明':
     'prefix': 'PS-self'
     'body': 'PS: '
@@ -61,6 +62,15 @@
   '- Member:  ‹对象的›成员':
     'prefix': 'Member-self'
     'body': 'Member: '
+  '- Events:  事件':
+    'prefix': 'Events-self'
+    'body': 'Events: '
+  '- Methods:  方法':
+    'prefix': 'Methods-self'
+    'body': 'Methods: '
+  '- Props:  属性':
+    'prefix': 'Props-self'
+    'body': 'Props: '
   '- Arguments:  参数':
     'prefix': 'Arguments-self'
     'body': 'Arguments: '
@@ -73,6 +83,9 @@
   '- Output:  输出':
     'prefix': 'Output-self'
     'body': 'Output: '
+  '- Trans:  传递':
+    'prefix': 'Trans-self'
+    'body': 'Trans: '
     
   '- Env:  环境':
     'prefix': 'Env-self'
@@ -150,7 +163,10 @@
   '-* <tag/>  单标记':
     'prefix': 'tag-single'
     'body': '<${1:tag} />'
+    
+# 待转存--------------------------------------------------------------------
 
+# .js 文件 
 '.source.js':
   '- window.screenLeft':
     'prefix': 'screenLeft-window'
@@ -164,14 +180,29 @@
   '- window.screenY':
     'prefix': 'screenY-window'
     'body': 'window.screenY'
-
+  
+# .php 文件
+'.text.html.php':  
+  'php zs-multi-line  多行注释':
+    'prefix': 'zs-multi-line'
+    'body': """/*  
+    $1
+    */"""
+    
+    
+    
+    
+    
+    
+# 待转存--------------------------------------------------------------------
 
 # 使用说明 
 # e.g.:
 #   '-console.log()':            # 提示 显示为
 #     'prefix': 'log'            # 激活提示的词 
 #     'body': 'console.log($1);' # 最终的结果 
-# 语法注释
+
+# 语法说明 
 #   $1 表示光标的默认位置
 #   $2 按下 tab 键,光标跳到的第二个位置,以此类推
 #   ${1:name} 表示第一次会将 name 选中
@@ -179,20 +210,13 @@
 #   提示 显示 字符开始不可使用下划线符号_
 #   """内容""" 创建保持格式的代码块 「"""...""" 代替'...'」
 # 当激活字符一样时,后面的会覆盖掉前面的.
+
 # 自定义Snippets的扩展词时,定义的格式的确定
 #   在要定义的文档类型下,ctrl-Shift-p 输入代码  Editor: Log Cursor Scope
 #   弹出字符如 txt格式的为 text.plain ,则.text.plain类似于.source.js表示一种文件格式
 #   注意在前面加一个点.
-# 自定义的分类: 
-#   按大类划分文档: 避免一个文件中条目过多  
-#   文档内的规则: 
-#     -obj/Object .xxx  xxxx 类简写或类 
-#     -word 单词
-#     -eN   事件名 
-#     -operat  操作符
-#     -xxx  其他 
+
 # Question:
-#   
 
 # 原始文档说明 留存 
 # Your snippets

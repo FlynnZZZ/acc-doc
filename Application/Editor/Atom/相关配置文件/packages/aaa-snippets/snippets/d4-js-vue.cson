@@ -217,8 +217,38 @@
   'JV new VueRouter();  实例化路由':
     'prefix': 'new-VueRouter'
     'body': """new VueRouter({
-        routes : $1
-      });""" 
+      routes: $1
+      ,base: '/'
+      ,linkActiveClass: 'router-link-active'
+      ,linkExactActiveClass: 'router-link-exact-active'
+      ,mode: 'hash'
+      ,fallback: true 
+      ,scrollBehavior: function(to,from,pos){
+        // 
+      } 
+    });""" 
+  'JV routerMap-member  一条路由配置项':
+    'prefix': 'routerMap-member'
+    'body': """{
+      path: 'xxx'  
+      ,component: cpt0
+      // ,components: {
+      //   default: cpt0
+      //   ,k1: cpt1
+      //   ,...
+      // }
+      ,name: ''  
+      ,redirect: ''  
+      ,alias: ''  
+      ,props: ''  
+      ,meta: ''  
+      ,beforeEnter: function(to,from,next){
+        // 
+      }
+      ,children: [ 
+        {  }
+      ]  
+    }""" 
   'JV redirect  KW,重定向':
     'prefix': 'redirect-KW-vue'
     'body': """redirect""" 

@@ -52,6 +52,7 @@
   core:
     allowPendingPaneItems: false
     audioBeep: false
+    automaticallyUpdate: false
     closeEmptyWindows: false
     destroyEmptyPanes: false
     disabledPackages: [
@@ -216,7 +217,13 @@
     nonWordCharacters: "/\\()\"':,.;<>~!#%^&*|+=[]{}`?…、◆★●■▲▼（），。-"
 ".html.text.vue":
   editor:
-    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…-"
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…-："
+".js.regexp.replacement.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!#@%^&*|+=[]{}`?-…、"
+".js.regexp.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!#@%^&*|+=[]{}`?-…、"
 ".js.source":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!#@%^&*|+=[]{}`?-…、"

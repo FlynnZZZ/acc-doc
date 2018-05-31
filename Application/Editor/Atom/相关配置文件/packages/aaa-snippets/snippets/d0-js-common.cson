@@ -1,0 +1,8 @@
+# js  
+'.source.js':
+  'JC test':
+    'prefix': 'test-js-common'
+    'body': '''test-js-common'''
+
+
+

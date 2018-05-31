@@ -1,0 +1,6 @@
+# css  
+'.source.css':
+  'CB test':
+    'prefix': 'test-css'
+    'body': 'test-css'
+

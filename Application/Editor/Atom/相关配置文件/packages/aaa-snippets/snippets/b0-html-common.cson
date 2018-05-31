@@ -1,0 +1,243 @@
+# html | php | xml | vue 
+'.text.html.basic,.text.html.php,.text.xml,.text.html.vue':
+  # 标签 ----------------------------
+  'HC <meta name="viewport" content="...">':
+    'prefix': 'meta-viewport-tag'
+    'body': '<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">'
+  'HC <style>$1</style>':
+    'prefix': 'style-inset'
+    'body': '<style>\n\t$1\n</style>'
+  'HC <script src="$1" charset="utf-8"></script>':
+    'prefix': 'script-src'
+    'body': '<script src="$1" charset="utf-8"></script>'
+  'HC <div>$1</div>  仅div标签':
+    'prefix': 'div-only-tag'
+    'body': '<div>$1</div>'
+  'HC <div class="$1">$2</div>  class属性的div':
+    'prefix': 'div-class-tag'
+    'body': '<div class="$1">$2</div>'
+  'HC <div id="$1">$2</div>  id属性的div':
+    'prefix': 'div-id-tag'
+    'body': '<div id="$1">$2</div>'
+  'HC <template>$1</template>':
+    'prefix': 'template-tag'
+    'body': '<template>$1</template>'
+  # 属性----------------------------------
+  'HC style="$1"':
+    'prefix': 'style-attr'
+    'body': 'style="$1"'
+  'HC class="$1"':
+    'prefix': 'class-attr'
+    'body': 'class="$1"'
+  'HC id="$1"':
+    'prefix': 'id-attr'
+    'body': 'id="$1"'
+  'HC placeholder="$1"  表单的默认显示':
+    'prefix': 'placeholder-attr'
+    'body': 'placeholder="$1"'
+  'HC name="$1"':
+    'prefix': 'name-attr'
+    'body': 'name="$1"'
+  'HC data-xxx="val"  自定义数据':
+    'prefix': 'data-xxx-attr'
+    'body': 'data-$1="$2"'
+  # 自定义组合--------------------------------
+  'HC html-self  自定义模版':
+    'prefix': 'html-self'
+    'body': """
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>$1</title>
+      <link rel="stylesheet" href="./css.css">
+      <script src="./js/js.js" charset="utf-8"></script>
+    </head>
+    <body>
+    </body>
+    </html>"""
+  'HC html-mobile  自定义的移动端模版':
+    'prefix': 'html-mobile'
+    'body': """
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+      <title>$1</title>
+      <link rel="stylesheet" href="../css.css">
+    </head>
+    <body>
+    </body>
+    </html>"""
+  'HC cpt-template  自定义的vue组件模版':
+    'prefix': 'cpt-template'
+    'body': """
+    <style>
+    </style>
+    <div>
+    $1
+    </div>
+    <script type="text/javascript">
+    $(function(){
+    })
+    </script>
+    """ 
+  'HC cpt-Template-child  自定义的vue子组件模版':
+    'prefix': 'cpt-template-child'
+    'body': """
+    <style>
+    </style>
+    <template id="c-xxx">
+      <div id="xxx">
+        $1
+      </div>
+    </template>
+    <script type="text/javascript">
+      // in props: 
+        
+      // put props: 
+        
+      // get event: 
+        
+      // out event: 
+      Vue.component('c-name',{
+        template: '#xxx_xx'
+        ,props: []
+        ,props: {
+          prop0: {
+            default: function () {
+              return 
+            }
+            // default: xxx
+            // ,type: Number 
+            // ,required: bol  
+            // ,validator: function (val) { 
+            //   return bol;
+            // }
+          }
+          // ,prop1: Number 
+          // ,prop1: [Number,String] 
+        }
+        ,data: function(){
+          return {
+            
+          }
+        }
+        ,created: function(){
+          
+        }
+      });
+    </script>
+    
+    """ 
+# html | vue 
+'.text.html.basic,.text.html.vue': 
+  # 指令  
+  'HV v-if  是否渲染控制':
+    'prefix': 'v-if-vue'
+    'body': 'v-if="${1:key}"' 
+  'HV v-else-if  是否渲染控制':
+    'prefix': 'velseif-vue'
+    'body': 'v-else-if="${1:key}"' 
+  'HV v-else  是否渲染控制':
+    'prefix': 'v-else-vue'
+    'body': 'v-else'
+  'HV v-show  是否显示控制':
+    'prefix': 'v-show-vue'
+    'body': 'v-show="${1:key}"' 
+  'HV v-for  循环渲染':
+    'prefix': 'v-for-vue'
+    'body': 'v-for="(val,key) in list"' 
+  'HV v-text  文本插入':
+    'prefix': 'v-text-vue'
+    'body': 'v-text="${1:key}"' 
+  'HV v-html  HTML插入':
+    'prefix': 'v-html-vue'
+    'body': 'v-html="${1:key}"' 
+  'HV v-model  双向‹表单›绑定':
+    'prefix': 'v-model-vue'
+    'body': 'v-model="${1:key}"'
+  'HV v-bind  属性绑定':
+    'prefix': 'v-bind-vue'
+    'body': ':${1:class}="${2:arg}"'
+  'HV v-on  事件绑定':
+    'prefix': 'v-on-vue'
+    'body': '@${1:click}="${2:arg}"' 
+  'HV v-once  一次性插值‹配合插值使用›':
+    'prefix': 'v-once-vue'
+    'body': """v-once""" 
+  'HV v-cloak  实例编译时存在‹结束后消失›':
+    'prefix': 'v-cloak-vue'
+    'body': """v-cloak""" 
+  'HV v-pre  跳过该部分的编译':
+    'prefix': 'v-pre-vue'
+    'body': """v-pre""" 
+  'HV v-directive  自定义指令':
+    'prefix': 'v-directive-vue'
+    'body': 'v-name="{fn: foo, arg: arg1}"' 
+  # 标签 
+  'HV <slot name="xxx">$1</slot>  子组件中对应分发的内容':
+    'prefix': 'slot-tag-vue'
+    'body': '<slot name="${1:xxx}">$2</slot>'
+  'HV <keep-alive>$1</keep-alive>  组件缓存,避免重新渲染':
+    'prefix': 'keep-alive-tag-vue'
+    'body': '<keep-alive>$1</keep-alive>'
+  'HV <transition>$1</transition>  过渡动画':
+    'prefix': 'transition-tag-vue'
+    'body': '<transition name="$1">$2</transition>'
+  'HV <router-view></router-view>  路由视图':
+    'prefix': 'router-view-couple-vue'
+    'body': '<router-view name="$2">$1</router-view>' 
+  'HV <router-view />  路由视图':
+    'prefix': 'router-view-single-vue'
+    'body': '<router-view name="$1" />' 
+  'HV <router-link></router-link>  路由入口':
+    'prefix': 'router-link-tag-vue'
+    'body': '<router-link>$1</router-link>' 
+  # 属性   
+  'HV lang="$1" 定义使用的语言':
+    'prefix': 'lang-attr'
+    'body': """lang=\"$1\"""" 
+  'HV slot="$1"  父组件中具名的分发内容':
+    'prefix': 'slot-attr-vue'
+    'body': 'slot="$1"' 
+  'HV scope="$1"  作用域插槽,提供父组件分发内容的数据':
+    'prefix': 'scope-attr-vue'
+    'body': 'scope="$1"' 
+  'HV is="$1"  指定组件':
+    'prefix': 'is-attr-vue'
+    'body': 'is="$1"' 
+  'HV ref="$1"  子组件索引-标识子组件':
+    'prefix': 'ref-attr-vue'
+    'body': 'ref="$1"'
+  'HV inline-template="$1"  内联模版':
+    'prefix': 'inline-template-attr-vue'
+    'body': 'inline-template="$1"' 
+  'HV to="$1"  <router-link>属性,跳转地址':
+    'prefix': 'to-attr-router'
+    'body': 'to="$1"'
+  'HV tag="div"  <router-link>属性,渲染成的标签':
+    'prefix': 'tag-attr-router'
+    'body': 'tag="$1"'
+  'HV active-class="$1"  <router-link>属性,路径匹配激活class':
+    'prefix': 'active-class-attr-router-link'
+    'body': 'active-class="$1"'
+  'HV exact-active-class="$1"  router-link属性,路径精确匹配激活class':
+    'prefix': 'exact-active-class-router-link'
+    'body': 'exact-active-class="$1"'
+  # 属性-布尔值    
+  'HV scoped  CSS样式只在该组件中生效':
+    'prefix': 'scoped-attr-vue'
+    'body': 'scoped'
+  'HV append  router-link属性,跳转加上当前地址':
+    'prefix': 'append-attr-router-vue'
+    'body': 'append'
+  'HV replace  router-link属性,跳转并替换历史记录':
+    'prefix': 'append-attr-router-vue'
+    'body': 'append'
+  # 属性-其他 
+  'HV text/x-template  定义组件模版':
+    'prefix': 'text/x-template-attr-vue'
+    'body': '"text/x-template"'
+
