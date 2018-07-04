@@ -1,0 +1,69 @@
+# 微信小程序 .json --------------------------------------------------------------
+'.source.json':
+  'jnMp window  页面窗口表现':
+    'prefix': 'window-mp'
+    'body': """\"window\": { 
+          "backgroundColor": "#fff"
+          ,"navigationBarTitleText": "xxx"
+          ,"navigationBarTextStyle": "white"
+          ,"navigationBarBackgroundColor":"#000"
+          ,"navigationStyle":""
+          ,"enablePullDownRefresh":false
+          ,"backgroundTextStyle": "dark"
+          ,"onReachBottomDistance": 50
+          ,"backgroundColorTop": "#fff"
+          ,"backgroundColorBottom": "#fff"
+        } """
+  'jnMp tabBar  tab设置':
+    'prefix': 'tabBar-mp'
+    'body': """\"tabBar\": {   
+      "color":"#000"
+      ,"selectedColor":"#000"
+      ,"backgroundColor":"#fff"
+      ,"list": [     
+        { "pagePath": "page/index/index"
+        ,"text": "显示的文字"
+        ,"iconPath": "./img.png"
+        ,"selectedIconPath":"./img.png"} 
+      ]
+      ,"position": "bottom"  
+      ,"borderStyle":"black"
+    } """
+  'jnMp networkTimeout  网络请求超时设定':
+    'prefix': 'networkTimeout-mp'
+    'body': """\"networkTimeout\": {  
+      "request": 60000,        
+      'connectSocket': 60000,  
+      "downloadFile": 60000,   
+      'uploadFile': 60000       
+    } """
+  'jnMp debug  开启debug模式':
+    'prefix': 'debug-mp'
+    'body': """\"debug\": true""" 
+  'jnMp disableScroll  页面是否不可滚动':
+    'prefix': 'disableScroll-mp'
+    'body': """\"disableScroll\": true""" 
+  'jnMp navigationBarBackgroundColor  ':
+    'prefix': 'navigationBarBackgroundColor-mp'
+    'body': """\"navigationBarBackgroundColor\": \"#ffffff\"""" 
+  'jnMp navigationBarTextStyle  ':
+    'prefix': 'navigationBarTextStyle-mp'
+    'body': """\"navigationBarTextStyle\": \"black\" """ 
+  'jnMp navigationBarTitleText  ':
+    'prefix': 'navigationBarTitleText-mp'
+    'body': """\"navigationBarTitleText\": \"文本\" """ 
+  'jnMp backgroundColor  ':
+    'prefix': 'backgroundColor-mp'
+    'body': """\"backgroundColor\": \"#eeeeee\" """ 
+  'jnMp backgroundTextStyle  ':
+    'prefix': 'backgroundTextStyle-mp'
+    'body': """\"backgroundTextStyle\": \"light\" """ 
+  'jnMp enablePullDownRefresh  ':
+    'prefix': 'enablePullDownRefresh-mp'
+    'body': """\"enablePullDownRefresh\": true """ 
+  'jnMp onReachBottomDistance  ':
+    'prefix': 'onReachBottomDistance-mp'
+    'body': """\"onReachBottomDistance\": 50 """ 
+
+
+

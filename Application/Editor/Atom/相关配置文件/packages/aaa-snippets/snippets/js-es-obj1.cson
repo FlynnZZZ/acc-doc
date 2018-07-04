@@ -1,0 +1,261 @@
+# js 其他类型&对象 
+'.source.js':
+  # date ------------------------------------------------
+  'EO1 Date.now()  num,自世界协调时间至今的毫秒数':
+    'prefix': 'Date-now'
+    'body': 'Date.now()'
+  'EO1 Date.parse(str/date)  num,日期解析的毫秒数':
+    'prefix': 'Date-parse'
+    'body': 'Date.parse($1)'
+  'EO1 Date.UTC(year,month[,...]) num,表示日期的毫秒数':
+    'prefix': 'Date-UTC'
+    'body': 'Date.UTC($1)'
+  'EO1 new Date([val])  创建时间对象':
+    'prefix': 'new-Date'
+    'body': 'new Date($1)'
+  'EO1 .getDate()  num,日数值,1-31':
+    'prefix': 'getDate-date'
+    'body': 'getDate()'
+  'EO1 .getDay()  num,星期数值,0-6':
+    'prefix': 'getDay-date'
+    'body': 'getDay()'
+  'EO1 .getFullYear()  num,年份数值,1970-275760':
+    'prefix': 'getFullYear-date'
+    'body': 'getFullYear()'
+  'EO1 .getHours()  num,小时数值,0-23':
+    'prefix': 'getHours-date'
+    'body': 'getHours()'
+  'EO1 .getMonth()  num,月份数值,0-11':
+    'prefix': 'getMonth-date'
+    'body': 'getMonth()'
+  'EO1 .getMinutes()  num,分钟数值,0-59':
+    'prefix': 'getMinutes-date'
+    'body': 'getMinutes()'
+  'EO1 .getMilliseconds()  num,毫秒数值,0-999':
+    'prefix': 'getMilliseconds-date'
+    'body': 'getMilliseconds()'
+  'EO1 .getSeconds()  num,秒数值,0-59':
+    'prefix': 'getSeconds-date'
+    'body': 'getSeconds()'
+  'EO1 .getTime()  num,时间的毫秒值':
+    'prefix': 'getTime-date'
+    'body': 'getTime()'
+  'EO1 .getTimezoneOffset()  num,当前时区和GMT格林威治时间相差的分钟数值':
+    'prefix': 'getTimezoneOffset-date'
+    'body': 'getTimezoneOffset()'
+  'EO1 .toDateString()':
+    'prefix': 'toDateString-date'
+    'body': 'toDateString()'
+  'EO1 .toLocaleString()':
+    'prefix': 'toLocaleString-date'
+    'body': 'toLocaleString()'
+  'EO1 .toLocaleDateString()':
+    'prefix': 'toLocaleDateString-date'
+    'body': 'toLocaleDateString()'
+  'EO1 .toLocaleTimeString()':
+    'prefix': 'toLocaleTimeString-date'
+    'body': 'toLocaleTimeString()'
+  'EO1 .toTimeString()':
+    'prefix': 'toTimeString-date'
+    'body': 'toTimeString()'
+  'EO1 .toUTCString()':
+    'prefix': 'toUTCString-date'
+    'body': 'toUTCString()'
+  # math ------------------------------------------------
+  'EO1 Math  数学库对象':
+    'prefix': 'Math-math'
+    'body': 'Math'
+  'EO1 Math.PI  π的值':
+    'prefix': 'Math-PI'
+    'body': 'Math.PI'
+  'EO1 Math.SQRT2  2的平方根':
+    'prefix': 'Math-SQRT2'
+    'body': 'Math.SQRT2'
+  'EO1 Math.SQRT1_2  1/2的平方根':
+    'prefix': 'Math-SQRT1_2'
+    'body': 'Math.SQRT1_2'
+  'EO1 Math.E  自然对数的底数':
+    'prefix': 'Math-E'
+    'body': 'Math.E'
+  'EO1 Math.LN10  10的自然对数':
+    'prefix': 'Math-LN10'
+    'body': 'Math.LN10'
+  'EO1 Math.LN2  2的自然对数':
+    'prefix': 'Math-LN2'
+    'body': 'Math.LN2'
+  'EO1 Math.LOG2E  以2为底e的对数':
+    'prefix': 'Math-LOG2E'
+    'body': 'Math.LOG2E'
+  'EO1 Math.LOG10E  以10为底e的对数':
+    'prefix': 'Math-LOG10E'
+    'body': 'Math.LOG10E'
+  'EO1 Math.random() 0-1间的随机数':
+    'prefix': 'Math-random'
+    'body': 'Math.random()'
+  'EO1 Math.abs(num) 求绝对值':
+    'prefix': 'Math-abs'
+    'body': 'Math.abs($1)'
+  'EO1 Math.ceil($1) 向上取整':
+    'prefix': 'Math-ceil'
+    'body': 'Math.ceil($1)'
+  'EO1 Math.floor($1) 向下取整':
+    'prefix': 'Math-floor'
+    'body': 'Math.floor($1)'
+  'EO1 Math.round($1)  四舍五入取整':
+    'prefix': 'Math-round'
+    'body': 'Math.round($1)'
+  'EO1 Math.exp(num)  Math.E的num次幂':
+    'prefix': 'Math-exp'
+    'body': 'Math.exp($1)'
+  'EO1 Math.log(num)  num的自然对数':
+    'prefix': 'Math-log'
+    'body': 'Math.log($1)'
+  'EO1 Math.pow(num,power) num的power次幂':
+    'prefix': 'Math-pow'
+    'body': 'Math.pow($1)'
+  'EO1 Math.sqrt(num) 平方根':
+    'prefix': 'Math-sqrt'
+    'body': 'Math.sqrt($1)'
+  'EO1 Math.max(num1,num2,..)  ':
+    'prefix': 'Math-max'
+    'body': 'Math.max($1)'
+  'EO1 Math.min(num1,num2,..)  ':
+    'prefix': 'Math-min'
+    'body': 'Math.min($1)'
+  'EO1 Math.cos(弧度值)  ':
+    'prefix': 'Math-cos'
+    'body': 'Math.cos($1)'
+  'EO1 Math.sin(弧度值)  ':
+    'prefix': 'Math-sin'
+    'body': 'Math.sin($1)'
+  'EO1 Math.tan(弧度值)  ':
+    'prefix': 'Math-tan'
+    'body': 'Math.tan($1)'
+  'EO1 Math.asin(num)  ':
+    'prefix': 'Math-asin'
+    'body': 'Math.asin($1)'
+  'EO1 Math.acos(num)  ':
+    'prefix': 'Math-acos'
+    'body': 'Math.acos($1)'
+  'EO1 Math.atan(num)  ':
+    'prefix': 'Math-atan'
+    'body': 'Math.atan($1)'
+  'EO1 Math.atan2(num)  num1/num2的反正切值':
+    'prefix': 'Math-atan2'
+    'body': 'Math.atan2($1)'
+  # Promise ------------------------------------------------
+  'EO1 Promise  promise构造函数':
+    'prefix': 'Promise'
+    'body': 'Promise'
+  'EO1 Promise.all(promiseArr)  全局模式':
+    'prefix': 'Promise.all'
+    'body': '''Promise.all([
+        promise1
+        ,...
+      ])'''
+  'EO1 Promise.race(promiseArr)  竞速模式':
+    'prefix': 'Promise.race'
+    'body': '''Promise.race([
+        promise1
+        ,...
+      ])'''
+  'EO1 Promise.resolve($1)  promise,执行成功':
+    'prefix': 'Promise.resolve'
+    'body': '''Promise.resolve($1)'''
+  'EO1 Promise.reject($1)  promise,执行失败':
+    'prefix': 'Promise.reject'
+    'body': '''Promise.reject($1)'''
+  'EO1 new Promise(fn)  实例化Promise':
+    'prefix': 'new-promise'
+    'body': '''new Promise(function(rs,rj){
+      })'''
+  'EO1 pms.then(fn)  pms,执行rs':
+    'prefix': 'then-promise'
+    'body': '''then(function(data){
+      })'''
+  'EO1 pms.then(fn1,fn2)  pms,执行rs/rj':
+    'prefix': 'then-both-promise'
+    'body': '''then(function(data){
+      }
+      ,function(info){
+      })'''
+  'EO1 pms.catch(fn)  pms,执行rj':
+    'prefix': 'catch-promise'
+    'body': '''catch(function(info){
+      })'''
+  'EO1 pms.finally(fn)  pms,最终会执行':
+    'prefix': 'finally-promise'
+    'body': '''finally(function(data){
+      })'''
+  # XMLHttpRequest ------------------------------------------------
+  'EO1 new XMLHttpRequest()  AJAX核心对象':
+    'prefix': 'new-XMLHttpRequest'
+    'body': 'new XMLHttpRequest()'
+  'EO1 .setRequestHeader(key,val)  设定请求头':
+    'prefix': 'setRequestHeader-xhr'
+    'body': 'setRequestHeader(key,val)'
+  'EO1 .send([data])  发送请求数据':
+    'prefix': 'send-xhr'
+    'body': 'send($1)'
+  'EO1 ajax-pack  自定义的代码段':
+    'prefix': 'ajax-pack'
+    'body':  """
+      var xhr = new XMLHttpRequest();
+      xhr.open('Method', 'Url', true);
+      xhr.setRequestHeader('Content-Type', 'application/json'); // 可选
+      xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4) {
+          console.log('state change end', xhr);
+          console.log(xhr.status);
+          console.log(xhr.response);
+          var response = JSON.parse(xhr.response);
+          console.log(response);
+        } 
+        else {
+          console.log('change');
+        }
+      }
+      var aoo = { username: 'gua', password: '123', };
+      var data = JSON.stringify(aoo);
+      xhr.send(data); 
+      """
+  # console ----------------------------------------------------
+  'EO1 console  控制台调试对象':
+    'prefix': 'console'
+    'body': 'console'
+  'EO1 .log("%c%s","color:red",str,$1)  带颜色输出':
+    'prefix': 'console-log-color'
+    'body': 'console.log("%c%s","color:red","说明文字",$1)'
+  'EO1 .info(val1,val2,..)  输出信息性消息':
+    'prefix': 'console-info'
+    'body': 'console.info($1)'
+  'EO1 .warn(val1,val2,..)  输出警告消息':
+    'prefix': 'console-warn'
+    'body': 'console.warn($1)'
+  'EO1 .error(val1,val2,..)  输出错误消息':
+    'prefix': 'console-error'
+    'body': 'console.error($1)'
+  'EO1 .clear()  清除所有输出':
+    'prefix': 'console-clear'
+    'body': 'console.clear()'
+  'EO1 .time("timer1")  计时器开始计时':
+    'prefix': 'console-time'
+    'body': 'console.time("timer1")'
+  'EO1 .timeEnd("timer1")  计时器结束计时并输出':
+    'prefix': 'console-timeEnd'
+    'body': 'console.timeEnd("timer1")'
+  'EO1 .trace("trace1")  调用路径显示':
+    'prefix': 'console-trace'
+    'body': 'console.trace("trace1")'
+  'EO1 .dir($1)  优化对对象的显示':
+    'prefix': 'console-dir'
+    'body': 'console.dir($1)'
+  'EO1 .table(val)  以表格形式输出':
+    'prefix': 'console-table'
+    'body': 'console.table($1)'
+  'EO1 .group($1)  组的开始':
+    'prefix': 'console-group'
+    'body': 'console.group($1)'
+  'EO1 .groupEnd()  组的结束':
+    'prefix': 'console-groupEnd'
+    'body': 'console.groupEnd()'

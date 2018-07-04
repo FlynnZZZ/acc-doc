@@ -1,0 +1,351 @@
+# 微信小程序 .wxml 文件----------------------------------------------------------
+'.text.xml':
+  # 标签&属性&事件----------------------------------- 
+  'HW <block>$1</block>  块':
+    'prefix': 'block-tag'
+    'body': """<block >$1</block>""" 
+  'HW <template name="">$1</template>  模版':
+    'prefix': 'template-tag-wx'
+    'body': """<template name="">$1</template>""" 
+  'HW is="$1"  template的属性':
+    'prefix': 'is-attr-template'
+    'body': 'is="$1"'
+  'HW name="$1"  template的属性':
+    'prefix': 'name-attr-template'
+    'body': 'name="$1"'
+  'HW data="$1"  template的属性':
+    'prefix': 'data-attr-template'
+    'body': 'data="$1"'
+  'HW <view>$1</view>  视图容器':
+    'prefix': 'view-tag'
+    'body': """<view >$1</view>""" 
+  'HW <scroll-view>$1</scroll-view>  可滚动视图区域':
+    'prefix': 'scroll-view tag'
+    'body': """<scroll-view scroll-y>
+      $1
+    </scroll-view>""" 
+  'HW scroll-x="true"  横向滚动':
+    'prefix': 'scroll-x attr'
+    'body': """scroll-x=\"true\" """ 
+  'HW scroll-y="true"  纵向滚动':
+    'prefix': 'scroll-y attr'
+    'body': """scroll-y=\"true\" """ 
+  'HW scroll-with-animation="true"  在设置滚动条位置时使用动画过渡':
+    'prefix': 'scroll-with-animation attr'
+    'body': """scroll-with-animation=\"true\" """ 
+  'HW enable-back-to-top="true"  滚动条返回顶部':
+    'prefix': 'enable-back-to-top attr'
+    'body': """enable-back-to-top=\"true\" """ 
+  'HW scroll-top="0"  设置纵向滚动条位置':
+    'prefix': 'scroll-top attr'
+    'body': """scroll-top=\"0\" """ 
+  'HW scroll-left="0"  设置横向滚动条位置':
+    'prefix': 'scroll-left attr'
+    'body': """scroll-left=\"0\" """ 
+  'HW scroll-into-view="_childId"  将元素滚动到可视区':
+    'prefix': 'scroll-into-view attr'
+    'body': """scroll-into-view=\"_childId\" """ 
+  'HW upper-threshold="50"  距顶/左部触发scrolltoupper事件的距离':
+    'prefix': 'upper-threshold attr'
+    'body': """upper-threshold=\"50\" """ 
+  'HW lower-threshold="50"  距底/右部触发scrolltolower事件的距离':
+    'prefix': 'lower-threshold attr'
+    'body': """lower-threshold=\"50\" """ 
+  'HW bindscrolltoupper=  scroll-view属性':
+    'prefix': 'bindscrolltoupper attr'
+    'body': """bindscrolltoupper=\"$1\"""" 
+  'HW bindscrolltolower=  scroll-view属性':
+    'prefix': 'bindscrolltolower attr'
+    'body': """bindscrolltolower=\"$1\"""" 
+  'HW bindscroll=  scroll-view属性':
+    'prefix': 'bindscroll attr'
+    'body': """bindscroll=\"$1\"""" 
+  'HW <movable-area>$1</movable-area>  <movable-view>的可移动区域':
+    'prefix': 'movable-area tag'
+    'body': """<movable-area >$1</movable-area>""" 
+  'HW <movable-view>$1</movable-view>  可拖拽滑动的视图容器':
+    'prefix': 'movable-view tag'
+    'body': """<movable-view x="" y="">$1</movable-view>""" 
+  'HW inertia  movable-view属性':
+    'prefix': 'inertia attr'
+    'body': """inertia""" 
+  'HW out-of-bounds  movable-view属性':
+    'prefix': 'out-of-bounds attr'
+    'body': """out-of-bounds""" 
+  'HW direction=  movable-view属性':
+    'prefix': 'direction attr'
+    'body': """direction=\"$1\"""" 
+  'HW damping=  movable-view属性':
+    'prefix': 'damping attr'
+    'body': """damping=\"$1\"""" 
+  'HW friction=  movable-view属性':
+    'prefix': 'friction attr'
+    'body': """friction=\"$1\"""" 
+  'HW <swiper>$1</swiper>  轮播组件':
+    'prefix': 'swiper-tag'
+    'body': """<swiper >$1</swiper>""" 
+  'HW indicator-dots  swiper属性':
+    'prefix': 'indicator-dots attr'
+    'body': """indicator-dots""" 
+  'HW autoplay  swiper属性':
+    'prefix': 'autoplay attr'
+    'body': """autoplay""" 
+  'HW vertical  swiper属性':
+    'prefix': 'vertical attr'
+    'body': """vertical""" 
+  'HW indicator-color=  swiper属性':
+    'prefix': 'indicator-color attr'
+    'body': """indicator-color=\"${1:rgba(0,0,0,0.2)}\"""" 
+  'HW indicator-active-color=  swiper属性':
+    'prefix': 'indicator-active-color attr'
+    'body': """indicator-active-color=\"${1:#000}\"""" 
+  'HW interval=  swiper属性':
+    'prefix': 'interval attr'
+    'body': """interval=\"${1:5000}\"""" 
+  'HW duration=  swiper属性':
+    'prefix': 'duration attr'
+    'body': """duration=\"${1:500}\"""" 
+  'HW circular=  swiper属性':
+    'prefix': 'circular attr'
+    'body': """circular""" 
+  'HW current=  swiper属性':
+    'prefix': 'current attr'
+    'body': """current=\"${1:0}\"""" 
+  'HW <swiper-item>$1</swiper-item>  轮播中一帧的页面':
+    'prefix': 'swiper-item tag'
+    'body': """<swiper-item >$1</swiper-item>""" 
+  'HW <cover-view>$1</cover-view>  覆盖在原生组件上的文本视图':
+    'prefix': 'cover-view'
+    'body': """<cover-view>$1</cover-view>""" 
+  'HW <cover-image src="$1"/>  覆盖在原生组件之上的图片视图':
+    'prefix': 'cover-image'
+    'body': """<cover-image src="$1"/>""" 
+  'HW <image src="$1"/>  图片':
+    'prefix': 'image-tag'
+    'body': """<image src=\"$1\" mode=\"aspectFit\"/>""" 
+  'HW lazyload="true"  image属性':
+    'prefix': 'lazyload attr'
+    'body': """lazyload=\"true\" """ 
+  'HW <audio></audio>  音频':
+    'prefix': 'audio-tag'
+    'body': """<audio src="">$1</audio>""" 
+  'HW <video></video>  视频':
+    'prefix': 'video-tag'
+    'body': """<video src="">$1</video>""" 
+  'HW <camera></camera>  系统相机':
+    'prefix': 'camera-tag'
+    'body': """<camera >$1</camera>""" 
+  'HW <live-player></live-player>  实时音视频播放':
+    'prefix': 'live-player tag'
+    'body': """<live-player >$1</live-player>""" 
+  'HW <icon type="" size="12" color=""/>  图标':
+    'prefix': 'icon-tag'
+    'body': """<icon type="$1" size="12" color="#ccc"/>""" 
+  'HW <text >$1</text>  文本':
+    'prefix': 'text tag'
+    'body': """<text >$1</text>""" 
+  'HW selectable text':
+    'prefix': 'selectable attr'
+    'body': """selectable""" 
+  'HW decode text':
+    'prefix': 'decode attr'
+    'body': """decode""" 
+  'HW space= text':
+    'prefix': 'space= attr'
+    'body': """space=\"$1\"""" 
+  'HW <navigator >$1</navigator>  链接':
+    'prefix': 'navigator-tag-wx'
+    'body': """<navigator url="$1" open-type="navigate">$2</navigator>""" 
+  'HW <rich-text nodes="{{nodes}}"><rich-text>  富文本':
+    'prefix': 'rich-text tag            '
+    'body': '<rich-text nodes="{{${1:nodes}}}"></rich-text>'
+  'HW nodes="{{}}"  rich-text属性':
+    'prefix': 'nodes attr'
+    'body': 'nodes="{{$1}}"'
+  'HW <progress>$1</progress>  进度条':
+    'prefix': 'progress-tag-wx'
+    'body': """<progress>$1</progress>""" 
+  'HW <form>$1</form>  表单':
+    'prefix': 'form-tag-wx'
+    'body': """<form>$1</form>""" 
+  'HW <input />  输入框':
+    'prefix': 'input-tag-wx'
+    'body': """<input />""" 
+  'HW <checkbox-group>$1</checkbox-group>  多项选择器':
+    'prefix': 'checkbox-group tag-wx'
+    'body': """<checkbox-group>$1</checkbox-group>""" 
+  'HW <checkbox />  多选项目':
+    'prefix': 'checkbox-tag-wx'
+    'body': """<checkbox />""" 
+  'HW <picker>$1</picker>  从底部弹起的滚动选择器':
+    'prefix': 'picker-tag-wx'
+    'body': """<picker>$1</picker>""" 
+  'HW <picker-view>$1</picker-view>  嵌入页面的滚动选择器':
+    'prefix': 'picker-view tag-wx'
+    'body': """<picker-view>$1</picker-view>""" 
+  'HW <picker-view-column>$1</picker-view-column>  滚动选择项':
+    'prefix': 'picker-view-column tag-wx'
+    'body': """<picker-view-column>$1</picker-view-column>""" 
+  'HW <radio-group>$1</radio-group>  单项选择器':
+    'prefix': 'radio-group tag-wx'
+    'body': """<radio-group>$1</radio-group>""" 
+  'HW <radio>$1</radio>  单选项目':
+    'prefix': 'radio-tag-wx'
+    'body': """<radio>$1</radio>""" 
+  'HW <slider>$1</slider>  滑动选择器':
+    'prefix': 'slider-tag-wx'
+    'body': """<slider>$1</slider>""" 
+  'HW <switch>$1</switch>  开关选择器':
+    'prefix': 'switch-tag-wx'
+    'body': """<switch>$1</switch>""" 
+  'HW <textarea>$1</textarea>  多行输入框':
+    'prefix': 'textarea-tag-wx'
+    'body': """<textarea>$1</textarea>""" 
+  'HW <label>$1</label>  改进表单组件的可用性':
+    'prefix': 'label-tag-wx'
+    'body': """<label>$1</label>""" 
+  'HW <button>$1</button>  按钮':
+    'prefix': 'button-tag-wx'
+    'body': """<button>$1</button>""" 
+  'HW <map>$1</map>  地图':
+    'prefix': 'map-tag-wx'
+    'body': """<map>$1</map>""" 
+  'HW <canvas>$1</canvas>  画布':
+    'prefix': 'canvas-tag-wx'
+    'body': """<canvas>$1</canvas>""" 
+  'HW <contact-button>$1</contact-button>  客服会话按钮':
+    'prefix': 'contact-button tag-wx'
+    'body': """<contact-button>$1</contact-button>""" 
+  'HW <open-data>$1</open-data>  用于展示微信开放的数据':
+    'prefix': 'open-data tag-wx'
+    'body': """<open-data>$1</open-data>""" 
+  'HW <web-view>$1</web-view>  承载网页的容器':
+    'prefix': 'web-view tag-wx'
+    'body': """<web-view>$1</web-view>""" 
+  # 多用属性------------------------------ 
+  'HW hidden="true"  是否隐藏':
+    'prefix': 'hidden attr'
+    'body': """hidden=\"true\" """ 
+  'HW hover-class="none"  点击后的样式类':
+    'prefix': 'hover-class attr'
+    'body': """hover-class=\"none\"""" 
+  'HW hover-start-time="50"  点击后多久出现点击态':
+    'prefix': 'hover-start-time attr'
+    'body': """hover-start-time=\"50\" """ 
+  'HW hover-stay-time="400"  手指松开后点击态保留时间':
+    'prefix': 'hover-stay-time  attr'
+    'body': """hover-stay-time=\"400\" """ 
+  'HW hover-stop-propagation="true"  是否阻止祖先节点出现点击态':
+    'prefix': 'hover-stop-propagation attr'
+    'body': """hover-stop-propagation=\"true\" """ 
+  # 事件 
+  'HW data-xxx="_any"  自定义属性,会发送给事件处理函数':
+    'prefix': 'data attr-event'
+    'body': """data-xxx=\"$1\" """ 
+  'HW bind:type="fn"  事件绑定,不阻止冒泡':
+    'prefix': 'bind-event-wx'
+    'body': """bind:type=\"fn\" """ 
+  'HW catch:type="fn"  事件绑定,阻止冒泡':
+    'prefix': 'catch-event-wx'
+    'body': """catch:type=\"fn\" """ 
+  'HW touchstart  手指触摸动作开始':
+    'prefix': 'touchstart-event'
+    'body': """touchstart""" 
+  'HW touchmove  手指触摸后移动':
+    'prefix': 'touchmove-event'
+    'body': """touchmove""" 
+  'HW touchend  手指触摸动作结束':
+    'prefix': 'touchend-event'
+    'body': """touchend""" 
+  'HW touchcancel  手指触摸动作被打断':
+    'prefix': 'touchcancel-event'
+    'body': """touchcancel""" 
+  'HW tap  手指触摸后离开':
+    'prefix': 'tap-event'
+    'body': """tap""" 
+  'HW longpress  手指触摸超过350ms再离开':
+    'prefix': 'longpress-event'
+    'body': """longpress""" 
+  'HW transitionend  ':
+    'prefix': 'transitionend-event'
+    'body': """transitionend""" 
+  'HW animationstart  ':
+    'prefix': 'animationstart-event'
+    'body': """animationstart""" 
+  'HW animationiteration  ':
+    'prefix': 'animationiteration-event'
+    'body': """animationiteration""" 
+  'HW animationend  ':
+    'prefix': 'animationend-event'
+    'body': """animationend""" 
+  'HW touchforcechange  ':
+    'prefix': 'touchforcechange-event'
+    'body': """touchforcechange""" 
+  'HW change  改变/变化事件':
+    'prefix': 'change-event'
+    'body': """change""" 
+  'HW error  ':
+    'prefix': 'error-event'
+    'body': """error""" 
+  'HW load  ':
+    'prefix': 'load-event'
+    'body': """load""" 
+  'HW submit  ':
+    'prefix': 'submit-event'
+    'body': """submit""" 
+  'HW input  ':
+    'prefix': 'input-event'
+    'body': """input""" 
+  'HW scroll  ':
+    'prefix': 'scroll-event'
+    'body': """scroll""" 
+  'HW scrolltoupper  ':
+    'prefix': 'scrolltoupper-event'
+    'body': """scrolltoupper""" 
+  'HW scrolltolower  ':
+    'prefix': 'scrolltolower-event'
+    'body': """scrolltolower""" 
+  'HW getphonenumber  ':
+    'prefix': 'getphonenumber-event'
+    'body': """getphonenumber""" 
+  'HW getuserinfo  ':
+    'prefix': 'getuserinfo-event'
+    'body': """getuserinfo""" 
+  'HW contact  ':
+    'prefix': 'contact-event'
+    'body': """contact""" 
+  # 指令语法------------------------------ 
+  'HW wx:for="{{$1}}"  列表渲染':
+    'prefix': 'wx:for1'
+    'body': """wx:for=\"{{$1}}\" """ 
+  'HW wx:for-item="itm"  指定项':
+    'prefix': 'wx:for-item'
+    'body': """wx:for-item=\"itm\" """ 
+  'HW wx:for-index="idx"  指定键':
+    'prefix': 'wx:for-index'
+    'body': """wx:for-index=\"idx\" """ 
+  'HW wx:key="_key/*this"  指定列表中项目的唯一标识符':
+    'prefix': 'wx-key'
+    'body': """wx:key=\"*this\" """ 
+  'HW wx:if="{{val}}"  条件渲染':
+    'prefix': 'wx:if'
+    'body': """wx:if=\"{{val}}\" """ 
+  'HW wx:elif="{{val}}"  条件渲染':
+    'prefix': 'wx:elif'
+    'body': """wx:elif=\"{{val}}\" """ 
+  'HW wx:else  条件渲染':
+    'prefix': 'wx:else'
+    'body': """wx:else""" 
+  # 功能---------------------------------- 
+  'HW <import src="xxx.wxml"/>  使用目标文件定义的<template>模版':
+    'prefix': 'import-wx'
+    'body': """<import src="$1"/>""" 
+  'HW <include src="xxx.wxml"/>  将目标文件除了<template/>的整个代码引入':
+    'prefix': 'include-wx'
+    'body': """<include src="$1"/>""" 
+  # ---------------------------------------------------------------------------- 
+
+
+
+
+

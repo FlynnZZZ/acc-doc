@@ -1,0 +1,252 @@
+# 微信小程序 .js 
+'.source.js':
+  'JMB App({})  小程序注册':
+    'prefix': 'App-mp'
+    'body': """App({
+        globalData: {  
+          _key: _val
+          ,..
+        }
+        // Methods
+        ,fn1: function (){
+          // 
+        }
+        // Lifecycles 
+        ,onLaunch: function(query){   
+          // 初始化 
+        }
+        ,onShow: function(){       
+          // 显示
+        }
+        ,onHide: function(){      
+          // 隐藏 
+        }
+        ,onError: function(){       
+          // 出错 
+        }
+        ,onPageNotFound: function(param){       
+          // 页面不存在 
+        }
+      })""" 
+  'JMB Page({})  页面注册':
+    'prefix': 'Page-mp'
+    'body': """Page({
+        data: {  
+          key: val
+          ,..
+        }
+        // Datas  
+        ,key1: 111  
+        // Methods
+        ,fn1: function (){
+          
+        }
+        // Lifecycles 
+        ,onLoad: function(query){   
+          console.log('加载页面',query); 
+        }
+        ,onShow: function(){       
+          console.log('页面显示');
+        }
+        ,onReady: function(){      
+          console.log('初次渲染完成');
+        }
+        ,onHide: function(){      
+          console.log('页面隐藏');
+        }
+        ,onUnload: function(){       
+          console.log('页面卸载');
+        }
+        // 事件处理函数 
+        ,onPullDownRefresh: function () {   
+          console.log('下拉刷新');
+        }
+        ,onReachBottom: function () {        
+          console.log('上拉触底');
+        }
+        ,onShareAppMessage: function(){     
+          return {   
+            'title': '自定义转发标题',  
+            'path': '/page/user?id=123', 
+          }
+        }
+        ,onPageScroll: function(obj){       
+          console.log('页面滚动',obj);
+        }
+      })""" 
+  'JMB Behavior({})  注册组件':
+    'prefix': 'Behavior-mp'
+    'body': """Behavior({
+        data: {  
+          key: val
+          ,..
+        }
+        ,properties: {
+          attr1: {
+            type: null  // 任意类型
+            ,value: val // 可选,初始值 
+            ,observer: function(newVal ,oldVal){ 
+              // 
+            } 
+          }
+          attr2: String // 简化的定义方式 
+          ,...
+        }
+        ,externalClasses: []
+        ,methods: {
+          fn1: function (){
+            // 
+          }
+        }
+        // Lifecycles 
+        ,created: function(){   
+        }
+        ,attached: function(){   
+        }
+        ,ready: function(){   
+        }
+        ,moved: function(){   
+        }
+        ,detached: function(){   
+        }
+        ,options: {
+          multipleSlots: true 
+        }
+        ,relations: {
+          './xxx-xx': {  
+            type: 'child' 
+            ,linked: function(cpnt){      
+            }  
+            ,linkChanged: function(cpnt){ 
+            }  
+            ,unlinked: function(cpnt){    
+            }
+            // ,target:                 
+            }
+          }
+        }
+        ,behaviors: []
+      })""" 
+  'JMB Behavior({})  behaviors构造器':
+    'prefix': 'Component-mp'
+    'body': """Component({
+        data: {  
+          key: val
+          ,..
+        }
+        ,properties: function (){
+          attr1: {
+            type: null  // 任意类型
+            ,value: val // 可选,初始值 
+            ,observer: function(newVal ,oldVal){ 
+              // 
+            } 
+          }
+          attr2: String // 简化的定义方式 
+          ,...
+        }
+        ,externalClasses: []
+        ,methods: {
+          fn1: function (){
+            // 
+          }
+        }
+        // Lifecycles 
+        ,created: function(){   
+        }
+        ,attached: function(){   
+        }
+        ,ready: function(){   
+        }
+        ,moved: function(){   
+        }
+        ,detached: function(){   
+        }
+        ,options: {
+          multipleSlots: true 
+        }
+        ,relations: {
+          './xxx-xx': {  
+            type: 'child' 
+            ,linked: function(cpnt){      
+            }  
+            ,linkChanged: function(cpnt){ 
+            }  
+            ,unlinked: function(cpnt){    
+            }
+            // ,target:                 
+            }
+          }
+        }
+        ,behaviors: []
+      })""" 
+  # 
+  'JMB onLaunch  小程序初始化':
+    'prefix': 'onLaunch-mp'
+    'body': """onLaunch""" 
+  'JMB onError  小程序出错':
+    'prefix': 'onError-mp'
+    'body': """onError""" 
+  'JMB onPageNotFound  小程序页面不存在':
+    'prefix': 'onPageNotFound-mp'
+    'body': """onPageNotFound""" 
+  'JMB onLoad  页面加载':
+    'prefix': 'onLoad-page-mp'
+    'body': """onLoad""" 
+  'JMB onShow  小程序/页面显示':
+    'prefix': 'onShow-mp'
+    'body': """onShow""" 
+  'JMB onReady  页面初次渲染完成':
+    'prefix': 'onReady-page-mp'
+    'body': """onReady""" 
+  'JMB onHide  小程序/页面隐藏':
+    'prefix': 'onHide-mp'
+    'body': """onHide""" 
+  'JMB onUnload  页面卸载':
+    'prefix': 'onUnload-page-mp'
+    'body': """onUnload""" 
+  'JMB onPullDownRefresh  页面下拉':
+    'prefix': 'onPullDownRefresh-page-mp'
+    'body': """onPullDownRefresh""" 
+  'JMB onReachBottom  页面上拉触底':
+    'prefix': 'onReachBottom-page-mp'
+    'body': """onReachBottom""" 
+  'JMB onShareAppMessage  页面右上角转发':
+    'prefix': 'onShareAppMessage-page-mp'
+    'body': """onShareAppMessage""" 
+  'JMB onPageScroll  页面滚动':
+    'prefix': 'onPageScroll-page-mp'
+    'body': """onPageScroll""" 
+  # 
+  'JMB getApp()  小程序实例':
+    'prefix': 'getApp-app'
+    'body': """getApp()""" 
+  'JMB .globalData  全局数据':
+    'prefix': 'globalData-app'
+    'body': """globalData""" 
+  'JMB .getCurrentPage()  当前页面实例':
+    'prefix': 'getCurrentPage-app'
+    'body': """getCurrentPage()""" 
+  'JMB .setData({},fn?)  更新视图':
+    'prefix': 'setData-page-mp'
+    'body': """setData({
+        key: val 
+      })""" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+# 微信小程序 .wxss 文件----------------------------------------------------------
+'.source.css': 
+  # 
+  'WS @import "./xx.wxss";  导入外联样式表':
+    'prefix': 'import mp'
+    'body': '@import "./xx.wxss";'
+  # 元素选择器 
+  'WS view':
+    'prefix': 'view mp'
+    'body': 'view'
+  'WS navigator':
+    'prefix': 'navigator mp'
+    'body': 'navigator'
+
+
+
+
+
+
+
+
+
+
+

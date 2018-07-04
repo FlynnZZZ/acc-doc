@@ -1,0 +1,505 @@
+# 数据类型&类&常用对象 --------------------------------------------------------
+'.source.js':
+  # fn ------------------------------------------------
+  'EO Function  函数类型的构造函数':
+    'prefix': 'Function-fn'
+    'body': 'Function'
+  'EO function  函数':
+    'prefix': 'function'
+    'body': 'function'
+  'EO function foo(){}  定义函数':
+    'prefix': 'function-define'
+    'body': '''function $1($2){
+      } '''
+  'EO function(){}  匿名函数':
+    'prefix': 'function-nameless'
+    'body': '''function($1){
+      }'''
+  'EO ;(function (){})()  立即执行的匿名函数':
+    'prefix': 'function-immediate '
+    'body': ''';(function ($1){
+      })($2)'''
+  'EO fn.name str,函数的名字':
+    'prefix': 'name-fn'
+    'body': 'name'
+  'EO fn.caller  fn,函数执行时的上层函数':
+    'prefix': 'caller-fn'
+    'body': 'caller'
+  'EO fn.prototype  obj,构造函数原型':
+    'prefix': 'prototype-fn'
+    'body': 'prototype'
+  'EO fn.apply(this[,arr])  方法在指定对象上调用':
+    'prefix': 'apply-fn'
+    'body': 'apply(${1:this},${2:arr})'
+  'EO fn.call(this[,arg1,arg2,...])  方法在指定对象上调用':
+    'prefix': 'call-fn'
+    'body': """call(${1:this},${2:arg1,arg2,..})"""
+  'EO fn.bind(this[,arg1,arg2,...])  fn,将借用的方法返回':
+    'prefix': 'bind-fn'
+    'body': 'bind(${1:this},${2:arg1,arg2,..})'
+  'EO arguments  [函数体内]表示函数的参数类数组':
+    'prefix': 'arguments-fn'
+    'body': 'arguments'
+  'EO arguments.callee  在函数体内表示函数本身':
+    'prefix': 'callee-arguments'
+    'body': 'callee'
+  'EO ($1) => {$2}  箭头函数,ES6':
+    'prefix': 'function-arrow'
+    'body': '''($1) => {
+        $2
+      }'''
+  'EO ($1) => expr  箭头函数-简写,ES6':
+    'prefix': 'function-arrow-simple'
+    'body': '''($1) => $2'''
+  'EO function* name(){}  Generator函数,ES6':
+    'prefix': 'function-generator'
+    'body': '''function* $1($2){
+        yield
+      }'''
+  'EO function* (){}  匿名Generator函数,ES6':
+    'prefix': 'function-generator-nameless'
+    'body': '''function* $1($2){
+        yield
+      }'''
+  'EO yield  Generator停止位置,ES6':
+    'prefix': 'yield-generator'
+    'body': 'yield'
+  'EO yield*  调用另一Generator,ES6':
+    'prefix': 'yield1-generator'
+    'body': 'yield*'
+  'EO async function name(){}  async函数,ES6':
+    'prefix': 'function-async'
+    'body': '''async function $1($2){
+        $3
+      }'''
+  'EO async function (){}  匿名async函数,ES6':
+    'prefix': 'function-async-nameless'
+    'body': '''async function ($2){
+        $3
+      }'''
+  'EO await $1  ES6':
+    'prefix': 'await-async'
+    'body': 'await $1'
+  # obj ------------------------------------------------
+  'EO Object  对象的构造函数':
+    'prefix': 'Object-obj' # 存在bug
+    'body': 'Object'
+  'EO Object.create(protoObj[,configObj])  obj,生成对象':
+    'prefix': 'Object-create'
+    'body': 'Object.create($1)'
+  'EO Object.is(val1,val2)  bol,值是否相同(按外形比较)':
+    'prefix': 'Object-is'
+    'body': 'Object.is($1)'
+  'EO Object.keys(obj)  arr,获取可枚举的自有成员':
+    'prefix': 'Object-keys'
+    'body': 'Object.keys($1)'
+  'EO Object.assign(obj1,obj2,..)  obj,返回合并后的对象':
+    'prefix': 'Object-assign'
+    'body': 'Object.assign($1)'
+  'EO Object.getPrototypeOf(obj)  obj,原型对象':
+    'prefix': 'Object-getPrototypeOf'
+    'body': 'Object.getPrototypeOf($1)'
+  'EO Object.setPrototypeOf(obj,proto)  obj,设置对象的原型对象':
+    'prefix': 'Object-setPrototypeOf'
+    'body': 'Object.setPrototypeOf(obj,proto)'
+  'EO Object.defineProperty(obj,key,{})  定义对象的成员及其特性':
+    'prefix': 'Object-defineProperty'
+    'body': '''Object.defineProperty(${1:obj},key,{
+        // get: function (){
+        // },
+        // set: function (){
+        // },
+        value: val,
+        writable: true,
+        enumerable: true, 
+        configurable: true
+      })'''
+  'EO Object.defineProperties(obj,configObj)  同时定义多个成员及特性':
+    'prefix': 'Object-defineProperties'
+    'body': '''Object.defineProperties(${1:obj},{
+        aoo: {
+          value: 101,
+          writable: true,
+          enumerable: true,
+          configurable: true
+        },
+        boo: {
+          set: function(newVal) {
+            // this.xx = newVal
+          },
+          get: function() {
+            // return this.xx
+          },
+          enumerable: true,
+          configurable: true
+        }
+      })'''
+  'EO Object.getOwnPropertyDescriptor(obj,key)  obj,成员的特性配置信息':
+    'prefix': 'Object-getOwnPropertyDescriptor'
+    'body': 'Object.getOwnPropertyDescriptor($1)'
+  'EO Object.getOwnPropertyDescriptors(obj)  obj,所有成员的特性配置信息':
+    'prefix': 'Object-getOwnPropertyDescriptors'
+    'body': 'Object.getOwnPropertyDescriptors($1)'
+  'EO Object.getOwnPropertyNames()  arr,所有[包括不可枚举]的自有成员':
+    'prefix': 'Object-getOwnPropertyNames'
+    'body': 'Object.getOwnPropertyNames()'
+  'EO Object.preventExtensions(obj)  不可新增成员,仍可修改、删除成员':
+    'prefix': 'Object-preventExtensions'
+    'body': 'Object.preventExtensions($1)'
+  'EO Object.seal(obj)  不可新增、删除成员,仍可修改成员':
+    'prefix': 'Object-seal'
+    'body': 'Object.seal($1)'
+  'EO Object.freeze(obj)  不可新增、删除、修改成员':
+    'prefix': 'Object-freeze'
+    'body': 'Object.freeze($1)'
+  'EO Object.isExtensible(obj)  bol,能否新增成员':
+    'prefix': 'Object-isExtensible'
+    'body': 'Object.isExtensible($1)'
+  'EO Object.isSealed(obj)  bol,能否新增、删除成员':
+    'prefix': 'Object-isSealed'
+    'body': 'Object.isSealed($1)'
+  'EO Object.isFrozen(obj)  bol,能否新增、删除及修改成员':
+    'prefix': 'Object-isFrozen'
+    'body': 'Object.isFrozen($1)'
+  'EO obj.__proto__  obj,原型对象':
+    'prefix': 'proto-obj' 
+    'body': '__proto__'
+  'EO obj.constructor  fn,构造函数':
+    'prefix': 'constructor-obj' # 存在bug,当为 'prefix': 'constructor' 时
+    'body': 'constructor'
+  'EO obj.valueOf()  对象转基本类型':
+    'prefix': 'valueOf-obj'
+    'body': 'valueOf()'
+  'EO obj.toString()  对象字符化':
+    'prefix': 'toString-obj'
+    'body': 'toString()'
+  'EO obj.toLocaleString()  对象字符化':
+    'prefix': 'toLocaleString-obj'
+    'body': 'toLocaleString()'
+  'EO pbj.hasOwnProperty(key)  bol,属性是否存在(不包括原型)':
+    'prefix': 'hasOwnProperty-obj' # 存在bug 
+    'body': 'hasOwnProperty($1)'
+  'EO obj.propertyIsEnumerable(key)  bol,属性能否for-in枚举':
+    'prefix': 'propertyIsEnumerable-obj'
+    'body': 'propertyIsEnumerable($1)'
+  'EO obj.isPrototypeOf(obj)  bol,是否处于目标对象原型链上':
+    'prefix': 'isPrototypeOf-obj'
+    'body': 'isPrototypeOf($1)'
+  'EO writable  可写':
+    'prefix': 'writable'
+    'body': 'writable' 
+  'EO enumerable':
+    'prefix': 'enumerable'
+    'body': 'enumerable' 
+  'EO configurable  可配置':
+    'prefix': 'configurable'
+    'body': 'configurable' 
+  # bol ------------------------------------------------
+  'EO Boolean  布尔类型构造函数':
+    'prefix': 'Boolean-bol'
+    'body': 'Boolean'
+  'EO Boolean($1) ':
+    'prefix': 'Boolean'
+    'body': 'Boolean($1)'
+  # num ------------------------------------------------
+  'EO Infinity  ':
+    'prefix': 'Infinity'
+    'body': 'Infinity'
+  'EO Number  ':
+    'prefix': 'Number-num '
+    'body': 'Number'
+  'EO Number($1)  ':
+    'prefix': 'Number'
+    'body': 'Number($1)'
+  'EO Number.NaN  ':
+    'prefix': 'Number-NaN'
+    'body': 'Number.NaN'
+  'EO Number.MAX_VALUE  ':
+    'prefix': 'Number-MAX_VALUE'
+    'body': 'Number.MAX_VALUE'
+  'EO Number.MIN_VALUE  ':
+    'prefix': 'Number-MIN_VALUE'
+    'body': 'Number.MIN_VALUE'
+  'EO Number.NEGATIVE_INFINITY  ':
+    'prefix': 'Number-NEGATIVE_INFINITY'
+    'body': 'Number.NEGATIVE_INFINITY'
+  'EO Number.POSITIVE_INFINITY  ':
+    'prefix': 'Number-POSITIVE_INFINITY'
+    'body': 'Number.POSITIVE_INFINITY'
+  'EO Number.MAX_SAFE_INTEGER  ES6':
+    'prefix': 'Number-MAX_SAFE_INTEGER'
+    'body': 'Number.MAX_SAFE_INTEGER'
+  'EO Number.MIN_SAFE_INTEGER  ES6':
+    'prefix': 'Number-MIN_SAFE_INTEGER'
+    'body': 'Number.MIN_SAFE_INTEGER'
+  'EO Number.EPSILON  ES6':
+    'prefix': 'Number-EPSILON'
+    'body': 'Number.EPSILON'
+  'EO Number.isFinite()  ':
+    'prefix': 'Number-isFinite'
+    'body': 'Number.isFinite()'
+  'EO Number.isInteger()  ':
+    'prefix': 'Number-isInteger'
+    'body': 'Number.isInteger()'
+  'EO Number.isNaN()  ':
+    'prefix': 'Number-isNaN'
+    'body': 'Number.isNaN()'
+  'EO Number.isSafeInteger()  ':
+    'prefix': 'Number-isSafeInteger'
+    'body': 'Number.isSafeInteger()'
+  'EO Number.parseFloat()  ':
+    'prefix': 'Number-parseFloat'
+    'body': 'Number.parseFloat()'
+  'EO Number.parseInt()  ':
+    'prefix': 'Number-parseInt'
+    'body': 'Number.parseInt()'
+  'EO Number.isNaN(val)  ES6':
+    'prefix': 'Number-isNaN'
+    'body': 'Number.isNaN($1)'
+  'EO Number.isFinite(val)  ES6':
+    'prefix': 'Number-isFinite'
+    'body': 'Number.isFinite($1)'
+  'EO Number.parseInt(str)  ES6':
+    'prefix': 'Number-parseInt'
+    'body': 'Number.parseInt($1)'
+  'EO Number.parseFloat(str)  ES6':
+    'prefix': 'Number-parseFloat'
+    'body': 'Number.parseFloat($1)'
+  'EO Number.isInteger(num)  ES6':
+    'prefix': 'Number-isInteger'
+    'body': 'Number.isInteger($1)'
+  'EO Number.isSafeInteger(num)  ES6':
+    'prefix': 'Number-isSafeInteger'
+    'body': 'Number.isSafeInteger($1)'
+  'EO num.toFixed(num) str,四舍五入保留num位小数':
+    'prefix': 'toFixed-num'
+    'body': 'toFixed($1)'
+  'EO num.toExponential(x) str,以科学计数法表示并保留x位小数 ':
+    'prefix': 'toExponential-num'
+    'body': 'toExponential($1)'
+  'EO num.toPrecision(x) str,以指数或点形式来表示[根据x的长度来决定形式]':
+    'prefix': 'toPrecision-num'
+    'body': 'toPrecision($1)'
+  # str/arr 
+  'EO str/arr.slice(begin[,end]) str,字符/数组截取':
+    'prefix': 'slice-str/arr'
+    'body': 'slice($1)'
+  'EO str/arr.includes(str/val)  bol,是否包含指定字符串':
+    'prefix': 'includes-str/arr'
+    'body': 'includes("$1")'
+  'EO str/arr.indexOf(str[,bgn])  idx,指定位置向后首个指定字符串的下标,否则返回-1':
+    'prefix': 'indexOf-str/arr'
+    'body': 'indexOf($1,0$2)$3'
+  'EO str/arr.lastIndexOf(str[,bgn])  idx,指定位置向前的首个指定字符串的下标,否则返回-1':
+    'prefix': 'lastIndexOf-str/arr'
+    'body': 'lastIndexOf($1)'
+  'EO str/arr.concat($1)  str,返回拼接后的字符串/数组':
+    'prefix': 'concat-str/arr'
+    'body': 'concat($1)'
+  # str/rgep 
+  'EO .compile(rgep,modifier)  ':
+    'prefix': 'compile-str/rgep'
+    'body': 'compile($1)'
+  # str ------------------------------------------------
+  'EO String  ':
+    'prefix': 'String-str'
+    'body': 'String'
+  'EO String($1)  ':
+    'prefix': 'String'
+    'body': 'String($1)'
+  'EO String.fromCharCode(num,num...) str,指定Unicode值对应的字符串':
+    'prefix': 'String-fromCharCode'
+    'body': 'String.fromCharCode($1)'
+  'EO String.fromCodePoint(num)  ES6':
+    'prefix': 'String-fromCodePoint'
+    'body': 'String.fromCodePoint($1)'
+  'EO str.charAt(idx)  str,指定下标对应的字符':
+    'prefix': 'charAt-str'
+    'body': 'charAt($1)'
+  'EO str.charCodeAt(idx)  num,以Unicode编码形式显示指定位置的字符':
+    'prefix': 'charCodeAt-str'
+    'body': 'charCodeAt($1)'
+  'EO str.substr(begin[,num])  str,截取num个字符 ':
+    'prefix': 'substr-str'
+    'body': 'substr($1)'
+  'EO str.substring(idx1,idx2)  str,截取字符串':
+    'prefix': 'substring-str'
+    'body': 'substring($1)'
+  'EO str.match(str/rgep)  arr,指定字符匹配到的数组':
+    'prefix': 'match-str'
+    'body': 'match($1)'
+  'EO str.localeCompare(str)  num,字符串比较':
+    'prefix': 'localeCompare-str'
+    'body': 'localeCompare($1)'
+  'EO str.replace(rgep/str,replacement)  str,返回替换后的字符串':
+    'prefix': 'replace-str'
+    'body': 'replace($1,$2)'
+  'EO str.split(str/rgep)  arr,使用包含的指定字符分割成数组':
+    'prefix': 'split-str'
+    'body': 'split($1)'
+  'EO str.trim()  str,去除头尾空格并返回':
+    'prefix': 'trim-str'
+    'body': 'trim()'
+  'EO str.toUpperCase()  str,转换为大写并返回':
+    'prefix': 'toUpperCase-str'
+    'body': 'toUpperCase()'
+  'EO str.toLowerCase()  str,转换为小写并返回':
+    'prefix': 'toLowerCase-str'
+    'body': 'toLowerCase()'
+  'EO str.toLocaleLowerCase()  str,转换为本地小写并返回':
+    'prefix': 'toLocaleLowerCase-str'
+    'body': 'toLocaleLowerCase()'
+  'EO str.toLocaleUpperCase()  str,转换为本地大写并返回':
+    'prefix': 'toLocaleUpperCase-str'
+    'body': 'toLocaleUpperCase()'
+  'EO str.search(str/rgep)  idx,首个指定字符串的下标,否则返回-1':
+    'prefix': 'search-str'
+    'body': 'search($1)'
+  'EO str .repeat(num)  ES6':
+    'prefix': 'repeat'
+    'body': 'repeat($1)'
+  'EO str .startsWith(str[,idx])  ES6':
+    'prefix': 'startsWith'
+    'body': 'startsWith($1)'
+  'EO str .endsWith(str[,idx])  ES6':
+    'prefix': 'endsWith'
+    'body': 'endsWith($1)'
+  'EO str .codePointAt()  ES6':
+    'prefix': 'codePointAt'
+    'body': 'codePointAt()'
+  # arr ------------------------------------------------
+  'EO Array':
+    'prefix': 'Array-arr'
+    'body': 'Array'
+  'EO Array.isArray(arr)  bol,是否为数组':
+    'prefix': 'Array-isArray'
+    'body': 'Array.isArray($1)'
+  'EO Array.from(arrLike [,mapFoo] [,thisArr])  ES6':
+    'prefix': 'Array-from'
+    'body': 'Array.from(arrLike ${1:,foo})'
+  'EO Array.of(val1,val2,..)  ES6':
+    'prefix': 'Array-of'
+    'body': 'Array.of($1)'
+  'EO arr.pop()  val,返回删除的尾部成员':
+    'prefix': 'pop-arr'
+    'body': 'pop()'
+  'EO arr.shift()  val,返回删除的头部成员':
+    'prefix': 'shift-arr'
+    'body': 'shift()'
+  'EO arr.push(val1?...)  num,末尾添加成员,返回新数组长度':
+    'prefix': 'push-arr'
+    'body': 'push($1)'
+  'EO arr.unshift(val1 [,val2,...])  num,头部添加元素,返回新数组长度':
+    'prefix': 'unshift-arr'
+    'body': 'unshift($1)'
+  'EO arr.splice(begin ,num ,v1,v2,...)  arr,删除[添加]元素,返回由删除的成员组成的数组':
+    'prefix': 'splice-arr'
+    'body': 'splice(${1:begin},${2:num},${3:v1,v2,...})'
+  'EO arr.reverse()  arr,颠倒所有成员后返回':
+    'prefix': 'reverse-arr'
+    'body': 'reverse()'
+  'EO arr.sort(foo?)  返回排序后的数组[改变原数组]':
+    'prefix': 'sort-arr'
+    'body': """sort(${1:function(val1,val2){
+      return ${2:true[改变顺序]}
+    }})"""
+  'EO arr.join(str?)  str,使用指定字符串连成员':
+    'prefix': 'join-arr'
+    'body': 'join($1)'
+  'EO arr.forEach(foo)  数组遍历':
+    'prefix': 'forEach-arr'
+    'body': """forEach(function(val,idx ${1:,arr}){
+      $2
+    } )"""
+  'EO arr.map(cfoo ,this?)  arr,返回回调返回值组成的数组':
+    'prefix': 'map-arr'
+    'body': """map(function(val,idx ${1:,arr}){
+      return $2
+    } )"""
+  'EO arr.every(foo ,this?)  bol,回调返回值是否全部为真':
+    'prefix': 'every-arr'
+    'body': """every(function(val,idx ${1:,arr}){
+      return ${2:[全部为真时,才为真]}
+    } )"""
+  'EO arr.some(foo ,this?)  bol,回调返回值是否存在真':
+    'prefix': 'some-arr'
+    'body': """some(function(val,idx ${1:,arr}){
+      return ${2:[若存在返回值为真则返回真]}
+    } )"""
+  'EO arr.filter(foo ,this?)  arr,回调返回值为true的元素组成的数组':
+    'prefix': 'filter-arr'
+    'body': """filter(function(val,idx ${1:,arr}){
+        return ${2:true[保留]}
+      } )"""
+  'EO arr.reduce(foo ,initVal?)  条件缩减,返回最后一次回调返回值':
+    'prefix': 'reduce-arr'
+    'body': """reduce(function(retVal,val,idx ${1:,arr}){ 
+      return $2 
+    } ,initVal )"""
+  'EO arr.reduceRight(foo ,initVal?)  同.reduce,只是从右到左遍历':
+    'prefix': 'reduceRight-arr'
+    'body': """reduceRight(function(retVal,val,idx ${1:,arr}){ 
+      return $2 
+    } ,initVal)"""
+  'EO arr.find(fn)  meber,返回首个回调值为true的成员':
+    'prefix': 'find-arr'
+    'body': """find(function(meber){ 
+      return bol   
+    } )"""
+  'EO arr.findIndex(fn)  idx,返回首个回调值为true的成员的下标,否则-1':
+    'prefix': 'findIndex-arr'
+    'body': """findIndex(function(meber){ 
+      return bol   
+    } )"""
+  # RegExp ------------------------------------------------
+  'EO RegExp  ':
+    'prefix': 'RegExp-rgep'
+    'body': 'RegExp'
+  'EO RegExp($1)  ':
+    'prefix': 'RegExp'
+    'body': 'RegExp($1)'
+  'EO RegExp.input  str,当前被匹配的字符串':
+    'prefix': 'RegExp-input'
+    'body': 'RegExp.input'
+  'EO RegExp.lastMatch  str,最后一个匹配的字符串':
+    'prefix': 'RegExp-lastMatch'
+    'body': 'RegExp.lastMatch'
+  'EO RegExp.lastParen  str,最后一对圆括号内的匹配子串':
+    'prefix': 'RegExp-lastParen'
+    'body': 'RegExp.lastParen'
+  'EO RegExp.leftContext  str,最后一次匹配前的子串':
+    'prefix': 'RegExp-leftContext'
+    'body': 'RegExp.leftContext'
+  'EO RegExp.multiline  bol,指定是否所的表达式都用于多行的布尔值':
+    'prefix': 'RegExp-multiline'
+    'body': 'RegExp.multiline'
+  'EO RegExp.rightContext  str,在上次匹配之后的子串':
+    'prefix': 'RegExp-rightContext'
+    'body': 'RegExp.rightContext'
+  'EO .multiline  bol,是否多行匹配':
+    'prefix': 'multiline-re'
+    'body': 'multiline'
+  'EO .lastIndex  num,读写下次匹配字符位置的数值表示[在全局匹配时生效],从0开始':
+    'prefix': 'lastIndex-re'
+    'body': 'lastIndex'
+  'EO .ignoreCase   bol,是否忽略大小写':
+    'prefix': 'ignoreCase-re'
+    'body': 'ignoreCase'
+  'EO .test(str/num)  bol,是否存在于字符串中':
+    'prefix': 'test-re'
+    'body': 'test($1)'
+  'EO .exec(str)  arr,正则匹配到的字符串组成的数组':
+    'prefix': 'exec-re'
+    'body': 'exec($1)'
+  # json ------------------------------------------------
+  'EO JSON.parse(JSONstr[,foo(key,val)]) obj,解析':
+    'prefix': 'JSON.parse'
+    'body': 'JSON.parse($1)'
+  'EO JSON.stringify(val) str,序列化':
+    'prefix': 'JSON.stringify-simple'
+    'body': 'JSON.stringify($1)'
+  'EO JSON.stringify(val ,arr/foo ,num/str) str,序列化':
+    'prefix': 'JSON.stringify'
+    'body': 'JSON.stringify(val ,null ,2)'
+
+
