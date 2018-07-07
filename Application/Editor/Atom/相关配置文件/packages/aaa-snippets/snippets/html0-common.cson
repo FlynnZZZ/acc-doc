@@ -50,8 +50,8 @@
     <head>
       <meta charset="utf-8">
       <title>$1</title>
-      <link rel="stylesheet" href="./css.css">
-      <script src="./js/js.js" charset="utf-8"></script>
+      <link rel="stylesheet" href="./style.css">
+      <script src="./script.js" charset="utf-8"></script>
     </head>
     <body>
     </body>

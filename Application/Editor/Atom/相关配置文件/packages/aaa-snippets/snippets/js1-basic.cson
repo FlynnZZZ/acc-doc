@@ -1,68 +1,73 @@
-# ES相关的词&全局变量&规范 --------------------------------------------------------
+# js  
 '.source.js':
+  'JB /* $1 */  多行注释':
+    'prefix': 'zs-multi-line'
+    'body': '''/* 
+      $1
+    */'''
   # 关键字 
-  'es0 use strict  使用严格模式':
+  'JB use strict  使用严格模式':
     'prefix': 'use-strict'
     'body': """'use strict';""" 
-  'es0 break  跳出循环':
+  'JB break  跳出循环':
     'prefix': 'break'
     'body': """break""" 
-  'es0 continue  继续下一次循环':
+  'JB continue  继续下一次循环':
     'prefix': 'continue'
     'body': 'continue'
-  'es0 false  否':
+  'JB false  否':
     'prefix': 'false'
     'body': """false""" 
-  'es0 return  返回':
+  'JB return  返回':
     'prefix': 'return'
     'body': 'return '
-  'es0 finally  关键字':
+  'JB finally  关键字':
     'prefix': 'finally'
     'body': """finally""" 
-  'es0 public  关键字':
+  'JB public  关键字':
     'prefix': 'public'
     'body': """public""" 
-  'es0 static  静态属性':
+  'JB static  静态属性':
     'prefix': 'static'
     'body': """static""" 
-  'es0 strict  关键字':
+  'JB strict  关键字':
     'prefix': 'strict'
     'body': """strict""" 
-  'es0 switch  关键字':
+  'JB switch  关键字':
     'prefix': 'switch1'
     'body': """switch""" 
-  'es0 this  关键字':
+  'JB this  关键字':
     'prefix': 'this'
     'body': 'this'
-  'es0 throw  关键字':
+  'JB throw  关键字':
     'prefix': 'throw'
     'body': """throw""" 
-  'es0 catch  关键字':
+  'JB catch  关键字':
     'prefix': 'catch'
     'body': """catch""" 
-  'es0 undefined  关键字':
+  'JB undefined  关键字':
     'prefix': 'undefined'
     'body': 'undefined' 
   # 操作符 
-  'es0 typeof val;  str,值类型检测':
+  'JB typeof val;  str,值类型检测':
     'prefix': 'typeof-operat'
     'body': 'typeof '
-  'es0 obj instanceof Foo;  bol,对象是否继承至构造函数':
+  'JB obj instanceof Foo;  bol,对象是否继承至构造函数':
     'prefix': 'instanceof-operat'
     'body': """instanceof""" 
-  'es0 delete val;  bol,删除对象中的成员[值],返回是否删除成功的布尔值':
+  'JB delete val;  bol,删除对象中的成员[值],返回是否删除成功的布尔值':
     'prefix': 'delete-operat'
     'body': 'delete '
-  'es0 prop in obj;  bol,属性是否在对象中[包括原型中属性]':
+  'JB prop in obj;  bol,属性是否在对象中[包括原型中属性]':
     'prefix': 'in-operat'
     'body': 'in '
-  'es0 void expr;  undefined,执行表达式':
+  'JB void expr;  undefined,执行表达式':
     'prefix': 'void-operat'
     'body': 'void '
-  'es0 expr1?expr2:expr3;  三元条件运算符':
+  'JB expr1?expr2:expr3;  三元条件运算符':
     'prefix': 'expr3-operat'
     'body': '?expr2:expr3'
-  'es0 try-catch':
+  'JB try-catch':
     'prefix': 'try-catch'
     'body': """try {
       } 
@@ -70,74 +75,69 @@
       } 
       finally {
       }"""
-  'es0 for (var i = 0; i < $1; i++) { }':
+  'JB for (var i = 0; i < $1; i++) { }':
     'prefix': 'for-es'
     'body': """for (var i = 0; i < $1; i++) {
       $2
     }"""
-  'es0 for-in;':
+  'JB for-in;':
     'prefix': 'for-in-es'
     'body': """for(var ${1:key} in ${2:obj}){
       $3
     };"""
   # 全局变量函数 ------------------------------------------------
-  'es0 parseInt(str/num[,radix])  num,返回指定进制的整数值':
+  'JB parseInt(str/num[,radix])  num,返回指定进制的整数值':
     'prefix': 'parseInt-win'
     'body': 'parseInt(str,${1:radix})'
-  'es0 parseFloat(str/num)  num,返回整数值/浮点数值':
+  'JB parseFloat(str/num)  num,返回整数值/浮点数值':
     'prefix': 'parseFloat-win'
     'body': 'parseFloat($1)'
-  'es0 encodeURI(str)  str,编码为URI':
+  'JB encodeURI(str)  str,编码为URI':
     'prefix': 'encodeURI-win'
     'body': 'encodeURI($1)'
-  'es0 decodeURI(uri)  str,解码URI':
+  'JB decodeURI(uri)  str,解码URI':
     'prefix': 'decodeURI-win'
     'body': 'decodeURI($1)'
-  'es0 encodeURIComponent(str)  str,编码为URI[完全编码]':
+  'JB encodeURIComponent(str)  str,编码为URI[完全编码]':
     'prefix': 'encodeURIComponent-win'
     'body': 'encodeURIComponent($1)'
-  'es0 decodeURIComponent(uri)  str,解码URI[完全解码]':
+  'JB decodeURIComponent(uri)  str,解码URI[完全解码]':
     'prefix': 'decodeURIComponent-win'
     'body': 'decodeURIComponent($1)'
-  'es0 escape(str)  str,编码字符串':
+  'JB escape(str)  str,编码字符串':
     'prefix': 'escape-win'
     'body': 'escape($1)'
-  'es0 unescape(str)  str,解码由escape编码的字符串':
+  'JB unescape(str)  str,解码由escape编码的字符串':
     'prefix': 'unescape-win'
     'body': 'unescape($1)'
-  'es0 isFinite(num)  bol,数值是否有限':
+  'JB isFinite(num)  bol,数值是否有限':
     'prefix': 'isFinite-win'
     'body': 'isFinite($1)'
-  'es0 isNaN(val)  bol,能否转换为NaN':
+  'JB isNaN(val)  bol,能否转换为NaN':
     'prefix': 'isNaN-win'
     'body': 'isNaN($1)'
-  'es0 eval(JSStr)  解析并执行JS字符串':
+  'JB eval(JSStr)  解析并执行JS字符串':
     'prefix': 'eval-win'
     'body': 'eval($1)'
   # module 
-  'es0 import  ES6':
-    'prefix': 'import'
-    'body': 'import'
-  'es0 import xx from "./";  ES6':
-    'prefix': 'import from'
-    'body': 'import ${1:xx} from "${2:./}";'
-  'es0 import($1)  ES6':
-    'prefix': 'import1'
-    'body': 'import($1)'
-  'es0 export  ES6':
+  'JB export  ES6模块 输出':
+    'prefix': 'export'
+    'body': 'export '
+  'JB export default ES6模块 默认输出':
     'prefix': 'export default'
     'body': 'export default $1'
-  'es0 extend  ES6':
-    'prefix': 'extend'
-    'body': """extend""" 
+  'JB import  ES6模块 引入':
+    'prefix': 'import'
+    'body': 'import'
+  'JB import xx from "./";  ES6模块 默认引入':
+    'prefix': 'import from'
+    'body': 'import ${1:xx} from "${2:./}";'
+  'JB import($1)  ES6模块 动态引入':
+    'prefix': 'import1'
+    'body': 'import($1)'
+  # class 
+  'JB extends class继承':
+    'prefix': 'extends'
+    'body': """extends""" 
     
-  
-  
-  
-  
-
-
-
-
-
 

@@ -1,9 +1,0 @@
-# js  
-'.source.js':
-  'JB /* $1 */  多行注释':
-    'prefix': 'zs-multi-line'
-    'body': '''/* 
-      $1
-    */'''
-
-

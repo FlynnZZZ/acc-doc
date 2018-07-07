@@ -1,0 +1,10 @@
+# 所有格式的补全 
+'*':  
+  'AA vrb  变量':
+    'prefix': 'vrb'
+    'body': """vrb""" 
+  'AA ltr  字面量':
+    'prefix': 'ltr'
+    'body': """ltr""" 
+
+

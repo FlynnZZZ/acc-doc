@@ -13,6 +13,9 @@
   '* data  数据':
     'prefix': 'data'
     'body': """data""" 
+  '* back  返回值':
+    'prefix': 'back'
+    'body': """back""" 
   '* double  双':
     'prefix': 'double'
     'body': """double""" 

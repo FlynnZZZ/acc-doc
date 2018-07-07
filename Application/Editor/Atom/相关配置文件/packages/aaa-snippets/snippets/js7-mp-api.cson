@@ -1,12 +1,11 @@
 # 微信小程序 .js 
 '.source.js':
-  # 页面操作  
+  # 页面修改   
   'JMA wx.setNavigationBarTitle({})  动态设置当前页面标题':
     'prefix': 'wx.setNavigationBarTitle-api'
     'body': """wx.setNavigationBarTitle({
         title: '标题'
-        ,success: function (){
-        }
+        ,success: function (){ }
         ,fail: function (){ }
         ,complete: function (){ }
       })""" 
@@ -18,11 +17,9 @@
   'JMA wx.startPullDownRefresh({})  开始下拉刷新':
     'prefix': 'wx.startPullDownRefresh-api'
     'body': """wx.startPullDownRefresh({
-      success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.stopPullDownRefresh()  停止当前页面下拉刷新':
     'prefix': 'wx.stopPullDownRefresh-api'
@@ -30,80 +27,68 @@
   'JMA wx.setTopBarText({})  动态设置置顶栏文字内容':
     'prefix': 'wx.setTopBarText-api'
     'body': """wx.setTopBarText({
-      text: '文本'
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        text: '文本'
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
+  # tabBar 
   'JMA wx.setTabBarBadge({})  为tabBar某一项的右上角添加文本':
     'prefix': 'wx.setTabBarBadge-api'
     'body': """wx.setTabBarBadge({
-      index: 0 
-      ,text: "str" 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        index: 0 
+        ,text: "str" 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.removeTabBarBadge({})  移除tabBar某一项右上角的文本':
     'prefix': 'wx.removeTabBarBadge-api'
     'body': """wx.removeTabBarBadge({
-      index: 0 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        index: 0 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.showTabBarRedDot({})  显示tabBar某一项的右上角的红点':
     'prefix': 'wx.showTabBarRedDot-api'
     'body': """wx.showTabBarRedDot({
-      index: 0 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        index: 0 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.hideTabBarRedDot({})  隐藏tabBar某一项的右上角的红点':
     'prefix': 'wx.hideTabBarRedDot-api'
     'body': """wx.hideTabBarRedDot({
-      index: 0 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        index: 0 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.setTabBarStyle({})  动态设置tabBar的整体样式':
     'prefix': 'wx.setTabBarStyle-api'
     'body': """wx.setTabBarStyle({
-      color: "#fff" 
-      ,selectedColor: "#fff" 
-      ,backgroundColor: "#fff" 
-      ,borderStyle: "black" 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        color: "#fff" 
+        ,selectedColor: "#fff" 
+        ,backgroundColor: "#fff" 
+        ,borderStyle: "black" 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.setTabBarItem({})  动态设置tabBar某一项的内容':
     'prefix': 'wx.setTabBarItem-api'
     'body': """wx.setTabBarItem({
-      index: 0  
-      ,text: "str" 
-      ,iconPath: "" 
-      ,selectedIconPath: "" 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        index: 0  
+        ,text: "str" 
+        ,iconPath: "" 
+        ,selectedIconPath: "" 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
+  # 弹窗 
   'JMA wx.showTabBar({})  显示tabBar':
     'prefix': 'wx.showTabBar-api'
     'body': """wx.showTabBar({
@@ -117,22 +102,18 @@
   'JMA wx.hideTabBar({})  隐藏tabBar':
     'prefix': 'wx.hideTabBar-api'
     'body': """wx.hideTabBar({
-      animation: true   
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        animation: true   
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.showLoading({})  显示loading提示框':
     'prefix': 'wx.showLoading-api'
     'body': """wx.showLoading({
         title: 'str' 
         ,mask: true 
-        ,success: function (){
-        }
-        ,fail: function (){
-        }
+        ,success: function (){ }
+        ,fail: function (){ }
         ,complete: function (){ }
       })""" 
   'JMA wx.hideLoading()  隐藏loading提示框':
@@ -142,14 +123,12 @@
     'prefix': 'wx.showToast-api'
     'body': """wx.showToast({
         title: '提示的内容' 
-        ,icon: 'success'
+        ,icon: 'none'
         ,image: './'
         ,duration: 1500
         ,mask: false
-        ,success: function (res){
-        }
-        ,fail: function (){
-        }
+        ,success: function (back){ }
+        ,fail: function (){ }
         ,complete: function (){ }
       })""" 
   'JMA wx.hideToast()  隐藏消息提示框':
@@ -158,29 +137,25 @@
   'JMA wx.showModal({})  ​显示模态弹窗':
     'prefix': 'wx.showModal-api'
     'body': """wx.showModal({
-      title: 'str' 
-      ,content: 'str'
-      ,showCancel: false 
-      ,cancelText: 'str'
-      ,cancelColor: '#ccc'
-      ,confirmText: 'str'
-      ,confirmColor: '#fff'
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        title: 'str' 
+        ,content: 'str'
+        ,showCancel: false 
+        ,cancelText: 'str'
+        ,cancelColor: '#ccc'
+        ,confirmText: 'str'
+        ,confirmColor: '#fff'
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.showActionSheet({})  ​显示操作菜单':
     'prefix': 'wx.showActionSheet-api'
     'body': """wx.showActionSheet({
-      itemList: ['str'] 
-      ,itemColor: '#ccc' 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        itemList: ['str'] 
+        ,itemColor: '#ccc' 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   # 导航 
   'JMA wx.showNavigationBarLoading()  在当前页面显示导航条加载动画':
@@ -192,24 +167,21 @@
   'JMA wx.setNavigationBarColor({})  设置导航条颜色':
     'prefix': 'wx.setNavigationBarColor-api'
     'body': """wx.setNavigationBarColor({
-      frontColor: '#fff' 
-      ,backgroundColor: '#ccc' 
-      ,animation: {
-        duration: 10 
-        ,timingFunc: 'easeIn'
-      } 
-      ,success: function (){
-      }
-      ,fail: function (){
-      }
-      ,complete: function (){ }
+        frontColor: '#fff' 
+        ,backgroundColor: '#ccc' 
+        ,animation: {
+          duration: 10 
+          ,timingFunc: 'easeIn'
+        } 
+        ,success: function (){ }
+        ,fail: function (){ }
+        ,complete: function (){ }
       })""" 
   'JMA wx.navigateTo({})  页面跳转':
     'prefix': 'wx.navigateTo-api'
     'body': """wx.navigateTo({
         url: '_url'
-        ,success: function (res){
-        }
+        ,success: function (back){ }
         ,fail: function (){ }
         ,complete: function (){ }
       })""" 
@@ -217,40 +189,32 @@
     'prefix': 'wx.navigateBack-api'
     'body': """wx.navigateBack({
         delta: 1 
-        ,success: function (){
-        }
-        ,fail: function (){
-        }
+        ,success: function (){ }
+        ,fail: function (){ }
         ,complete: function (){ }
       })""" 
   'JMA wx.redirectTo({})  页面跳转':
     'prefix': 'wx.redirectTo-api'
     'body': """wx.redirectTo({
         url: '_url'
-        ,success: function (){
-        }
-        ,fail: function (){
-        }
+        ,success: function (){ }
+        ,fail: function (){ }
         ,complete: function (){ }
       })""" 
   'JMA wx.switchTab({})  跳转到tabBar页':
     'prefix': 'wx.switchTab-api'
     'body': """wx.switchTab({
         url: '_url'
-        ,success: function (){
-        }
-        ,fail: function (){
-        }
+        ,success: function (){ }
+        ,fail: function (){ }
         ,complete: function (){ }
       })""" 
   'JMA wx.reLaunch({})  关闭所有页面,打开到应用内的某个页面':
     'prefix': 'wx.reLaunch-api'
     'body': """wx.reLaunch({
         url: '_url'
-        ,success: function (){
-        }
-        ,fail: function (){
-        }
+        ,success: function (){ }
+        ,fail: function (){ }
         ,complete: function (){ }
       })""" 
   # 网络请求 
@@ -268,8 +232,7 @@
           ,..
         }
         ,dataType: 'json'
-        ,success: function (back){
-        }
+        ,success: function (back){ }
         ,fail: function (err){ }
         ,complete: function (arg){ }
       })""" 
@@ -296,8 +259,7 @@
         url: '_url'
         ,header: {  
         }
-        ,success: function (back){
-        }
+        ,success: function (back){ }
         ,fail: function (err){ }
         ,complete: function (arg){ }
       })""" 
