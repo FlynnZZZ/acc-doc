@@ -28,15 +28,15 @@
   'EO fn.prototype  obj,构造函数原型':
     'prefix': 'prototype-fn'
     'body': 'prototype'
-  'EO fn.apply(this[,arr])  方法在指定对象上调用':
+  'EO fn.apply(this ,argArr?)  方法在指定对象上调用':
     'prefix': 'apply-fn'
-    'body': 'apply(${1:this},${2:arr})'
-  'EO fn.call(this[,arg1,arg2,...])  方法在指定对象上调用':
+    'body': 'apply(${1:this} )'
+  'EO fn.call(this ,arg1?,.. )  方法在指定对象上调用':
     'prefix': 'call-fn'
-    'body': """call(${1:this},${2:arg1,arg2,..})"""
-  'EO fn.bind(this[,arg1,arg2,...])  fn,将借用的方法返回':
+    'body': """call(${1:this} )"""
+  'EO fn.bind(this ,arg1?,... )  fn,将借用的方法返回':
     'prefix': 'bind-fn'
-    'body': 'bind(${1:this},${2:arg1,arg2,..})'
+    'body': 'bind(${1:this} )'
   'EO arguments  [函数体内]表示函数的参数类数组':
     'prefix': 'arguments-fn'
     'body': 'arguments'
@@ -82,28 +82,28 @@
     'body': 'await $1'
   # obj ------------------------------------------------
   'EO Object  对象的构造函数':
-    'prefix': 'Object-obj' # 存在bug
+    'prefix': 'Object.obj' # 存在bug
     'body': 'Object'
   'EO Object.create(protoObj[,configObj])  obj,生成对象':
-    'prefix': 'Object-create'
+    'prefix': 'Object.create'
     'body': 'Object.create($1)'
   'EO Object.is(val1,val2)  bol,值是否相同(按外形比较)':
-    'prefix': 'Object-is'
+    'prefix': 'Object.is'
     'body': 'Object.is($1)'
   'EO Object.keys(obj)  arr,获取可枚举的自有成员':
-    'prefix': 'Object-keys'
+    'prefix': 'Object.keys'
     'body': 'Object.keys($1)'
-  'EO Object.assign(obj1,obj2,..)  obj,返回合并后的对象':
-    'prefix': 'Object-assign'
+  'EO Object.assign(obj1,obj2,..)  obj,合并到第一个对象中并返回':
+    'prefix': 'Object.assign'
     'body': 'Object.assign($1)'
   'EO Object.getPrototypeOf(obj)  obj,原型对象':
-    'prefix': 'Object-getPrototypeOf'
+    'prefix': 'Object.getPrototypeOf'
     'body': 'Object.getPrototypeOf($1)'
   'EO Object.setPrototypeOf(obj,proto)  obj,设置对象的原型对象':
-    'prefix': 'Object-setPrototypeOf'
+    'prefix': 'Object.setPrototypeOf'
     'body': 'Object.setPrototypeOf(obj,proto)'
   'EO Object.defineProperty(obj,key,{})  定义对象的成员及其特性':
-    'prefix': 'Object-defineProperty'
+    'prefix': 'Object.defineProperty'
     'body': '''Object.defineProperty(${1:obj},key,{
         // get: function (){
         // },
@@ -115,7 +115,7 @@
         configurable: true
       })'''
   'EO Object.defineProperties(obj,configObj)  同时定义多个成员及特性':
-    'prefix': 'Object-defineProperties'
+    'prefix': 'Object.defineProperties'
     'body': '''Object.defineProperties(${1:obj},{
         aoo: {
           value: 101,
@@ -135,31 +135,31 @@
         }
       })'''
   'EO Object.getOwnPropertyDescriptor(obj,key)  obj,成员的特性配置信息':
-    'prefix': 'Object-getOwnPropertyDescriptor'
+    'prefix': 'Object.getOwnPropertyDescriptor'
     'body': 'Object.getOwnPropertyDescriptor($1)'
   'EO Object.getOwnPropertyDescriptors(obj)  obj,所有成员的特性配置信息':
-    'prefix': 'Object-getOwnPropertyDescriptors'
+    'prefix': 'Object.getOwnPropertyDescriptors'
     'body': 'Object.getOwnPropertyDescriptors($1)'
   'EO Object.getOwnPropertyNames()  arr,所有[包括不可枚举]的自有成员':
-    'prefix': 'Object-getOwnPropertyNames'
+    'prefix': 'Object.getOwnPropertyNames'
     'body': 'Object.getOwnPropertyNames()'
   'EO Object.preventExtensions(obj)  不可新增成员,仍可修改、删除成员':
-    'prefix': 'Object-preventExtensions'
+    'prefix': 'Object.preventExtensions'
     'body': 'Object.preventExtensions($1)'
   'EO Object.seal(obj)  不可新增、删除成员,仍可修改成员':
-    'prefix': 'Object-seal'
+    'prefix': 'Object.seal'
     'body': 'Object.seal($1)'
   'EO Object.freeze(obj)  不可新增、删除、修改成员':
-    'prefix': 'Object-freeze'
+    'prefix': 'Object.freeze'
     'body': 'Object.freeze($1)'
   'EO Object.isExtensible(obj)  bol,能否新增成员':
-    'prefix': 'Object-isExtensible'
+    'prefix': 'Object.isExtensible'
     'body': 'Object.isExtensible($1)'
   'EO Object.isSealed(obj)  bol,能否新增、删除成员':
-    'prefix': 'Object-isSealed'
+    'prefix': 'Object.isSealed'
     'body': 'Object.isSealed($1)'
   'EO Object.isFrozen(obj)  bol,能否新增、删除及修改成员':
-    'prefix': 'Object-isFrozen'
+    'prefix': 'Object.isFrozen'
     'body': 'Object.isFrozen($1)'
   'EO obj.__proto__  obj,原型对象':
     'prefix': 'proto-obj' 
@@ -206,70 +206,70 @@
     'prefix': 'Infinity'
     'body': 'Infinity'
   'EO Number  ':
-    'prefix': 'Number-num '
+    'prefix': 'Number.num '
     'body': 'Number'
   'EO Number($1)  ':
     'prefix': 'Number'
     'body': 'Number($1)'
   'EO Number.NaN  ':
-    'prefix': 'Number-NaN'
+    'prefix': 'Number.NaN'
     'body': 'Number.NaN'
   'EO Number.MAX_VALUE  ':
-    'prefix': 'Number-MAX_VALUE'
+    'prefix': 'Number.MAX_VALUE'
     'body': 'Number.MAX_VALUE'
   'EO Number.MIN_VALUE  ':
-    'prefix': 'Number-MIN_VALUE'
+    'prefix': 'Number.MIN_VALUE'
     'body': 'Number.MIN_VALUE'
   'EO Number.NEGATIVE_INFINITY  ':
-    'prefix': 'Number-NEGATIVE_INFINITY'
+    'prefix': 'Number.NEGATIVE_INFINITY'
     'body': 'Number.NEGATIVE_INFINITY'
   'EO Number.POSITIVE_INFINITY  ':
-    'prefix': 'Number-POSITIVE_INFINITY'
+    'prefix': 'Number.POSITIVE_INFINITY'
     'body': 'Number.POSITIVE_INFINITY'
   'EO Number.MAX_SAFE_INTEGER  ES6':
-    'prefix': 'Number-MAX_SAFE_INTEGER'
+    'prefix': 'Number.MAX_SAFE_INTEGER'
     'body': 'Number.MAX_SAFE_INTEGER'
   'EO Number.MIN_SAFE_INTEGER  ES6':
-    'prefix': 'Number-MIN_SAFE_INTEGER'
+    'prefix': 'Number.MIN_SAFE_INTEGER'
     'body': 'Number.MIN_SAFE_INTEGER'
   'EO Number.EPSILON  ES6':
-    'prefix': 'Number-EPSILON'
+    'prefix': 'Number.EPSILON'
     'body': 'Number.EPSILON'
   'EO Number.isFinite()  ':
-    'prefix': 'Number-isFinite'
+    'prefix': 'Number.isFinite'
     'body': 'Number.isFinite()'
   'EO Number.isInteger()  ':
-    'prefix': 'Number-isInteger'
+    'prefix': 'Number.isInteger'
     'body': 'Number.isInteger()'
   'EO Number.isNaN()  ':
-    'prefix': 'Number-isNaN'
+    'prefix': 'Number.isNaN'
     'body': 'Number.isNaN()'
   'EO Number.isSafeInteger()  ':
-    'prefix': 'Number-isSafeInteger'
+    'prefix': 'Number.isSafeInteger'
     'body': 'Number.isSafeInteger()'
   'EO Number.parseFloat()  ':
-    'prefix': 'Number-parseFloat'
+    'prefix': 'Number.parseFloat'
     'body': 'Number.parseFloat()'
   'EO Number.parseInt()  ':
-    'prefix': 'Number-parseInt'
+    'prefix': 'Number.parseInt'
     'body': 'Number.parseInt()'
   'EO Number.isNaN(val)  ES6':
-    'prefix': 'Number-isNaN'
+    'prefix': 'Number.isNaN'
     'body': 'Number.isNaN($1)'
   'EO Number.isFinite(val)  ES6':
-    'prefix': 'Number-isFinite'
+    'prefix': 'Number.isFinite'
     'body': 'Number.isFinite($1)'
   'EO Number.parseInt(str)  ES6':
-    'prefix': 'Number-parseInt'
+    'prefix': 'Number.parseInt'
     'body': 'Number.parseInt($1)'
   'EO Number.parseFloat(str)  ES6':
-    'prefix': 'Number-parseFloat'
+    'prefix': 'Number.parseFloat'
     'body': 'Number.parseFloat($1)'
   'EO Number.isInteger(num)  ES6':
-    'prefix': 'Number-isInteger'
+    'prefix': 'Number.isInteger'
     'body': 'Number.isInteger($1)'
   'EO Number.isSafeInteger(num)  ES6':
-    'prefix': 'Number-isSafeInteger'
+    'prefix': 'Number.isSafeInteger'
     'body': 'Number.isSafeInteger($1)'
   'EO num.toFixed(num) str,四舍五入保留num位小数':
     'prefix': 'toFixed-num'
@@ -308,10 +308,10 @@
     'prefix': 'String'
     'body': 'String($1)'
   'EO String.fromCharCode(num,num...) str,指定Unicode值对应的字符串':
-    'prefix': 'String-fromCharCode'
+    'prefix': 'String.fromCharCode'
     'body': 'String.fromCharCode($1)'
   'EO String.fromCodePoint(num)  ES6':
-    'prefix': 'String-fromCodePoint'
+    'prefix': 'String.fromCodePoint'
     'body': 'String.fromCodePoint($1)'
   'EO str.charAt(idx)  str,指定下标对应的字符':
     'prefix': 'charAt-str'
@@ -372,13 +372,13 @@
     'prefix': 'Array-arr'
     'body': 'Array'
   'EO Array.isArray(arr)  bol,是否为数组':
-    'prefix': 'Array-isArray'
+    'prefix': 'Array.isArray'
     'body': 'Array.isArray($1)'
   'EO Array.from(arrLike [,mapFoo] [,thisArr])  ES6':
-    'prefix': 'Array-from'
+    'prefix': 'Array.from'
     'body': 'Array.from(arrLike ${1:,foo})'
   'EO Array.of(val1,val2,..)  ES6':
-    'prefix': 'Array-of'
+    'prefix': 'Array.of'
     'body': 'Array.of($1)'
   'EO arr.pop()  val,返回删除的尾部成员':
     'prefix': 'pop-arr'
@@ -459,22 +459,22 @@
     'prefix': 'RegExp'
     'body': 'RegExp($1)'
   'EO RegExp.input  str,当前被匹配的字符串':
-    'prefix': 'RegExp-input'
+    'prefix': 'RegExp.input'
     'body': 'RegExp.input'
   'EO RegExp.lastMatch  str,最后一个匹配的字符串':
-    'prefix': 'RegExp-lastMatch'
+    'prefix': 'RegExp.lastMatch'
     'body': 'RegExp.lastMatch'
   'EO RegExp.lastParen  str,最后一对圆括号内的匹配子串':
-    'prefix': 'RegExp-lastParen'
+    'prefix': 'RegExp.lastParen'
     'body': 'RegExp.lastParen'
   'EO RegExp.leftContext  str,最后一次匹配前的子串':
-    'prefix': 'RegExp-leftContext'
+    'prefix': 'RegExp.leftContext'
     'body': 'RegExp.leftContext'
   'EO RegExp.multiline  bol,指定是否所的表达式都用于多行的布尔值':
-    'prefix': 'RegExp-multiline'
+    'prefix': 'RegExp.multiline'
     'body': 'RegExp.multiline'
   'EO RegExp.rightContext  str,在上次匹配之后的子串':
-    'prefix': 'RegExp-rightContext'
+    'prefix': 'RegExp.rightContext'
     'body': 'RegExp.rightContext'
   'EO .multiline  bol,是否多行匹配':
     'prefix': 'multiline-re'

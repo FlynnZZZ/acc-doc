@@ -9,58 +9,58 @@
   'JV Vue.component("c-name",{})  全局组件':
     'prefix': 'vue-component'
     'body': """Vue.component('c-name',{
-      template: ''
-      ,props: []
-      ,props: {
+      template: '',
+      props: [],
+      props: {
         prop0: {
-          default: xxx
+          default: xxx,
           default: function () {
             return 
-          }
-          ,type: Number 
-          ,required: bol  
-          ,validator: function (val) { 
+          },
+          type: Number ,
+          required: bol,  
+          validator: function (val) { 
             return bol;
-          }
-        }
-        ,prop1: Number 
-        ,prop1: [Number,String] 
-      }
-      ,data: function(){
+          },
+        },
+        prop1: Number, 
+        prop1: [Number,String],  
+      },
+      data: function(){
         return {
           
         }
-      }
-      ,created: function(){
+      },
+      created: function(){
       }
     });""" 
   'JV Vue.component("c-name",foo)  异步全局组件':
     'prefix': 'vue-component-async'
     'body': """Vue.component("c-name",function(rs,rj){
       rs({
-        template: ''
-        ,props: []
-        ,props: {
+        template: '',
+        props: [],
+        props: {
           prop0: {
-            default: xxx
+            default: xxx,
             default: function () {
               return 
-            }
-            ,type: Number 
-            ,required: bol  
-            ,validator: function (val) { 
+            },
+            type: Number, 
+            required: bol,  
+            validator: function (val) { 
               return bol;
-            }
-          }
-          ,prop1: Number 
-          ,prop1: [Number,String] 
-        }
-        ,data: function(){
+            },
+          },
+          prop1: Number, 
+          prop1: [Number,String], 
+        },
+        data: function(){
           return {
             
           }
-        }
-        ,created: function(){
+        },
+        created: function(){
         }
       })
     });""" 
@@ -69,17 +69,17 @@
     'body': """Vue.directive('xxx-xxx', {
       bind : function(el,binds,vn){
         // binds{name,value,expression,arg,modifiers}
-      }
-      ,inserted : function(el,binds,vn){
+      },
+      inserted : function(el,binds,vn){
         // binds{name,value,expression,arg,modifiers}
-      }
-      ,update : function(el,binds,vn,oVn){
+      },
+      update : function(el,binds,vn,oVn){
         // binds{name,value,expression,arg,modifiers,oldValue}
-      }
-      ,componentUpdated : function(el,binds,vn,oVn){
+      },
+      componentUpdated : function(el,binds,vn,oVn){
         // binds{name,value,expression,arg,modifiers,oldValue}
-      }
-      ,unbind : function(el,binds,vn,oVn){
+      },
+      unbind : function(el,binds,vn,oVn){
         // binds{name,value,expression,arg,modifiers}
       }
     });""" 
@@ -94,15 +94,15 @@
   'JV new Vue({$1});  实例化Vue':
     'prefix': 'new-vue'
     'body': """new Vue({
-        el: '#xxx'
-        ,data: {}
-        ,computed: {}
-        ,watch: {}
-        ,methods: {}
-        ,created: function (){
+        el: '#xxx',
+        data: {},
+        computed: {},
+        watch: {},
+        methods: {},
+        created: function (){
           var that = this;
-        }
-        ,mounted: function (){
+        },
+        mounted: function (){
           var that = this;
           this.$nextTick(function () { });
           
@@ -117,14 +117,14 @@
     'body': """xxx: {
         default: function () {  
           return ;
-        }
-        ,type: String, 
+        },
+        type: String, 
           // String Number Boolean Function Object Array Symbol
           // 自定义构造器函数,使用 instanceof 检测 
-        ,required: true,  
-        ,validator: function (value) {  
+        required: true,  
+        validator: function (value) {  
           return value > 10
-        }
+        },
       } """ 
   'JV propsData  KW,传递属性数据':
     'prefix': 'propsData-vue'
@@ -137,8 +137,8 @@
     'body': """xxx: {
         get: function () {
           return 
-        }
-        ,set: function (val) {
+        },
+        set: function (val) {
           
         }
       } """ 
@@ -148,10 +148,10 @@
   'JV watch-member  MB,数据监听的完整成员':
     'prefix': 'watch-member-vue'
     'body': """'aaa.bbb': {
-        deep: true 
-        ,handler: function ( val, oldVal) {
+        deep: true, 
+        handler: function ( val, oldVal) {
           
-        }
+        },
       }""" 
   'JV methods  KW,方法':
     'prefix': 'methods-vue'
@@ -217,35 +217,35 @@
   'JV new VueRouter();  实例化路由':
     'prefix': 'new-VueRouter'
     'body': """new VueRouter({
-      routes: $1
-      ,base: '/'
-      ,linkActiveClass: 'router-link-active'
-      ,linkExactActiveClass: 'router-link-exact-active'
-      ,mode: 'hash'
-      ,fallback: true 
-      ,scrollBehavior: function(to,from,pos){
+      routes: $1,
+      base: '/',
+      linkActiveClass: 'router-link-active',
+      linkExactActiveClass: 'router-link-exact-active',
+      mode: 'hash',
+      fallback: true, 
+      scrollBehavior: function(to,from,pos){
         // 
       } 
     });""" 
   'JV routerMap-member  一条路由配置项':
     'prefix': 'routerMap-member'
     'body': """{
-      path: 'xxx'  
-      ,component: cpt0
-      // ,components: {
+      path: 'xxx',  
+      component: cpt0,
+      // components: {
       //   default: cpt0
       //   ,k1: cpt1
       //   ,...
-      // }
-      ,name: ''  
-      ,redirect: ''  
-      ,alias: ''  
-      ,props: ''  
-      ,meta: ''  
-      ,beforeEnter: function(to,from,next){
+      // },
+      name: '',  
+      redirect: '',  
+      alias: '',  
+      props: '',  
+      meta: '',  
+      beforeEnter: function(to,from,next){
         // 
-      }
-      ,children: [ 
+      },
+      children: [ 
         {  }
       ]  
     }""" 
@@ -280,43 +280,43 @@
     'body': """new Vuex.store({ 
       state: { 
         stateData1: 123  
-      }
-      ,mutations: {  
+      },
+      mutations: {  
         fooMt: function(state,data){  
         }
-      }
-      ,actions: {   
+      },
+      actions: {   
         fooAt: function({ commit },data){  
         }
-      }
-      // ,getters: {  
+      },
+      // getters: {  
       //   fooGt: function({ stateData1 },getters){
       //     return stateData1;
       //   }
-      // }
-      ,modules: {  
+      // },
+      modules: {  
       }
     })""" 
   'JV store-module-vuex  vuex模块化':
     'prefix': 'store-module-vuex'
     'body': """export default { 
       state: { 
-        stateData1: 123  
-      }
-      ,mutations: {  
+        stateData1: 123,  
+      },
+      mutations: {  
         fooMt: function(state,data){  
-        }
-      }
-      ,actions: {   
+        },
+      },
+      actions: {   
         fooAt: function({ commit,state },data){  
-        }
+        },
       }
-      // ,getters: {  
+      // getters: {  
       //   fooGt: function({ stateData1 },getters){
       //     return stateData1;
-      //   }
-      // }
-      ,namespaced: true  // 
+      //   },
+      // },
+      namespaced: true  // 
     }""" 
   'JV namespaced  KW,命名空间':
     'prefix': 'namespaced-KW-vuex'

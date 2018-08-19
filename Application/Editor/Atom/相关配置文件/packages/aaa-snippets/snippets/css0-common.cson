@@ -47,7 +47,7 @@
   'CC no-repeat':
     'prefix': 'no-repeat1'
     'body': 'no-repeat'
-  'CC transparent':
+  'CC transparent  透明的':
     'prefix': 'transparent'
     'body': 'transparent'
   # 操作--------------------------------

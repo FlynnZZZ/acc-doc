@@ -179,7 +179,7 @@
     'body': """<checkbox />""" 
   'HW <picker>$1</picker>  从底部弹起的滚动选择器':
     'prefix': 'picker-tag-wx'
-    'body': """<picker>$1</picker>""" 
+    'body': """<picker mode=\"selector\" value=\"\">$1</picker>""" 
   'HW <picker-view>$1</picker-view>  嵌入页面的滚动选择器':
     'prefix': 'picker-view tag-wx'
     'body': """<picker-view>$1</picker-view>""" 
@@ -244,10 +244,10 @@
     'body': """data-xxx=\"$1\" """ 
   'HW bind:type="fn"  事件绑定,不阻止冒泡':
     'prefix': 'bind-event-wx'
-    'body': """bind:type=\"fn\" """ 
+    'body': """bind:$1=\"$2\" """ 
   'HW catch:type="fn"  事件绑定,阻止冒泡':
     'prefix': 'catch-event-wx'
-    'body': """catch:type=\"fn\" """ 
+    'body': """catch:$1=\"$2\" """ 
   'HW touchstart  手指触摸动作开始':
     'prefix': 'touchstart-event'
     'body': """touchstart""" 
@@ -318,21 +318,24 @@
   'HW wx:for="{{$1}}"  列表渲染':
     'prefix': 'wx:for1'
     'body': """wx:for=\"{{$1}}\" """ 
+  'HW wx:for="{{$1}} wx:key="{{}}"  列表渲染并指定key':
+    'prefix': 'wx:for-key'
+    'body': """wx:for=\"{{$1}}\" wx:key=\"{{index}}\" """ 
   'HW wx:for-item="itm"  指定项':
     'prefix': 'wx:for-item'
-    'body': """wx:for-item=\"itm\" """ 
+    'body': """wx:for-item=\"${1:itm}\" """ 
   'HW wx:for-index="idx"  指定键':
     'prefix': 'wx:for-index'
-    'body': """wx:for-index=\"idx\" """ 
+    'body': """wx:for-index=\"${1:idx}\" """ 
   'HW wx:key="_key/*this"  指定列表中项目的唯一标识符':
     'prefix': 'wx-key'
-    'body': """wx:key=\"*this\" """ 
+    'body': """wx:key=\"${1:*this}\" """ 
   'HW wx:if="{{val}}"  条件渲染':
-    'prefix': 'wx:if'
-    'body': """wx:if=\"{{val}}\" """ 
+    'prefix': 'wx:if1'
+    'body': """wx:if=\"{{$1}}\" """ 
   'HW wx:elif="{{val}}"  条件渲染':
     'prefix': 'wx:elif'
-    'body': """wx:elif=\"{{val}}\" """ 
+    'body': """wx:elif=\"{{$1}}\" """ 
   'HW wx:else  条件渲染':
     'prefix': 'wx:else'
     'body': """wx:else""" 

@@ -13,27 +13,28 @@
     
     <script> 
     export default {
-      data: function(){ return {
-        // render 
-        
-        // handle 
-        
-        // cpnts 
-      }}
-      ,methods: {
-        // event 
-        
-        // pack 
-        
-        // func 
-        
-        // cpnts 
+      data(){ return {
+        //  
+      }},
+      methods: {
+        fn1(){
+          // 
+        },
+      },
+      mounted(){
+        // 
+      },
+      components: {
+        'xxx-xxx': () => import('./xxx.vue'),  
       }
     }
     </script> 
     
     <style lang="less" scoped> 
-      
+      /*局部样式*/
+    </style> 
+    <style lang="less"> 
+      /*全局样式*/
     </style> 
     
     """

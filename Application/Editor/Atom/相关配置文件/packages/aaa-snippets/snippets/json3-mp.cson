@@ -3,31 +3,31 @@
   'jnMp window  页面窗口表现':
     'prefix': 'window-mp'
     'body': """\"window\": { 
-          "backgroundColor": "#fff"
-          ,"navigationBarTitleText": "xxx"
-          ,"navigationBarTextStyle": "white"
-          ,"navigationBarBackgroundColor":"#000"
-          ,"navigationStyle":""
-          ,"enablePullDownRefresh":false
-          ,"backgroundTextStyle": "dark"
-          ,"onReachBottomDistance": 50
-          ,"backgroundColorTop": "#fff"
-          ,"backgroundColorBottom": "#fff"
-        } """
+        "backgroundColor": "#fff",
+        "navigationBarTitleText": "xxx",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor":"#000",
+        "navigationStyle":"",
+        "enablePullDownRefresh":false,
+        "backgroundTextStyle": "dark",
+        "onReachBottomDistance": 50,
+        "backgroundColorTop": "#fff",
+        "backgroundColorBottom": "#fff"
+      } """
   'jnMp tabBar  tab设置':
     'prefix': 'tabBar-mp'
     'body': """\"tabBar\": {   
-      "color":"#000"
-      ,"selectedColor":"#000"
-      ,"backgroundColor":"#fff"
-      ,"list": [     
+      "color":"#000",
+      "selectedColor":"#000",
+      "backgroundColor":"#fff",
+      "list": [     
         { "pagePath": "page/index/index"
         ,"text": "显示的文字"
         ,"iconPath": "./img.png"
         ,"selectedIconPath":"./img.png"} 
-      ]
-      ,"position": "bottom"  
-      ,"borderStyle":"black"
+      ],
+      "position": "bottom",
+      "borderStyle":"black"
     } """
   'jnMp networkTimeout  网络请求超时设定':
     'prefix': 'networkTimeout-mp'

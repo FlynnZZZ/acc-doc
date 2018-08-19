@@ -4,27 +4,27 @@
     'prefix': 'App-mp'
     'body': """App({
         globalData: {  
-          _key: _val
-          ,..
-        }
+          _key: _val,
+          ...
+        },
         // Methods
-        ,fn1: function (){
+        fn1: function (){
           // 
-        }
+        },
         // Lifecycles 
-        ,onLaunch: function(query){   
+        onLaunch: function(query){   
           // 初始化 
-        }
-        ,onShow: function(){       
+        },
+        onShow: function(){       
           // 显示
-        }
-        ,onHide: function(){      
+        },
+        onHide: function(){      
           // 隐藏 
-        }
-        ,onError: function(){       
+        },
+        onError: function(){       
           // 出错 
-        }
-        ,onPageNotFound: function(param){       
+        },
+        onPageNotFound: function(param){       
           // 页面不存在 
         }
       })""" 
@@ -32,45 +32,45 @@
     'prefix': 'Page-mp'
     'body': """Page({
         data: {  
-          key: val
-          ,..
+          key: val,
+          ...
         }
         // Datas  
-        ,key1: 111  
+        key1: 111,  
         // Methods
-        ,fn1: function (){
+        fn1: function (){
           
-        }
+        },
         // Lifecycles 
-        ,onLoad: function(query){   
+        onLoad: function(query){   
           console.log('加载页面',query); 
-        }
-        ,onShow: function(){       
+        },
+        onShow: function(){       
           console.log('页面显示');
-        }
-        ,onReady: function(){      
+        },
+        onReady: function(){      
           console.log('初次渲染完成');
-        }
-        ,onHide: function(){      
+        },
+        onHide: function(){      
           console.log('页面隐藏');
-        }
-        ,onUnload: function(){       
+        },
+        onUnload: function(){       
           console.log('页面卸载');
-        }
+        },
         // 事件处理函数 
-        ,onPullDownRefresh: function () {   
+        onPullDownRefresh: function () {   
           console.log('下拉刷新');
-        }
-        ,onReachBottom: function () {        
+        },
+        onReachBottom: function () {        
           console.log('上拉触底');
-        }
-        ,onShareAppMessage: function(){     
+        },
+        onShareAppMessage: function(){     
           return {   
             'title': '自定义转发标题',  
             'path': '/page/user?id=123', 
           }
-        }
-        ,onPageScroll: function(obj){       
+        },
+        onPageScroll: function(obj){       
           console.log('页面滚动',obj);
         }
       })""" 
@@ -78,107 +78,103 @@
     'prefix': 'Behavior-mp'
     'body': """Behavior({
         data: {  
-          key: val
-          ,..
-        }
-        ,properties: {
+          key: val,
+          // ...
+        },
+        properties: {
           attr1: {
-            type: null  // 任意类型
-            ,value: val // 可选,初始值 
-            ,observer: function(newVal ,oldVal){ 
+            type: null,  // 任意类型
+            value: val,  // 可选,初始值 
+            observer: function(newVal ,oldVal){ 
               // 
             } 
           }
-          attr2: String // 简化的定义方式 
-          ,...
-        }
-        ,externalClasses: []
-        ,methods: {
+          attr2: String, // 简化的定义方式 
+          ...
+        },
+        externalClasses: [],
+        methods: {
           fn1: function (){
             // 
           }
-        }
+        },
         // Lifecycles 
-        ,created: function(){   
-        }
-        ,attached: function(){   
-        }
-        ,ready: function(){   
-        }
-        ,moved: function(){   
-        }
-        ,detached: function(){   
-        }
-        ,options: {
+        created: function(){   
+        },
+        attached: function(){   
+        },
+        ready: function(){   
+        },
+        moved: function(){   
+        },
+        detached: function(){   
+        },
+        options: {
           multipleSlots: true 
-        }
-        ,relations: {
+        },
+        relations: {
           './xxx-xx': {  
-            type: 'child' 
-            ,linked: function(cpnt){      
-            }  
-            ,linkChanged: function(cpnt){ 
-            }  
-            ,unlinked: function(cpnt){    
-            }
-            // ,target:                 
-            }
+            type: 'child',  
+            linked: function(cpnt){      
+            },  
+            linkChanged: function(cpnt){ 
+            },  
+            unlinked: function(cpnt){    
+            },
           }
-        }
-        ,behaviors: []
+        },
+        behaviors: []
       })""" 
   'JMB Behavior({})  behaviors构造器':
     'prefix': 'Component-mp'
     'body': """Component({
         data: {  
-          key: val
-          ,..
-        }
-        ,properties: function (){
+          key: val,
+          ... 
+        },
+        properties: function (){
           attr1: {
-            type: null  // 任意类型
-            ,value: val // 可选,初始值 
-            ,observer: function(newVal ,oldVal){ 
+            type: null,  // 任意类型
+            value: val,  // 可选,初始值 
+            observer: function(newVal ,oldVal){ 
               // 
             } 
-          }
-          attr2: String // 简化的定义方式 
-          ,...
-        }
-        ,externalClasses: []
-        ,methods: {
+          },
+          attr2: String, // 简化的定义方式 
+          ...
+        },
+        externalClasses: [],
+        methods: {
           fn1: function (){
             // 
           }
-        }
+        },
         // Lifecycles 
-        ,created: function(){   
-        }
-        ,attached: function(){   
-        }
-        ,ready: function(){   
-        }
-        ,moved: function(){   
-        }
-        ,detached: function(){   
-        }
-        ,options: {
+        created: function(){   
+        },
+        attached: function(){   
+        },
+        ready: function(){   
+        },
+        moved: function(){   
+        },
+        detached: function(){   
+        },
+        options: {
           multipleSlots: true 
-        }
-        ,relations: {
+        },
+        relations: {
           './xxx-xx': {  
-            type: 'child' 
-            ,linked: function(cpnt){      
-            }  
-            ,linkChanged: function(cpnt){ 
-            }  
-            ,unlinked: function(cpnt){    
-            }
-            // ,target:                 
-            }
+            type: 'child', 
+            linked: function(cpnt){      
+            },  
+            linkChanged: function(cpnt){ 
+            },  
+            unlinked: function(cpnt){    
+            },
           }
-        }
-        ,behaviors: []
+        },
+        behaviors: []
       })""" 
   # 
   'JMB onLaunch  小程序初始化':
@@ -230,8 +226,19 @@
   'JMB .setData({},fn?)  更新视图':
     'prefix': 'setData-page-mp'
     'body': """setData({
-        key: val 
+        ${1:key}: val,  
       })""" 
+  # 
+  'JMB .triggerEvent("event_name", {} ,{}?)  触发事件':
+    'prefix': 'triggerEvent-mp'
+    'body': """triggerEvent(\"$1\" ,{
+      $2
+    }
+    ,{
+      bubbles: false, 
+      capturePhase: false, 
+      composed: false 
+    })""" 
 
 
 
