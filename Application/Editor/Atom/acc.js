@@ -254,7 +254,7 @@
           Ensure Single trailing Newline      自动去掉文档最后的空行
           ignore Whitespace On Current line
           remove trailing Whitespace          自动删除行末空格
-  社区扩展: 'C:/Users/f/.atom/packages'  
+  社区扩展: 'C:/Users/<用户名>/.atom/packages'  
     aaa-snippets               自定义的代码片段   
     minimap                    缩略图 
       相关设置: 
@@ -315,10 +315,12 @@
   可在命令行中使用Atom打开当前文件: atom ./ 
   '1.18.0' 折叠正常,1.19.0 折叠非标准内容的文件存在bug,并且也不能记住折叠的状态  
   '1.20.0' 开启atom-beautify导致内存占用过高  
+  '1.21.2': 最新稳定版本 
   '1.23.1' CSS代码提示,冒号后有空格则无提示 
   '1.25.1' 打开项目过多,导致运行很慢 
     display: block; 
-  最新稳定版本: '1.21.2' 
+  '1.30.0': 最新稳定版 
+    后续版本增强了语法检测,导致不能再方便的使用语言格式文件[如'.js']来写笔记了 
 Q&I: 
   优点总结
     折叠功能优秀
@@ -334,6 +336,8 @@ Q&I:
 Q&A: 
   使用一段时间后,出现卡死崩溃,无响应的现象,关闭重新启动后一直处于卡死状态 
     $ atom --clear-window-state  // 命令行执行 
-  
+
+
+
 
 
